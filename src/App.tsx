@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { AboutUs } from './pages/AboutUs/AboutUs';
+import { Category } from './pages/Category/Category';
+import { CheckOut } from './pages/CheckOut/CheckOut';
+import { Footer } from './components/Footer/Footer';
+import { Header } from './components/Header/Header';
+import { Home } from './pages/Home/Home';
+import { NotFound } from './pages/NotFound/NotFound';
+import { Product } from './pages/Product/Product';
+import { Route, Routes } from 'react-router-dom';
+import { ShoppingCart } from './pages/ShoppingCart/ShoppingCart';
+import { Subscription } from './pages/Subscription/Subscription';
 
-function App() {
+export const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="about-us" element={<AboutUs />} />
+        <Route path="category" element={<Category />} />
+        <Route path="checkout" element={<CheckOut />} />
+        <Route path="product" element={<Product />} />
+        <Route path="shopping-cart" element={<ShoppingCart />} />
+        <Route path="subscription" element={<Subscription />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
     </div>
   );
-}
-
-export default App;
+};
