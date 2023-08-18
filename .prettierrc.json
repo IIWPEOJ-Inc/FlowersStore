@@ -6,6 +6,11 @@
   "singleQuote": true,
   "trailingComma": "all",
   "bracketSpacing": true,
+<<<<<<< HEAD
   "arrowParens": "always",
   "endOfLine": "auto"
 }
+=======
+  "arrowParens": "always"
+}
+>>>>>>> fc4a23e (initial commit)

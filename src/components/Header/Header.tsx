@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import './Header.scss';
 import React from 'react';
 import burgerMenu from './assets/burgerMenu.svg';
@@ -18,4 +19,8 @@ export const Header = () => {
       </div>
     </header>
   );
+=======
+export const Header = () => {
+  return <div>Header</div>;
+>>>>>>> fc4a23e (initial commit)
 };
