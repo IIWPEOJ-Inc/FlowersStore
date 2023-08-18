@@ -1,0 +1,11 @@
+@import './fonts/stylesheet.css';
+
+html,
+body,
+#root,
+.app {
+  width: 100%;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 400;
+  margin: 0;
+}
