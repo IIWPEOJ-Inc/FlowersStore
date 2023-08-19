@@ -30,6 +30,7 @@ Naming conventions:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Let's essume you need to complete one of the tasks:\
 [Issue-008] Checkout page implementation.
 
@@ -53,11 +54,15 @@ Let's essume you need to complete one of the tasks:
 >>>>>>> 807bc24 (Update README.md)
 [Issue-008] Checkout page implementation.\
 >>>>>>> 1ff0fbc (Update README.md)
+=======
+Let's essume you need to complete one of the tasks:\
+[Issue-008] Checkout page implementation.
+>>>>>>> 6b8662d (Update README.md)
 
-first you need to create branch - depending on how issue is labled.\
+first you need to create branch - depending on how issue is labled.
 
 [Feature], [Bug], [Refactoring] branches opens from origin/master.\
-[Subtask] branches opens from any branch but origin/master.\
+[Subtask] branches opens from any branch but origin/master.
 
 to name branch use your task title:
 <<<<<<< HEAD
@@ -72,5 +77,9 @@ feature/issue-121/subtask/issue-122/sign-in-pop-up-desktop-implementation
 for example: main/feature/issue-121/sign-in-pop-up-implementation\
 or subtask for branch above:\
 {parent-branch}/{parent-issue-number}/subtask/{issue-number}/{short-descripton}\
+<<<<<<< HEAD
 feature/issue-121/subtask/issue-122/sign-in-pop-up-desktop-implementation\
 >>>>>>> 1ff0fbc (Update README.md)
+=======
+feature/issue-121/subtask/issue-122/sign-in-pop-up-desktop-implementation
+>>>>>>> 6b8662d (Update README.md)
