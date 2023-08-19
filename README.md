@@ -29,6 +29,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 Naming conventions:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Let's essume you need to complete one of the tasks:\
 [Issue-008] Checkout page implementation.
 
@@ -47,6 +48,9 @@ issue-121/subtask/issue-122/sign-in-pop-up-desktop-implementation
 Let's essume you need to complete one of the [Issue-008] Checkout page implementation
 =======
 Let's essume you need to complete one of the tasks:\ 
+=======
+Let's essume you need to complete one of the tasks:
+>>>>>>> 807bc24 (Update README.md)
 [Issue-008] Checkout page implementation.\
 >>>>>>> 1ff0fbc (Update README.md)
 
