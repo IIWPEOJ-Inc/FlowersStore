@@ -27,16 +27,17 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 # Branch Managment:
 
 Naming conventions:
-Let's essume you need to complete one of the [Issue-008] Checkout page implementation
+Let's essume you need to complete one of the tasks:\ 
+[Issue-008] Checkout page implementation.\
 
-first you need to create branch - depending on how issue is labled.
+first you need to create branch - depending on how issue is labled.\
 
-[Feature], [Bug], [Refactoring] branches opens from origin/master 
-[Subtask] branches opens from any branch but origin/master
+[Feature], [Bug], [Refactoring] branches opens from origin/master.\
+[Subtask] branches opens from any branch but origin/master.\
 
 to name branch use your task title:
-{parent-branch}{task-type}/{issue-number}/{short-descripton} 
-for example: main/feature/issue-121/sign-in-pop-up-implementation
-or subtask for branch above:
-{parent-branch}/{parent-issue-number}/subtask/{issue-number}/{short-descripton} 
-feature/issue-121/subtask/issue-122/sign-in-pop-up-desktop-implementation
+{parent-branch}{task-type}/{issue-number}/{short-descripton}\
+for example: main/feature/issue-121/sign-in-pop-up-implementation\
+or subtask for branch above:\
+{parent-branch}/{parent-issue-number}/subtask/{issue-number}/{short-descripton}\
+feature/issue-121/subtask/issue-122/sign-in-pop-up-desktop-implementation\
