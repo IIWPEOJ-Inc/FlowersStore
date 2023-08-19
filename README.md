@@ -1,9 +1,4 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
+# Getting Started:
 In the project directory, you can run:
 
 ### `npm start`
@@ -29,18 +24,19 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+# Branch Managment:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Naming conventions:
+Let's essume you need to complete one of the [Issue-008] Checkout page implementation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+first you need to create branch - depending on how issue is labled.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+[Feature], [Bug], [Refactoring] branches opens from origin/master 
+[Subtask] branches opens from any branch but origin/master
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+to name branch use your task title:
+{parent-branch}{task-type}/{issue-number}/{short-descripton} 
+for example: main/feature/issue-121/sign-in-pop-up-implementation
+or subtask for branch above:
+{parent-branch}/{parent-issue-number}/subtask/{issue-number}/{short-descripton} 
+feature/issue-121/subtask/issue-122/sign-in-pop-up-desktop-implementation
