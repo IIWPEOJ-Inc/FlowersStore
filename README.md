@@ -27,7 +27,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 # Branch Managment:
 
 Naming conventions:
-Let's essume you need to complete one of the tasks:\ 
+Let's essume you need to complete one of the tasks:
 [Issue-008] Checkout page implementation.\
 
 first you need to create branch - depending on how issue is labled.\
