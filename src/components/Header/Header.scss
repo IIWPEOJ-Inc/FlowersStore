@@ -1,0 +1,57 @@
+@import '../../functions.scss';
+
+header {
+  border: 1px solid black;
+  font-size: calculate-vw(16);
+  letter-spacing: 0.033vw;
+  font-weight: 500;
+  line-height: calculate-vw(19.2);
+  display: flex;
+  justify-content: space-between;
+
+  .left-buttons {
+    display: flex;
+    .left-button {
+      border-right: 1px solid black;
+      padding: calculate-vw(32) calculate-vw(64);
+    }
+  }
+
+  .right-buttons {
+    display: flex;
+    .sign-in-button {
+        border-left: 1px solid black;
+        padding: calculate-vw(32) calculate-vw(64.5);
+    }
+    .cart-button {
+        border-left: 1px solid black;
+        padding: calculate-vw(32) calculate-vw(72.5);
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
+
+  .left-buttons {
+    justify-content: center;
+    align-items: center;
+    padding: calculate-vw(12);
+    border-right: 1px solid black;
+  }
+
+  .right-buttons {
+    justify-content: center;
+    align-items: center;
+    padding: calculate-vw(12);
+    border-left: 1px solid black;
+  }
+}
