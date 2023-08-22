@@ -1,0 +1,7 @@
+﻿@function calculate-vw($value) {
+    @return calc($value * 100 / 1440) * 1vw
+  }
+
+  @function calculate-vw-mobile($value) {
+    @return calc($value * 100 / 768) * 1vw
+  }
