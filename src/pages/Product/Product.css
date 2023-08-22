@@ -1,0 +1,43 @@
+.product {
+  margin: 0;
+  padding: 0;
+}
+.product .main-info {
+  padding: 40px;
+}
+.product .details {
+  display: grid;
+  grid-gap: 24px;
+}
+.product .h1 {
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 500;
+  color: black;
+}
+.product .h2 {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  color: black;
+}
+.product .h3 {
+  margin: 0;
+}
+.product .p {
+  color: black;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.product .add-btn {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: black;
+  width: 100%;
+  height: 56px;
+}
+.product .radio-btn {
+  accent-color: black;
+}/*# sourceMappingURL=Product.css.map */

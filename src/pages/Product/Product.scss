@@ -1,0 +1,68 @@
+.product{
+    margin: 0;
+    padding: 0;
+
+    .main-image{
+        //margin: 0;
+        // display: block;
+        // width: 768px;
+    }
+
+    .main-info{
+        padding: 40px;
+    }
+
+    .details{
+        display: grid; 
+        grid-gap: 24px; 
+    }
+
+    .h1{
+        font-size: 38px;
+        font-style: normal;
+        font-weight: 500;
+        color: black;
+    }
+
+    .h2{
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        color: black;
+    }
+
+
+    .h3{
+        margin: 0;
+    }
+
+    .p{
+        color: black;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    .quantity{
+
+    }
+
+    .carousel-btn{
+
+    }
+
+    .add-btn{
+        color: white;
+        font-size: 16px;
+        font-weight: 500;
+        background-color: black;        
+        width: 100%;
+        height: 56px;
+    }
+
+    .radio-btn{
+        accent-color: black;
+    }
+
+}
+
