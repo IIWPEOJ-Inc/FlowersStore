@@ -1,5 +1,9 @@
 @import './fonts/stylesheet.css';
 
+*{
+  box-sizing: border-box;
+}
+
 html,
 body,
 #root,
@@ -8,4 +12,16 @@ body,
   font-family: 'Gilroy', sans-serif;
   font-weight: 400;
   margin: 0;
+}
+
+@media (min-width: 769px) {
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none !important;
+  }
 }
