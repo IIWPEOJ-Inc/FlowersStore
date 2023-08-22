@@ -36,8 +36,8 @@ first you need to create branch - depending on how issue is labled.
 [Subtask] branches opens from any branch but origin/master.
 
 to name branch use your task title:
-{parent-branch}{task-type}/{issue-number}/{short-descripton}\
+{task-type}/{issue-number}/{short-descripton}\
 for example: main/feature/issue-121/sign-in-pop-up-implementation\
 or subtask for branch above:\
-{parent-branch}/{parent-issue-number}/subtask/{issue-number}/{short-descripton}\
-feature/issue-121/subtask/issue-122/sign-in-pop-up-desktop-implementation
+{parent-issue-number}/subtask/{issue-number}/{short-descripton}\
+issue-121/subtask/issue-122/sign-in-pop-up-desktop-implementation
