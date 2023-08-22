@@ -1,0 +1,31 @@
+﻿@import '../../shared/mixins/functions.scss';
+
+.tertiary-button {
+    text-transform: uppercase;
+    color: white;
+    display: inline-block;
+    border: 1px solid white;
+    padding-top: calculate-vw(19.5);
+    padding-bottom: calculate-vw(17.5);
+    padding-right: calculate-vw(43);
+    padding-left: calculate-vw(43);
+    font-weight: 500;
+    font-size: calculate-vw(16);
+    line-height: calculate-vw(19.2);
+    letter-spacing: calc(1em / 33);
+
+    &.pressed {
+        background-color: white;
+        color: black;
+    }
+
+    &.disabled {
+        border: 1px solid #D2D2D7;
+        color: #808080;
+    }
+}
+
+.tertiary-button:hover {
+    background-color: white;
+    color: black;
+  }

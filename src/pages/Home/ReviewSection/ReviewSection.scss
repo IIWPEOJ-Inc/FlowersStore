@@ -1,0 +1,55 @@
+﻿@import '../../../shared/mixins/functions.scss';
+
+#review-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: calculate-vw(80);
+  img {
+    width: calculate-vw(77);
+    height: calculate-vw(53);
+  }
+  h2 {
+    margin-top: calculate-vw(24);
+    margin-bottom: calculate-vw(16);
+  }
+  .swiper {
+    width: 100%;
+    margin-bottom: calculate-vw(64);
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .review {
+    padding: 0 calculate-vw(56);
+    font-weight: 400;
+    font-size: calculate-vw(28);
+    line-height: calculate-vw(33.6);
+    font-style: italic;
+  }
+  .author {
+    font-weight: 500;
+    font-size: calculate-vw(16);
+    line-height: calculate-vw(19.2);
+    margin-top: calculate-vw(16);
+    margin-bottom: calculate-vw(36);
+  }
+  .swiper-button {
+    position: absolute;
+    top: calculate-vw(30);
+    z-index: 1;
+    cursor: pointer;
+  }
+  .image-swiper-button-prev {
+    left: calculate-vw(-25);
+  }
+  .image-swiper-button-next {
+    right: calculate-vw(-25);
+  }
+}
