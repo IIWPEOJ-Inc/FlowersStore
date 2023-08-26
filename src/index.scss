@@ -1,18 +1,32 @@
 @import './fonts/stylesheet.css';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 *{
   box-sizing: border-box;
 }
 
 =======
 >>>>>>> fc4a23e (initial commit)
+=======
+* {
+  box-sizing: border-box;
+}
+
+>>>>>>> 5311ea7 (feature/issue-018/footer-implementation)
 html,
 body,
 #root,
+h1,
+h2,
+h3,
+h4,
+h5,
+footer,
 .app {
   width: 100%;
   font-family: 'Gilroy', sans-serif;
+  font-size: 1.12vw;
   font-weight: 400;
   margin: 0;
 }
