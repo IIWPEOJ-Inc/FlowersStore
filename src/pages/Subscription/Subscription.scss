@@ -1,0 +1,24 @@
+@import '../../shared/mixins/functions.scss';
+
+h2 {
+    font-weight: 600;
+    font-size: calculate-vw(50);
+    line-height: calculate-vw(60);
+    margin: 0;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: calculate-vw(38);
+    line-height: calculate-vw(45.6);
+    margin-top: calculate-vw(24);
+    margin-bottom: calculate-vw(16);
+  }
+
+  h6 {
+    font-weight: 500;
+    font-size: calculate-vw(16);
+    line-height: calculate-vw(19.2);
+    margin-bottom: calculate-vw(6);
+    margin-top: 0;
+  }
