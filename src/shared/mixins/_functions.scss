@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿@function calculate-vw($value) {
     @return calc($value * 100 / 1440) * 1vw
   }
@@ -5,3 +6,16 @@
   @function calculate-vw-mobile($value) {
     @return calc($value * 100 / 768) * 1vw
   }
+=======
+@function calculate-vw($value) {
+  @return calc($value * 100 / 1440) * 1vw;
+}
+
+@function calculate-vw-tablet($value) {
+  @return calc($value * 100 / 720) * 1vw;
+}
+
+@function calculate-vw-mobile($value) {
+  @return calc($value * 100 / 320) * 1vw;
+}
+>>>>>>> 6f83886 (fix coments + responsive design)

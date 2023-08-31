@@ -2,6 +2,7 @@ import './Footer.scss';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useMediaQuery } from 'react-responsive';
 import Facebook from '../../assets/facebook.svg';
+import Input from './../input/Input';
 import Instagram from '../../assets/instagram.svg';
 import Link from './../link/link';
 import Pinterest from '../../assets/pinterest.svg';
@@ -22,22 +23,16 @@ const Footer = () => {
   const footerMedia = isDesktop ? 'footer-desktop' : isMobile ? 'footer-mobile' : 'footer-tablet';
   return (
     <footer className={footerMedia}>
-      <div className="footer-grid-item border-top-bottom border-right">
+      <div className="footer-grid-item border-1">
         <div className="content-container">
           <p>
-            Remember to offer beautiful flowers
+            Remember to offer beautiful flowers from Montreal Florist Studio Valentines Day, Mothers Day, Christmas....
             <br />
-            from Kyiv Florist Studio Valentines
-            <br />
-            Day, Mothers Day, Christmas....
-            <br />
-            Reminds you 7 days before. No
-            <br />
-            spam or sharing your address
+            Reminds you 7 days before. No spam or sharing your address
           </p>
           {/* "handleSubmit" will validate your inputs before invoking "onSubmit" */}
           <form className="remind-form" onSubmit={handleSubmit(onSubmit)}>
-            <input
+            <Input
               {...register('email', {
                 pattern: /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/,
                 required: true,
@@ -48,16 +43,16 @@ const Footer = () => {
           </form>
         </div>
       </div>
-      <div className="footer-grid-item border-top-bottom border-right">
+      <div className="footer-grid-item border-2">
         <div className="content-container">
           <h4>Contact Us</h4>
           <div className="links-grid">
             <div className="link-items-grid">
-              <h5>Address</h5>
+              <h5>Address:</h5>
               <Link to="/">360 Victoria Ave, Westmount, Montreal</Link>
             </div>
             <div className="link-items-grid">
-              <h5>Phone</h5>
+              <h5>Phone:</h5>
               <Link to="/">+1 438-600-3188</Link>
             </div>
             <div className="link-items-grid">
@@ -85,7 +80,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="footer-grid-item border-top-bottom border-right">
+      <div className="footer-grid-item border-3">
         <div className="content-container">
           <h4>Shop</h4>
           <div className="link-items-grid">
@@ -104,12 +99,14 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="footer-grid-item border-top-bottom">
+      <div className="footer-grid-item border-4">
         <div className="content-container">
           <h4>About Us</h4>
           <div className="link-items-grid">
             <Link to="/">Our Story</Link>
             <Link to="/">Blog</Link>
+          </div>
+          <div className="link-items-grid">
             <Link to="/">Shipping & returns</Link>
             <Link to="/">Terms & conditions</Link>
             <Link to="/">Privacy policy</Link>

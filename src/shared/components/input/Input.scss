@@ -1,0 +1,15 @@
+@import '../../mixins/functions.scss';
+
+.input {
+  width: 100%;
+  border: 1px solid gray;
+  padding: 1.25vw;
+  letter-spacing: 0.03vw;
+  vertical-align: middle;
+  font-family: Gilroy;
+  font-size: calculate-vw(14);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  color: #333;
+}

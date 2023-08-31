@@ -1,5 +1,4 @@
 ﻿import './PrimaryButton.scss';
-import React from 'react';
 
 interface Props {
   buttonType: 'button' | 'submit' | 'reset';

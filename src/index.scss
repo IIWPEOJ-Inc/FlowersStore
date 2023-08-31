@@ -1,4 +1,5 @@
 @import './fonts/stylesheet.css';
+@import './shared/mixins/functions.scss';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -26,8 +27,9 @@ footer,
 .app {
   width: 100%;
   font-family: 'Gilroy', sans-serif;
-  font-size: 1.12vw;
+  font-size: calculate-vw(16);
   font-weight: 400;
+  line-height: 130%;
   margin: 0;
 }
 <<<<<<< HEAD
