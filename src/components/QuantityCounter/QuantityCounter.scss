@@ -1,0 +1,27 @@
+﻿@import '../../shared/mixins/functions.scss';
+
+.quantity-counter {
+    height: calculate-vw(44);
+    border: 1px solid black;
+    display: inline-flex;
+    button {
+        all: unset;
+    }
+    .minus{
+        width: calculate-vw(44);
+    }
+    .quantity{
+        border-left: 1px solid black;
+        width: calculate-vw(56);
+    }
+    .plus {
+        border-left: 1px solid black;
+        width: calculate-vw(44);
+    }
+    .boxes-settings {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}

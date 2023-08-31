@@ -1,0 +1,54 @@
+﻿@import '../../../shared/mixins/functions.scss';
+
+#build-subscription-section {
+  display: flex;
+  border-bottom: 1px solid black;
+  .left-side {
+    width: 50vw;
+    .content {
+      padding: calculate-vw(80) calculate-vw(40);
+      span {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: calculate-vw(14);
+        line-height: calculate-vw(16.8);
+      }
+      .selection-description {
+        font-weight: 400;
+        font-size: calculate-vw(16);
+        line-height: calculate-vw(22.4);
+        color: #121212e5;
+        margin-bottom: calculate-vw(24);
+      }
+      .grey-line {
+        background-color: #D2D2D7;
+        height: calculate-vw(1);
+        margin: calculate-vw(40) 0;
+      }
+      .under-h4-div {
+        font-weight: 400;
+        font-size: calculate-vw(16);
+        line-height: calculate-vw(22.4);
+        margin-bottom: calculate-vw(24);
+      }
+      .frequency-buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: calculate-vw(16);
+      }
+    }
+  }
+  .right-side {
+    width: 50vw;
+    border-left: 1px solid black;
+    .content {
+      top: calculate-vw(85);
+      display: flex;
+      position: sticky;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

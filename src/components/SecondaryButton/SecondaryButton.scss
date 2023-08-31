@@ -3,6 +3,8 @@
 .secondary-button {
     text-transform: uppercase;
     display: inline-block;
+    flex-grow: 1;
+    text-align: center;
     border: 1px solid black;
     padding-top: calculate-vw(19.5);
     padding-bottom: calculate-vw(17.5);
