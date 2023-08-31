@@ -73,7 +73,7 @@
           font-weight: 600;
           font-size: calculate-vw(16);
           line-height: calculate-vw(19.2);
-          letter-spacing: calc(1em / 40);
+          letter-spacing: calculate-letter-spacing(2.5);
           padding-top: calculate-vw(105.5);
           padding-bottom: calculate-vw(105.5);
           span {

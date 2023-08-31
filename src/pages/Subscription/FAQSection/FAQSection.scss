@@ -1,0 +1,22 @@
+﻿@import '../../../shared/mixins/functions.scss';
+
+#faq-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F5F7;
+  padding: calculate-vw(80) calculate-vw(288);
+  .content {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: calculate-vw(80);
+    h2 {
+        margin-bottom: calculate-vw(40);
+        text-align: center;
+    }
+  }
+}
+
+  

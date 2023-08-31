@@ -8,7 +8,7 @@
     font-weight: 500;
     font-size: calculate-vw(16);
     line-height: calculate-vw(19.2);
-    letter-spacing: calc(1em / 33);
+    letter-spacing: calculate-letter-spacing(3);
     color: white;
     background-color: black;
 

@@ -24,7 +24,7 @@
             font-weight: 600;
             font-size: calculate-vw(16);
             line-height: calculate-vw(19.2);
-            letter-spacing: 0.033vw;
+            letter-spacing: calculate-letter-spacing(2.5);
         }
         img {
             width: calculate-vw(24);

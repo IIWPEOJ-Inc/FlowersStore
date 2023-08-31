@@ -8,7 +8,7 @@ header {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   font-size: calculate-vw(16);
-  letter-spacing: calc(1em / 50);
+  letter-spacing: calculate-letter-spacing(2);
   font-weight: 500;
   line-height: calculate-vw(19.2);
   display: flex;

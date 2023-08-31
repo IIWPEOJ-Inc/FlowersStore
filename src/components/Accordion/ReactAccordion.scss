@@ -1,0 +1,33 @@
+﻿@import '../../shared/mixins/functions.scss';
+
+.item {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid black;
+  .title {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h4 {
+      margin-top: calculate-vw(24);
+    }
+    img {
+      width: calculate-vw(24);
+      height: calculate-vw(24);
+    }
+  }
+  .item-content {
+    font-weight: 400;
+    font-size: calculate-vw(16);
+    line-height: calculate-vw(22.4);
+    margin-bottom: calculate-vw(24);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .3s ease-in-out;
+    &.show {
+      max-height: 30vw;
+      transition: max-height .3s ease-in-out;
+    }
+  }
+}
