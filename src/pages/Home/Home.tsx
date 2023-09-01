@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import './Home.scss';
 import { AboutUsSection } from './AboutUsSection/AboutUsSection';
 import { HeroSection } from './HeroSection/HeroSection';
@@ -13,17 +12,13 @@ export const Home = () => {
   return (
     <>
       <HeroSection />
-      <AboutUsSection />
+      {/*       <AboutUsSection />
       <WhyChooseUsSection />
       <ToContactUsSection />
       <OurServiceSection />
       <SubscriptionSection />
       <WeddingSection />
-      <ReviewSection />
+      <ReviewSection />*/}
     </>
   );
-=======
-export const Home = () => {
-  return <div>Home</div>;
->>>>>>> fc4a23e (initial commit)
 };

@@ -1,6 +1,5 @@
 ﻿import './WhyChooseUsSection.scss';
 import { RightSideComponent } from './components/RightSideComponent/RightSideComponent';
-import React from 'react';
 
 export const WhyChooseUsSection = () => {
   return (

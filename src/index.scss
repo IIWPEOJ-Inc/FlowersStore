@@ -1,20 +1,10 @@
 @import './fonts/stylesheet.css';
 @import './shared/mixins/functions.scss';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-*{
-  box-sizing: border-box;
-}
-
-=======
->>>>>>> fc4a23e (initial commit)
-=======
 * {
   box-sizing: border-box;
 }
 
->>>>>>> 5311ea7 (feature/issue-018/footer-implementation)
 html,
 body,
 #root,
@@ -23,6 +13,10 @@ h2,
 h3,
 h4,
 h5,
+nav,
+article,
+section,
+header,
 footer,
 .app {
   width: 100%;
@@ -30,20 +24,6 @@ footer,
   font-size: calculate-vw(16);
   font-weight: 400;
   line-height: 130%;
+  background-color: white;
   margin: 0;
 }
-<<<<<<< HEAD
-
-@media (min-width: 769px) {
-  .mobile-only {
-    display: none !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .desktop-only {
-    display: none !important;
-  }
-}
-=======
->>>>>>> fc4a23e (initial commit)

@@ -1,6 +1,5 @@
 ﻿import './WeddingSection.scss';
-import { TertiaryButton } from '../../../components/TertiaryButton/TertiaryButton';
-import React from 'react';
+import { TertiaryButton } from '../../../shared/components/buttons/Buttons';
 
 export const WeddingSection = () => {
   return (
@@ -13,7 +12,7 @@ export const WeddingSection = () => {
           <br />
           floral décor for your special day. Trust us to bring your vision to life.
         </div>
-        <TertiaryButton text={'INQUIRE NOW'} status={''} />
+        <TertiaryButton buttonType="button">INQUIRE NOW</TertiaryButton>
       </div>
     </section>
   );

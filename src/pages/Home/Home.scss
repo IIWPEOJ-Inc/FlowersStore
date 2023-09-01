@@ -1,11 +1,9 @@
 @import '../../shared/mixins/functions.scss';
 
 h1 {
-  position: relative;
   font-weight: 600;
   font-size: calculate-vw(67);
   line-height: calculate-vw(80.4);
-  margin: 0 0 calculate-vw(16) 0;
 }
 
 h2 {
@@ -26,12 +24,9 @@ h3 {
 .our-service {
   border-bottom: 1px solid black;
 
-  h2{
+  h2 {
     text-align: center;
     padding-bottom: calculate-vw(80);
     padding-top: calculate-vw(80);
   }
 }
-
-
-

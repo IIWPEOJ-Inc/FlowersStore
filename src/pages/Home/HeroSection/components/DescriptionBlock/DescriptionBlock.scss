@@ -1,36 +1,42 @@
 ﻿@import '../../../../../shared/mixins/functions.scss';
 
 .description-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: calculate-vw(24);
+  border-bottom: 1px solid black;
+
+  .block-title {
+    font-weight: 500;
+    font-size: calculate-vw(38);
+    line-height: calculate-vw(45.6);
+  }
+  .bottom-label {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: calculate-vw(360);
-    height: calculate-vw(360);
-    padding: calculate-vw(24);
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
+    gap: calculate-vw(4);
+    position: absolute;
+    bottom: calculate-vw(24);
     span {
-        font-weight: 500;
-        font-size: calculate-vw(38);
-        line-height: calculate-vw(45.6);
+      font-weight: 600;
+      font-size: calculate-vw(16);
+      line-height: calculate-vw(19.2);
+      letter-spacing: 0.033vw;
     }
-    .bottom-label {
-        display: flex;
-        gap: calculate-vw(4);
-        position: absolute;
-        bottom: calculate-vw(24);
-        span {
-            font-weight: 600;
-            font-size: calculate-vw(16);
-            line-height: calculate-vw(19.2);
-            letter-spacing: 0.033vw;
-        }
-        img {
-            width: calculate-vw(24);
-            height: calculate-vw(24);
-            position: relative;
-            bottom: calculate-vw(3);
-        }
+    img {
+      width: calculate-vw(24);
+      height: calculate-vw(24);
+      position: relative;
+      bottom: calculate-vw(3);
     }
+  }
+}
+
+.border-left {
+  border-left: 1px solid black;
+}
+
+.border-right {
+  border-right: 1px solid black;
 }

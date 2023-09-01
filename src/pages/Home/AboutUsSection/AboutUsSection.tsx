@@ -1,6 +1,5 @@
 ﻿import './AboutUsSection.scss';
-import { SecondaryButton } from '../../../components/SecondaryButton/SecondaryButton';
-import React from 'react';
+import { SecondaryButton } from '../../../shared/components/buttons/Buttons';
 
 export const AboutUsSection = () => {
   return (
@@ -21,7 +20,7 @@ export const AboutUsSection = () => {
             plants, as well as fragrant candles from luxury brands to create the perfect atmosphere. Make someone's day amazing by sending flowers,
             plants and gifts the same or next day. Ordering flowers online has never been easier.
           </div>
-          <SecondaryButton text={'LEARN MORE'} status={''} />
+          <SecondaryButton buttonType="button">LEARN MORE</SecondaryButton>
         </div>
       </div>
     </section>

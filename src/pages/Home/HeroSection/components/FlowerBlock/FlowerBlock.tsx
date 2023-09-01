@@ -1,14 +1,25 @@
 ﻿import './FlowerBlock.scss';
-import React from 'react';
+import { Direction } from '../DescriptionBlock/DescriptionBlock';
 
 interface FlowerBlockProps {
+  arrowDirection: Direction;
   image: string;
 }
 
-export const FlowerBlock = (props: FlowerBlockProps) => {
+const borderStyles = {
+  [Direction.Left]: {
+    borderStyle: '',
+  },
+  [Direction.Right]: {
+    borderStyle: 'border-left',
+  },
+};
+
+export const FlowerBlock = ({ arrowDirection, image }: FlowerBlockProps) => {
+  const { borderStyle: border } = borderStyles[arrowDirection];
   return (
-    <div className="flower-block">
-      <img src={props.image} alt="{props.image}" />
+    <div className={`flower-block border-bottom ${border}`}>
+      <img src={image} alt="{image}" />
     </div>
   );
 };

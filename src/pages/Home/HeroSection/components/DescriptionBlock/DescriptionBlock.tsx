@@ -9,32 +9,38 @@ export enum Direction {
 }
 
 interface DescriptionBlockProps {
-  direction: Direction;
-  description: string;
+  arrowDirection: Direction;
+  children: React.ReactNode;
 }
 
-export const DescriptionBlock = (props: DescriptionBlockProps) => {
-  let bottomLabel = null;
+const arrowImages = {
+  [Direction.Left]: {
+    img: <img src={leftArrow} alt="leftArrow" />,
+  },
+  [Direction.Right]: {
+    img: <img src={rightArrow} alt="rightArrow" />,
+  },
+};
 
-  if (props.direction === Direction.Left) {
-    bottomLabel = (
-      <div className="bottom-label">
-        <img src={leftArrow} alt="leftArrow" />
-        <span>Shop now</span>
-      </div>
-    );
-  } else {
-    bottomLabel = (
-      <div className="bottom-label">
-        <span>Shop now</span>
-        <img src={rightArrow} alt="rightArrow" />
-      </div>
-    );
-  }
+const borderStyles = {
+  [Direction.Left]: {
+    borderStyle: 'border-left',
+  },
+  [Direction.Right]: {
+    borderStyle: '',
+  },
+};
+
+export const DescriptionBlock = ({ arrowDirection, children }: DescriptionBlockProps) => {
+  const { img: arrowImage } = arrowImages[arrowDirection];
+  const { borderStyle: border } = borderStyles[arrowDirection];
   return (
-    <div className="description-block">
-      <span>{props.description}</span>
-      {bottomLabel}
+    <div className={`description-block ${border}`}>
+      <div className="block-title">{children}</div>
+      <div className="bottom-label">
+        {arrowImage}
+        <span>Shop now</span>
+      </div>
     </div>
   );
 };

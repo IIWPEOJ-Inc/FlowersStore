@@ -1,11 +1,10 @@
 ﻿import './ToContactUsSection.scss';
-import { PrimaryButton } from '../../../components/PrimaryButton/PrimaryButton';
+import { PrimaryButton } from '../../../shared/components/buttons/Buttons';
 import Facebook from '../../../shared/assets/facebook.svg';
 import Instagram from '../../../shared/assets/instagram.svg';
 import Phone from './assets/phone.svg';
 import PinDrop from './assets/pinDrop.svg';
 import Pinterest from '../../../shared/assets/pinterest.svg';
-import React from 'react';
 import RightImage from './assets/rightImage2.jpeg';
 import Telegram from '../../../shared/assets/telegram.svg';
 import Twitter from '../../../shared/assets/twitter.svg';
@@ -19,7 +18,7 @@ export const ToContactUsSection = () => {
           <span>We will call you back</span>
           <div className="call-block">
             <div className="input">+380 XX XXX XX XX</div>
-            <PrimaryButton text={'BOOK A CALL'} status={''} />
+            <PrimaryButton buttonType="button">BOOK A CALL</PrimaryButton>
           </div>
         </div>
         <div className="bottom-content">

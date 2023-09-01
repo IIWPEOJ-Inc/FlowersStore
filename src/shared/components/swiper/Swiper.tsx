@@ -1,20 +1,20 @@
-﻿import './ReactSwiper.scss';
+﻿import './Swiper.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Keyboard, Mousewheel, Navigation, Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { SwiperSlide as ReactSlide, Swiper as ReactSwiper } from 'swiper/react';
 import React, { ReactNode } from 'react';
-import leftArrow from './assets/leftArrow.svg';
-import rightArrow from './assets/rightArrow.svg';
+import leftArrow from '../../assets/leftArrow.svg';
+import rightArrow from '../../assets/rightArrow.svg';
 
-interface ReactSwiperProps {
+interface SwiperProps {
   children: ReactNode | ReactNode[];
 }
 
-export const ReactSwiper = (props: ReactSwiperProps) => {
+export const Swiper = (props: SwiperProps) => {
   return (
-    <Swiper
+    <ReactSwiper
       cssMode={true}
       loop={true}
       navigation={{
@@ -28,7 +28,7 @@ export const ReactSwiper = (props: ReactSwiperProps) => {
       className="mySwiper"
     >
       {React.Children.map(props.children, (child, index) => (
-        <SwiperSlide key={index}>{child}</SwiperSlide>
+        <ReactSlide key={index}>{child}</ReactSlide>
       ))}
       <div className="swiper-button image-swiper-button-next">
         <img src={rightArrow} alt="rightArrow" />
@@ -36,6 +36,6 @@ export const ReactSwiper = (props: ReactSwiperProps) => {
       <div className="swiper-button image-swiper-button-prev">
         <img src={leftArrow} alt="leftArrow" />
       </div>
-    </Swiper>
+    </ReactSwiper>
   );
 };

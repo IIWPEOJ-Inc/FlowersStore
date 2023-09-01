@@ -1,12 +1,12 @@
 import './Footer.scss';
+import { PrimaryButton } from '../buttons/Buttons';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useMediaQuery } from 'react-responsive';
 import Facebook from '../../assets/facebook.svg';
 import Input from './../input/Input';
 import Instagram from '../../assets/instagram.svg';
-import Link from './../link/link';
+import Link from '../link/Link';
 import Pinterest from '../../assets/pinterest.svg';
-import PrimaryButton from '../buttons/PrimaryButton';
 import Telegram from '../../assets/telegram.svg';
 import Twitter from '../../assets/twitter.svg';
 

@@ -1,4 +1,4 @@
-import './link.scss';
+import './Link.scss';
 import { Link as RouterLink } from 'react-router-dom';
 
 interface Props {

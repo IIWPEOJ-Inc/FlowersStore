@@ -1,7 +1,6 @@
 ﻿import './SubscriptionSection.scss';
-import { SecondaryButton } from '../../../components/SecondaryButton/SecondaryButton';
+import { SecondaryButton } from '../../../shared/components/buttons/Buttons';
 import Image from './assets/image.png';
-import React from 'react';
 
 export const SubscriptionSection = () => {
   return (
@@ -17,7 +16,7 @@ export const SubscriptionSection = () => {
             Experience the convenience and savings of regular flower deliveries with our flexible subscription service - up to 30% more profitable
             than one-time purchases.
           </div>
-          <SecondaryButton text={'SUBSCRIBE NOW'} status={''} />
+          <SecondaryButton buttonType="button">SUBSCRIBE NOW</SecondaryButton>
         </div>
       </div>
     </section>

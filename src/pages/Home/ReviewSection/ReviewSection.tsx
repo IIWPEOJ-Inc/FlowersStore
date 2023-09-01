@@ -1,16 +1,14 @@
 ﻿import './ReviewSection.scss';
-import { ReactSwiper } from '../../../components/ReactSwiper/ReactSwiper';
-import { SecondaryButton } from '../../../components/SecondaryButton/SecondaryButton';
+import { SecondaryButton } from '../../../shared/components/buttons/Buttons';
+import { Swiper } from '../../../shared/components/swiper/Swiper';
 import { SwiperContent } from './components/SwiperContent/SwiperContent';
 import Google from './assets/google.png';
-import React from 'react';
-
 export const ReviewSection = () => {
   return (
     <section id="review-section">
       <img src={Google} alt="GoogleImg" />
       <h2>Our Clients say</h2>
-      <ReactSwiper
+      <Swiper
         children={[
           <SwiperContent
             review={'“Ordered flowers online and they were the best bouquet! Impressed everyone around. Highly recommend this flower shop!”'}
@@ -30,7 +28,7 @@ export const ReviewSection = () => {
           />,
         ]}
       />
-      <SecondaryButton text={'READ REVIEWS'} status={''} />
+      <SecondaryButton buttonType="button">READ REVIEWS</SecondaryButton>
     </section>
   );
 };
