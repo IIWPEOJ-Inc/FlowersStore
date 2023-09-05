@@ -5,7 +5,7 @@ import burgerMenu from '../../assets/burgerMenu.svg';
 import shopBag from '../../assets/shopBag.svg';
 
 export const Header = () => {
-  const isDesktop = useMediaQuery({ minWidth: 769 });
+  const isDesktop = useMediaQuery({ minWidth: 992 });
 
   const leftContent = isDesktop ? (
     <div className="header-grid">

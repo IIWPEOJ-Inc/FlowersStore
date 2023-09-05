@@ -27,3 +27,63 @@ footer,
   background-color: white;
   margin: 0;
 }
+
+@media (min-width: 992px) {
+  h1 {
+    font-weight: 600;
+    font-size: calculate-vw(67);
+    line-height: calculate-vw(80.4);
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: calculate-vw(50);
+    line-height: calculate-vw(60);
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: calculate-vw(38);
+    line-height: calculate-vw(45.6);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  h1 {
+    font-weight: 600;
+    font-size: calculate-vw-tablet(67);
+    line-height: calculate-vw-tablet(80.4);
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: calculate-vw-tablet(50);
+    line-height: calculate-vw-tablet(60);
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: calculate-vw-tablet(38);
+    line-height: calculate-vw-tablet(45.6);
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-weight: 600;
+    font-size: calculate-vw-mobile(40);
+    line-height: calculate-vw-mobile(48);
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: calculate-vw-mobile(50);
+    line-height: calculate-vw-mobile(60);
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: calculate-vw-mobile(38);
+    line-height: calculate-vw-mobile(45.6);
+  }
+}

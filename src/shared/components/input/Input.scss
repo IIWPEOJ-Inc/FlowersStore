@@ -1,15 +1,39 @@
 @import '../../mixins/functions.scss';
 
 .input {
-  width: 100%;
-  border: 1px solid gray;
-  padding: 1.25vw;
-  letter-spacing: 0.03vw;
-  vertical-align: middle;
-  font-family: Gilroy;
-  font-size: calculate-vw(14);
-  font-style: normal;
+  border: 1px solid #d2d2d7;
+  letter-spacing: calc(1em / 33);
   font-weight: 500;
-  line-height: 120%;
+  font-family: Gilroy;
   color: #333;
+}
+
+@media (min-width: 992px) {
+  .input {
+    font-size: calculate-vw(14);
+    line-height: calculate-vw(16.8);
+    padding: calculate-vw(16);
+    height: calculate-vw(56);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .input {
+    font-size: calculate-vw-tablet(14);
+    line-height: calculate-vw-tablet(16.8);
+    padding: calculate-vw-tablet(16);
+    height: calculate-vw-tablet(56);
+  }
+}
+
+@media (max-width: 767px) {
+  .input {
+    font-size: calculate-vw-mobile(14);
+    line-height: calculate-vw-mobile(16.8);
+    padding-left: calculate-vw-mobile(16);
+    padding-right: calculate-vw-mobile(16);
+    padding-top: calculate-vw-mobile(12);
+    padding-bottom: calculate-vw-mobile(12);
+    height: calculate-vw-mobile(48);
+  }
 }

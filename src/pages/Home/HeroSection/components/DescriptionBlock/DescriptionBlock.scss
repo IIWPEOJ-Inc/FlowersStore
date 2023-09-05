@@ -1,42 +1,117 @@
 ﻿@import '../../../../../shared/mixins/functions.scss';
 
-.description-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  padding: calculate-vw(24);
-  border-bottom: 1px solid black;
-
-  .block-title {
-    font-weight: 500;
-    font-size: calculate-vw(38);
-    line-height: calculate-vw(45.6);
-  }
-  .bottom-label {
-    display: flex;
-    gap: calculate-vw(4);
-    position: absolute;
-    bottom: calculate-vw(24);
-    span {
-      font-weight: 600;
-      font-size: calculate-vw(16);
-      line-height: calculate-vw(19.2);
-      letter-spacing: 0.033vw;
-    }
-    img {
-      width: calculate-vw(24);
-      height: calculate-vw(24);
-      position: relative;
-      bottom: calculate-vw(3);
-    }
-  }
-}
-
 .border-left {
   border-left: 1px solid black;
 }
 
 .border-right {
   border-right: 1px solid black;
+}
+
+@media (min-width: 992px) {
+  .description-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: calculate-vw(24);
+    border-bottom: 1px solid black;
+
+    .block-title {
+      font-weight: 500;
+      font-size: calculate-vw(38);
+      line-height: calculate-vw(45.6);
+      text-align: center;
+    }
+    .bottom-label {
+      display: flex;
+      gap: calculate-vw(4);
+      position: absolute;
+      bottom: calculate-vw(24);
+      span {
+        font-weight: 600;
+        font-size: calculate-vw(16);
+        line-height: calculate-vw(19.2);
+        letter-spacing: 0.033vw;
+      }
+      img {
+        width: calculate-vw(24);
+        height: calculate-vw(24);
+        position: relative;
+        bottom: calculate-vw(3);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .description-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: calculate-vw-tablet(24);
+    border-bottom: 1px solid black;
+
+    .block-title {
+      font-weight: 500;
+      font-size: calculate-vw-tablet(38);
+      line-height: calculate-vw-tablet(45.6);
+      text-align: center;
+    }
+    .bottom-label {
+      display: flex;
+      gap: calculate-vw-tablet(4);
+      position: absolute;
+      bottom: calculate-vw-tablet(24);
+      span {
+        font-weight: 600;
+        font-size: calculate-vw-tablet(16);
+        line-height: calculate-vw-tablet(19.2);
+        letter-spacing: 0.033vw;
+      }
+      img {
+        width: calculate-vw-tablet(24);
+        height: calculate-vw-tablet(24);
+        position: relative;
+        bottom: calculate-vw-tablet(3);
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .description-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: calculate-vw-mobile(12);
+    border-bottom: 1px solid black;
+
+    .block-title {
+      font-weight: 500;
+      font-size: calculate-vw-mobile(26);
+      line-height: calculate-vw-mobile(31.2);
+      text-align: center;
+    }
+    .bottom-label {
+      display: flex;
+      gap: calculate-vw-mobile(4);
+      position: absolute;
+      bottom: calculate-vw-mobile(24);
+      span {
+        font-weight: 600;
+        font-size: calculate-vw-mobile(16);
+        line-height: calculate-vw-mobile(19.2);
+        letter-spacing: 0.033vw;
+      }
+      img {
+        width: calculate-vw-mobile(24);
+        height: calculate-vw-mobile(24);
+        position: relative;
+        bottom: calculate-vw-mobile(3);
+      }
+    }
+  }
 }

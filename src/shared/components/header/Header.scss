@@ -38,7 +38,7 @@ header {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   header {
     font-size: calculate-vw(16);
     line-height: calculate-vw(19.2);
@@ -54,7 +54,7 @@ header {
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 991px) {
   header {
     font-size: calculate-vw-tablet(16);
     line-height: calculate-vw-tablet(19.2);
@@ -82,7 +82,7 @@ header {
   }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 767px) {
   header {
     font-size: calculate-vw-mobile(16);
     line-height: calculate-vw-mobile(19.2);

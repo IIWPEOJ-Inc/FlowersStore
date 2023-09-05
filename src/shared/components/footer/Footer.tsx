@@ -1,7 +1,6 @@
 import './Footer.scss';
 import { PrimaryButton } from '../buttons/Buttons';
 import { SubmitHandler, useForm } from 'react-hook-form';
-import { useMediaQuery } from 'react-responsive';
 import Facebook from '../../assets/facebook.svg';
 import Input from './../input/Input';
 import Instagram from '../../assets/instagram.svg';
@@ -17,18 +16,15 @@ type Props = {
 const Footer = () => {
   const { register, handleSubmit } = useForm<Props>();
   const onSubmit: SubmitHandler<Props> = (data) => console.log(data);
-  const isDesktop = useMediaQuery({ minWidth: 768 });
-  const isMobile = useMediaQuery({ maxWidth: 479 });
 
-  const footerMedia = isDesktop ? 'footer-desktop' : isMobile ? 'footer-mobile' : 'footer-tablet';
   return (
-    <footer className={footerMedia}>
+    <footer>
       <div className="footer-grid-item border-1">
         <div className="content-container">
           <p>
             Remember to offer beautiful flowers from Montreal Florist Studio Valentines Day, Mothers Day, Christmas....
             <br />
-            Reminds you 7 days before. No spam or sharing your address
+            Reminds you 7 days before. No spam or sharing your address.
           </p>
           {/* "handleSubmit" will validate your inputs before invoking "onSubmit" */}
           <form className="remind-form" onSubmit={handleSubmit(onSubmit)}>

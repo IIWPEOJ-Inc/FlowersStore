@@ -41,12 +41,12 @@ export const HeroSection = () => {
         <DescriptionBlock arrowDirection={Direction.Right}>Fresh Flowers</DescriptionBlock>
         <FlowerBlock arrowDirection={Direction.Right} image={flower1} />
         <FlowerBlock arrowDirection={Direction.Left} image={flower2} />
-        <DescriptionBlock arrowDirection={Direction.Left}>Fresh Flowers</DescriptionBlock>
-        <DescriptionBlock arrowDirection={Direction.Right}>Fresh Flowers</DescriptionBlock>
+        <DescriptionBlock arrowDirection={Direction.Left}>Dried Flowers</DescriptionBlock>
+        <DescriptionBlock arrowDirection={Direction.Right}>Live Plants</DescriptionBlock>
         <FlowerBlock arrowDirection={Direction.Right} image={flower3} />
         <FlowerBlock arrowDirection={Direction.Left} image={flower4} />
-        <DescriptionBlock arrowDirection={Direction.Left}>Fresh Flowers</DescriptionBlock>
-        <DescriptionBlock arrowDirection={Direction.Right}>Fresh Flowers</DescriptionBlock>
+        <DescriptionBlock arrowDirection={Direction.Left}>Aroma Candles</DescriptionBlock>
+        <DescriptionBlock arrowDirection={Direction.Right}>Fresheners</DescriptionBlock>
         <FlowerBlock arrowDirection={Direction.Right} image={flower5} />
       </div>
     </section>

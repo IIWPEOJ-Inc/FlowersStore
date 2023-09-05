@@ -22,7 +22,7 @@ export const App = () => {
         <Route path="product" element={<Product />} />
         <Route path="shopping-cart" element={<ShoppingCart />} />
         <Route path="subscription" element={<Subscription />} />
-        <Route path="aboutus" element={<AboutUs />} />
+        <Route path="about-us" element={<AboutUs />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
