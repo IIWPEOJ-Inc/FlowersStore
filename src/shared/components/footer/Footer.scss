@@ -4,7 +4,6 @@ footer {
   .content-container {
     display: flex;
     flex-direction: column;
-    text-align: justify;
   }
 }
 
@@ -21,11 +20,6 @@ h4 {
 h5 {
   color: #808080;
   line-height: 120%;
-}
-
-p {
-  margin: 0;
-  line-height: 130%;
 }
 
 .remind-form {
@@ -55,11 +49,6 @@ p {
 
     h5 {
       font-size: calculate-vw(16);
-    }
-
-    p {
-      font-size: calculate-vw(16);
-      letter-spacing: calculate-vw(0.5);
     }
 
     img {
@@ -139,11 +128,6 @@ p {
       font-size: calculate-vw-tablet(16);
     }
 
-    p {
-      font-size: calculate-vw-tablet(18);
-      letter-spacing: calculate-vw-tablet(0.5);
-    }
-
     img {
       width: calculate-vw-tablet(24);
       height: calculate-vw-tablet(24);
@@ -216,11 +200,6 @@ p {
 
     h5 {
       font-size: calculate-vw-mobile(16);
-    }
-
-    p {
-      font-size: calculate-vw-mobile(18);
-      letter-spacing: calculate-vw-mobile(0.5);
     }
 
     img {

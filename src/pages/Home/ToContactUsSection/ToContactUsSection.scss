@@ -1,10 +1,21 @@
 ﻿@import '../../../shared/mixins/functions.scss';
 
 #to-contact-us-section {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   border-bottom: 1px solid black;
-  .left-side {
-    width: 50vw;
+  .left-section {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    .contact-us-container {
+      display: flex;
+      flex-direction: column;
+      gap: calculate-vw(24);
+
+      .form-container {
+      }
+    }
     .top-content {
       padding: calculate-vw(80);
       padding-bottom: calculate-vw(99);
@@ -92,10 +103,9 @@
       }
     }
   }
-  .right-side {
+  .right-section {
     display: flex;
     flex-direction: column;
-    width: 50vw;
     border-left: 1px solid black;
     img {
       width: 100%;

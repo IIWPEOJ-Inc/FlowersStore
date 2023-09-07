@@ -17,12 +17,10 @@
     padding: calculate-vw(24);
     border-bottom: 1px solid black;
 
-    .block-title {
-      font-weight: 500;
-      font-size: calculate-vw(38);
-      line-height: calculate-vw(45.6);
+    h3 {
       text-align: center;
     }
+
     .bottom-label {
       display: flex;
       gap: calculate-vw(4);
@@ -53,12 +51,10 @@
     padding: calculate-vw-tablet(24);
     border-bottom: 1px solid black;
 
-    .block-title {
-      font-weight: 500;
-      font-size: calculate-vw-tablet(38);
-      line-height: calculate-vw-tablet(45.6);
+    h3 {
       text-align: center;
     }
+
     .bottom-label {
       display: flex;
       gap: calculate-vw-tablet(4);
@@ -89,12 +85,10 @@
     padding: calculate-vw-mobile(12);
     border-bottom: 1px solid black;
 
-    .block-title {
-      font-weight: 500;
-      font-size: calculate-vw-mobile(26);
-      line-height: calculate-vw-mobile(31.2);
+    h3 {
       text-align: center;
     }
+
     .bottom-label {
       display: flex;
       gap: calculate-vw-mobile(4);
@@ -102,8 +96,8 @@
       bottom: calculate-vw-mobile(24);
       span {
         font-weight: 600;
-        font-size: calculate-vw-mobile(16);
-        line-height: calculate-vw-mobile(19.2);
+        font-size: calculate-vw-mobile(12);
+        line-height: calculate-vw-mobile(14.4);
         letter-spacing: 0.033vw;
       }
       img {

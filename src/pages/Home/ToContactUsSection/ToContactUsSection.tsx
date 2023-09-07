@@ -12,7 +12,7 @@ import Twitter from '../../../shared/assets/twitter.svg';
 export const ToContactUsSection = () => {
   return (
     <section id="to-contact-us-section">
-      <div className="left-side">
+      <div className="left-section">
         <div className="top-content">
           <h2>To Contact Us</h2>
           <span>We will call you back</span>
@@ -47,7 +47,7 @@ export const ToContactUsSection = () => {
           </div>
         </div>
       </div>
-      <div className="right-side">
+      <div className="right-section">
         <img src={RightImage} alt="RightImage" />
         <div className="bottom-follow-icons">
           <div className="follow">Follow Us</div>

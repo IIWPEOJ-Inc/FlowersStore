@@ -48,43 +48,41 @@
 
 @media (min-width: 768px) and (max-width: 991px) {
   #about-us-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     border-bottom: 1px solid black;
     .left-section {
-      border-right: 1px solid black;
+      border-bottom: 1px solid black;
       .content {
-        position: sticky;
-        top: calculate-vw(85);
-        padding: calculate-vw(80);
+        padding: calculate-vw-tablet(80);
       }
     }
     .right-section {
       display: flex;
       flex-direction: column;
-      gap: calculate-vw(64);
-      padding: calculate-vw(80);
+      gap: calculate-vw-tablet(64);
+      padding: calculate-vw-tablet(80);
 
       .content-container {
         display: flex;
         flex-direction: column;
-        gap: calculate-vw(16);
+        gap: calculate-vw-tablet(16);
 
         .title-container {
           display: flex;
           flex-direction: column;
-          gap: calculate-vw(24);
+          gap: calculate-vw-tablet(24);
           span {
             font-weight: 500;
-            font-size: calculate-vw(14);
-            line-height: calculate-vw(16.8);
+            font-size: calculate-vw-tablet(14);
+            line-height: calculate-vw-tablet(16.8);
           }
         }
 
         p {
           font-weight: 400;
-          font-size: calculate-vw(16);
-          line-height: calculate-vw(22.4);
+          font-size: calculate-vw-tablet(16);
+          line-height: calculate-vw-tablet(22.4);
           text-align: justify;
         }
       }
@@ -94,45 +92,52 @@
 
 @media (max-width: 767px) {
   #about-us-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     border-bottom: 1px solid black;
     .left-section {
-      border-right: 1px solid black;
+      border-bottom: 1px solid black;
       .content {
-        position: sticky;
-        top: calculate-vw(85);
-        padding: calculate-vw(80);
+        padding-top: calculate-vw-mobile(40);
+        padding-bottom: calculate-vw-mobile(40);
+        padding-left: calculate-vw-mobile(16);
+        padding-right: calculate-vw-mobile(16);
       }
     }
     .right-section {
       display: flex;
       flex-direction: column;
-      gap: calculate-vw(64);
-      padding: calculate-vw(80);
+      gap: calculate-vw-mobile(64);
+      padding-top: calculate-vw-mobile(40);
+      padding-bottom: calculate-vw-mobile(40);
+      padding-left: calculate-vw-mobile(16);
+      padding-right: calculate-vw-mobile(16);
 
       .content-container {
         display: flex;
         flex-direction: column;
-        gap: calculate-vw(16);
+        gap: calculate-vw-mobile(16);
 
         .title-container {
           display: flex;
           flex-direction: column;
-          gap: calculate-vw(24);
+          gap: calculate-vw-mobile(24);
           span {
             font-weight: 500;
-            font-size: calculate-vw(14);
-            line-height: calculate-vw(16.8);
+            font-size: calculate-vw-mobile(14);
+            line-height: calculate-vw-mobile(16.8);
           }
         }
 
         p {
           font-weight: 400;
-          font-size: calculate-vw(16);
-          line-height: calculate-vw(22.4);
+          font-size: calculate-vw-mobile(16);
+          line-height: calculate-vw-mobile(22.4);
           text-align: justify;
         }
+      }
+      .secondary-button {
+        flex-grow: 1;
       }
     }
   }

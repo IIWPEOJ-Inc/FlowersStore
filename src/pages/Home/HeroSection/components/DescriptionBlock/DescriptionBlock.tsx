@@ -36,7 +36,7 @@ export const DescriptionBlock = ({ arrowDirection, children }: DescriptionBlockP
   const { borderStyle: border } = borderStyles[arrowDirection];
   return (
     <div className={`description-block ${border}`}>
-      <div className="block-title">{children}</div>
+      <h3>{children}</h3>
       <div className="bottom-label">
         {arrowImage}
         <span>Shop now</span>
