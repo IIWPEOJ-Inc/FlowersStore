@@ -8,17 +8,34 @@ import Pinterest from '../../../shared/assets/pinterest.svg';
 import RightImage from './assets/rightImage2.jpeg';
 import Telegram from '../../../shared/assets/telegram.svg';
 import Twitter from '../../../shared/assets/twitter.svg';
+import Input from '../../../shared/components/input/Input';
+import { SubmitHandler, useForm } from 'react-hook-form';
+
+type Props = {
+  phone: string;
+};
 
 export const ToContactUsSection = () => {
+  const { register, handleSubmit } = useForm<Props>();
+  const onSubmit: SubmitHandler<Props> = (data) => console.log(data);
+
   return (
     <section id="to-contact-us-section">
       <div className="left-section">
-        <div className="top-content">
+        <div className="contact-us-container">
           <h2>To Contact Us</h2>
-          <span>We will call you back</span>
-          <div className="call-block">
-            <div className="input">+380 XX XXX XX XX</div>
-            <PrimaryButton buttonType="button">BOOK A CALL</PrimaryButton>
+          <div className="form-container">
+            <div className="subtitle">We will call you back</div>
+            <form className="phone-form flex-stretch" onSubmit={handleSubmit(onSubmit)}>
+              <Input
+                {...register('phone', {
+                  pattern: /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/,
+                  required: true,
+                })}
+                placeholder="+1 438 XXX XX XX"
+              />
+              <PrimaryButton buttonType="submit">BOOK A CALL</PrimaryButton>
+            </form>
           </div>
         </div>
         <div className="bottom-content">

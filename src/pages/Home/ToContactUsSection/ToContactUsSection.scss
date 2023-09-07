@@ -11,9 +11,57 @@
     .contact-us-container {
       display: flex;
       flex-direction: column;
+      padding: calculate-vw(80);
       gap: calculate-vw(24);
+      border-right: 1px solid black;
+      border-bottom: 1px solid black;
 
       .form-container {
+        display: flex;
+        flex-direction: column;
+        gap: calculate-vw(16);
+
+        .phone-form {
+          display: flex;
+          flex-direction: row;
+          gap: calculate-vw(16);
+
+          .flex-stretch {
+            flex: 1;
+          }
+        }
+      }
+    }
+
+    .phone--container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .title-container {
+        padding-top: calculate-vw(16);
+        padding-bottom: calculate-vw(16);
+        padding-left: calculate-vw(10);
+        padding-right: calculate-vw(10);
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+      }
+
+      .phone-grid-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: calculate-vw(24);
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+      }
+
+      .address-grid-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: calculate-vw(22);
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
       }
     }
     .top-content {
