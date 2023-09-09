@@ -127,6 +127,10 @@ p,
     height: calculate-vw(720);
   }
 
+  .img-subscription {
+    height: calculate-vw(720);
+  }
+
   .icon {
     width: calculate-vw(24);
     height: calculate-vw(24);
@@ -227,6 +231,10 @@ p,
     height: calculate-vw-tablet(560);
   }
 
+  .img-subscription {
+    height: calculate-vw-tablet(500);
+  }
+
   .icon {
     width: calculate-vw-tablet(24);
     height: calculate-vw-tablet(24);
@@ -321,6 +329,10 @@ p,
 
   .img-card-item {
     height: calculate-vw-mobile(200);
+  }
+
+  .img-subscription {
+    height: calculate-vw-mobile(420);
   }
 
   .icon {
