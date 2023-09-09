@@ -1,4 +1,3 @@
-import './Home.scss';
 import { AboutUsSection } from './AboutUsSection/AboutUsSection';
 import { HeroSection } from './HeroSection/HeroSection';
 import { OurServiceSection } from './OurServiceSection/OurServiceSection';
@@ -15,8 +14,8 @@ export const Home = () => {
       <AboutUsSection />
       <WhyChooseUsSection />
       <ToContactUsSection />
+      <OurServiceSection />
       {/*       
-      <ToContactUsSection />
       <OurServiceSection />
       <SubscriptionSection />
       <WeddingSection />

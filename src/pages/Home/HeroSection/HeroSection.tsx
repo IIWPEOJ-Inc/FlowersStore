@@ -1,12 +1,12 @@
 ﻿import './HeroSection.scss';
 import { DescriptionBlock, Direction } from './components/DescriptionBlock/DescriptionBlock';
 import { FlowerBlock } from './components/FlowerBlock/FlowerBlock';
+import HeroImage from './assets/heroImage.png';
 import flower1 from './assets/flower1.jpg';
 import flower2 from './assets/flower2.png';
 import flower3 from './assets/flower3.png';
 import flower4 from './assets/flower4.png';
 import flower5 from './assets/flower5.png';
-import leftSideImage from './assets/leftSideImage.png';
 
 export const HeroSection = () => {
   return (
@@ -28,7 +28,7 @@ export const HeroSection = () => {
             </div>
             <div className="grid-column-container">
               <div className="left-container">
-                <img src={leftSideImage} alt="leftSideImage" />
+                <img src={HeroImage} alt="img-hero" className="img-hero" />
               </div>
               <div className="right-container">
                 <p>Experience the joy of giving with our modern floral studio. Order online and send fresh flowers, plants and gifts today.</p>

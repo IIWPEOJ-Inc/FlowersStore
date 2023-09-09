@@ -1,6 +1,7 @@
 @import '../../mixins/functions.scss';
 
 .input {
+  width: 100%;
   border: 1px solid #d2d2d7;
   letter-spacing: calc(1em / 33);
   font-weight: 500;

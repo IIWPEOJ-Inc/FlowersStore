@@ -15,10 +15,10 @@ interface DescriptionBlockProps {
 
 const arrowImages = {
   [Direction.Left]: {
-    img: <img src={leftArrow} alt="leftArrow" />,
+    img: <img src={leftArrow} alt="arrow-left" className="icon arrow" />,
   },
   [Direction.Right]: {
-    img: <img src={rightArrow} alt="rightArrow" />,
+    img: <img src={rightArrow} alt="arrow-right" className="icon arrow" />,
   },
 };
 

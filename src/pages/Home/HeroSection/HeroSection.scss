@@ -47,12 +47,6 @@
               padding-right: calculate-vw(24);
               border-right: 1px solid black;
               border-top: 1px solid black;
-
-              img {
-                width: calculate-vw(256);
-                height: calculate-vw(256);
-                object-fit: cover;
-              }
             }
 
             .right-container {
@@ -126,12 +120,6 @@
               padding-right: calculate-vw-tablet(24);
               border-right: 1px solid black;
               border-top: 1px solid black;
-
-              img {
-                width: calculate-vw-tablet(280);
-                height: calculate-vw-tablet(256);
-                object-fit: cover;
-              }
             }
 
             .right-container {
@@ -207,12 +195,6 @@
               padding-right: calculate-vw-mobile(16);
               border-right: 1px solid black;
               border-top: 1px solid black;
-
-              img {
-                width: calculate-vw-mobile(155.5);
-                height: calculate-vw-mobile(180);
-                object-fit: cover;
-              }
             }
 
             .right-container {

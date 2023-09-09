@@ -8,17 +8,6 @@
 html,
 body,
 #root,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-.subtitle,
-.overline,
-.caption,
-.caption-small,
 header,
 footer,
 .app {
@@ -32,7 +21,25 @@ footer,
   margin: 0;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.subtitle,
+.overline,
+.caption,
+.caption-small {
+  font-family: 'Gilroy', sans-serif;
+  background-color: white;
+  letter-spacing: calc(1em / 33);
+  margin: 0;
+}
+
 @media (min-width: 992px) {
+  //typography
   h1 {
     font-weight: 600;
     font-size: calculate-vw(67);
@@ -100,9 +107,39 @@ footer,
     font-size: calculate-vw(12);
     line-height: calculate-vw(14.4);
   }
+
+  //images
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .img-hero {
+    height: calculate-vw(256);
+  }
+
+  .img-card-item {
+    height: calculate-vw(360);
+  }
+
+  .img-contact-us {
+    height: calculate-vw(720);
+  }
+
+  .icon {
+    width: calculate-vw(24);
+    height: calculate-vw(24);
+  }
+
+  .arrow {
+    position: relative;
+    bottom: calculate-vw(3);
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  //typography
   h1 {
     font-weight: 600;
     font-size: calculate-vw-tablet(67);
@@ -170,9 +207,39 @@ footer,
     font-size: calculate-vw-tablet(12);
     line-height: calculate-vw-tablet(14.4);
   }
+
+  //images
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .img-hero {
+    height: calculate-vw-tablet(256);
+  }
+
+  .img-card-item {
+    height: calculate-vw-tablet(384);
+  }
+
+  .img-contact-us {
+    height: calculate-vw-tablet(560);
+  }
+
+  .icon {
+    width: calculate-vw-tablet(24);
+    height: calculate-vw-tablet(24);
+  }
+
+  .arrow {
+    position: relative;
+    bottom: calculate-vw-tablet(3);
+  }
 }
 
 @media (max-width: 767px) {
+  //typography
   h1 {
     font-weight: 600;
     font-size: calculate-vw-mobile(40);
@@ -239,5 +306,30 @@ footer,
     font-weight: 500;
     font-size: calculate-vw-mobile(12);
     line-height: calculate-vw-mobile(14.4);
+  }
+
+  //images
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .img-hero {
+    height: calculate-vw-mobile(180);
+  }
+
+  .img-card-item {
+    height: calculate-vw-mobile(200);
+  }
+
+  .icon {
+    width: calculate-vw-mobile(24);
+    height: calculate-vw-mobile(24);
+  }
+
+  .arrow {
+    position: relative;
+    bottom: calculate-vw-mobile(3);
   }
 }

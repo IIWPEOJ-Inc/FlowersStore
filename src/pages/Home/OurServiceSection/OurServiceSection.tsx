@@ -2,8 +2,8 @@
 
 export const OurServiceSection = () => {
   return (
-    <div className="our-service">
+    <section id="our-service-section">
       <h2>Our Service</h2>
-    </div>
+    </section>
   );
 };

@@ -19,7 +19,7 @@ export const FlowerBlock = ({ arrowDirection, image }: FlowerBlockProps) => {
   const { borderStyle: border } = borderStyles[arrowDirection];
   return (
     <div className={`flower-block border-bottom ${border}`}>
-      <img src={image} alt="{image}" />
+      <img src={image} alt="card-item" className="img-card-item" />
     </div>
   );
 };

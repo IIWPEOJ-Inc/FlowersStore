@@ -3,12 +3,12 @@
 export const WhyChooseUsSection = () => {
   return (
     <section id="why-choose-us-section">
-      <div className="left-side">
+      <div className="left-section">
         <div className="content">
           <h2>Why choose us ?</h2>
         </div>
       </div>
-      <div className="right-side">
+      <div className="right-section">
         <div className="right-item">
           <h3>Stylish bouquets by florists</h3>
           <p>

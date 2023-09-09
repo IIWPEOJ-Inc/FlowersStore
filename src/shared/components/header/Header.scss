@@ -72,13 +72,6 @@ header {
         justify-content: center;
       }
     }
-
-    img {
-      max-width: 24px;
-      max-height: 24px;
-      width: calculate-vw-tablet(24);
-      height: calculate-vw-tablet(24);
-    }
   }
 }
 
@@ -99,13 +92,6 @@ header {
         padding: calculate-vw-mobile(12);
         justify-content: center;
       }
-    }
-
-    img {
-      max-width: 24px;
-      max-height: 24px;
-      width: calculate-vw-mobile(24);
-      height: calculate-vw-mobile(24);
     }
   }
 }

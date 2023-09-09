@@ -5,36 +5,32 @@ footer {
     display: flex;
     flex-direction: column;
   }
-}
 
-img {
-  vertical-align: middle;
-}
+  h5,
+  .caption {
+    color: #808080;
+  }
 
-h4 {
-  color: #808080;
-  font-weight: 500;
-  line-height: 120%;
-}
+  .remind-form {
+    display: flex;
+    flex-direction: column;
+  }
 
-h5 {
-  color: #808080;
-  line-height: 120%;
-}
+  .footer-grid-item {
+    flex-direction: column;
+    display: flex;
 
-.remind-form {
-  display: flex;
-  flex-direction: column;
+    .links-grid {
+      display: grid;
+    }
 
-  input {
-    width: 100%;
-    border: 1px solid gray;
-    vertical-align: middle;
-    font-family: Gilroy;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 120%;
-    color: #333;
+    .link-items-grid {
+      display: grid;
+    }
+
+    .links-flex {
+      display: flex;
+    }
   }
 }
 
@@ -43,26 +39,8 @@ h5 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
-    h4 {
-      font-size: calculate-vw(21);
-    }
-
-    h5 {
-      font-size: calculate-vw(16);
-    }
-
-    img {
-      width: calculate-vw(24);
-      height: calculate-vw(24);
-    }
-
     .remind-form {
       gap: calculate-vw(16);
-    }
-
-    .link {
-      font-size: calculate-vw(16);
-      letter-spacing: calculate-vw(0.5);
     }
 
     .border-1 {
@@ -89,26 +67,21 @@ h5 {
     }
 
     .footer-grid-item {
-      flex-direction: column;
       padding: calculate-vw(40);
-      display: flex;
 
       .content-container {
         gap: calculate-vw(24);
       }
 
       .links-grid {
-        display: grid;
         gap: calculate-vw(16);
       }
 
       .link-items-grid {
-        display: grid;
         gap: calculate-vw(8);
       }
 
       .links-flex {
-        display: flex;
         gap: calculate-vw(32);
       }
     }
@@ -120,69 +93,46 @@ h5 {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    h4 {
-      font-size: calculate-vw-tablet(21);
-    }
-
-    h5 {
-      font-size: calculate-vw-tablet(16);
-    }
-
-    img {
-      width: calculate-vw-tablet(24);
-      height: calculate-vw-tablet(24);
-    }
-
     .remind-form {
       gap: calculate-vw-tablet(16);
     }
 
-    .link {
-      font-size: calculate-vw-tablet(16);
-      letter-spacing: calculate-vw-tablet(0.5);
-    }
-
     .border-1 {
       border-top: 1px solid black;
-      border-right: 1px solid black;
     }
 
     .border-2 {
       border-top: 1px solid black;
+      border-left: 1px solid black;
     }
 
     .border-3 {
       border-top: 1px solid black;
-      border-right: 1px solid black;
       border-bottom: 1px solid black;
     }
 
     .border-4 {
       border-top: 1px solid black;
       border-bottom: 1px solid black;
+      border-left: 1px solid black;
     }
 
     .footer-grid-item {
-      flex-direction: column;
       padding: calculate-vw-tablet(40);
-      display: flex;
 
       .content-container {
         gap: calculate-vw-tablet(24);
       }
 
       .links-grid {
-        display: grid;
         gap: calculate-vw-tablet(16);
       }
 
       .link-items-grid {
-        display: grid;
         gap: calculate-vw-tablet(8);
       }
 
       .links-flex {
-        display: flex;
         gap: calculate-vw-tablet(32);
       }
     }
@@ -194,26 +144,8 @@ h5 {
     display: grid;
     grid-template-columns: 1fr;
 
-    h4 {
-      font-size: calculate-vw-mobile(21);
-    }
-
-    h5 {
-      font-size: calculate-vw-mobile(16);
-    }
-
-    img {
-      width: calculate-vw-mobile(24);
-      height: calculate-vw-mobile(24);
-    }
-
     .remind-form {
       gap: calculate-vw-mobile(16);
-    }
-
-    .link {
-      font-size: calculate-vw-mobile(16);
-      letter-spacing: calculate-vw-mobile(0.5);
     }
 
     .border-1 {
@@ -233,26 +165,21 @@ h5 {
     }
 
     .footer-grid-item {
-      flex-direction: column;
       padding: calculate-vw-mobile(40) calculate-vw-mobile(16);
-      display: flex;
 
       .content-container {
         gap: calculate-vw-mobile(24);
       }
 
       .links-grid {
-        display: grid;
         gap: calculate-vw-mobile(16);
       }
 
       .link-items-grid {
-        display: grid;
         gap: calculate-vw-mobile(8);
       }
 
       .links-flex {
-        display: flex;
         gap: calculate-vw-mobile(32);
       }
     }

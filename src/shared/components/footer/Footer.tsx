@@ -41,44 +41,44 @@ const Footer = () => {
       </div>
       <div className="footer-grid-item border-2">
         <div className="content-container">
-          <h4>Contact Us</h4>
+          <h5>Contact Us</h5>
           <div className="links-grid">
             <div className="link-items-grid">
-              <h5>Address:</h5>
+              <div className="caption">Address:</div>
               <Link to="/">360 Victoria Ave, Westmount, Montreal</Link>
             </div>
             <div className="link-items-grid">
-              <h5>Phone:</h5>
+              <div className="caption">Phone:</div>
               <Link to="/">+1 438-600-3188</Link>
             </div>
             <div className="link-items-grid">
-              <h5>General Enquiry:</h5>
+              <div className="caption">General Enquiry:</div>
               <Link to="/">Montreal.Florist.Studio@gmail.com</Link>
             </div>
           </div>
-          <h4>Follow Us</h4>
+          <h5>Follow Us</h5>
           <div className="links-flex">
             <Link to="/">
-              <img src={Instagram} alt="Instagram" />
+              <img src={Instagram} alt="Instagram" className="icon" />
             </Link>
             <Link to="/">
-              <img src={Pinterest} alt="Pinterest" />
+              <img src={Pinterest} alt="Pinterest" className="icon" />
             </Link>
             <Link to="/">
-              <img src={Facebook} alt="Facebook" />
+              <img src={Facebook} alt="Facebook" className="icon" />
             </Link>
             <Link to="/">
-              <img src={Twitter} alt="Twitter" />
+              <img src={Twitter} alt="Twitter" className="icon" />
             </Link>
             <Link to="/">
-              <img src={Telegram} alt="Telegram" />
+              <img src={Telegram} alt="Telegram" className="icon" />
             </Link>
           </div>
         </div>
       </div>
       <div className="footer-grid-item border-3">
         <div className="content-container">
-          <h4>Shop</h4>
+          <h5>Shop</h5>
           <div className="link-items-grid">
             <Link to="/">All Products</Link>
             <Link to="/">Fresh Flowers</Link>
@@ -88,7 +88,7 @@ const Footer = () => {
             <Link to="/">Designer Vases</Link>
             <Link to="/">Freshener Diffuser</Link>
           </div>
-          <h4>Service</h4>
+          <h5>Service</h5>
           <div className="link-items-grid">
             <Link to="/">Flower Subscription</Link>
             <Link to="/">Wedding & Event Decor</Link>
@@ -97,7 +97,7 @@ const Footer = () => {
       </div>
       <div className="footer-grid-item border-4">
         <div className="content-container">
-          <h4>About Us</h4>
+          <h5>About Us</h5>
           <div className="link-items-grid">
             <Link to="/">Our Story</Link>
             <Link to="/">Blog</Link>

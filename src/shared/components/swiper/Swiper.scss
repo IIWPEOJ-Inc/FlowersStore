@@ -1,26 +1,26 @@
 ﻿@import '../../mixins/functions.scss';
 
 .swiper {
-    width: 100%;
-    margin-bottom: calculate-vw(64);
-  }
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .swiper-button {
-    position: absolute;
-    top: calculate-vw(30);
-    z-index: 1;
-    cursor: pointer;
-  }
-  .image-swiper-button-prev {
-    left: calculate-vw(-25);
-  }
-  .image-swiper-button-next {
-    right: calculate-vw(-25);
-  }
+  width: 100%;
+  margin-bottom: calculate-vw(64);
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-button {
+  position: absolute;
+  top: calculate-vw(30);
+  z-index: 1;
+  cursor: pointer;
+}
+.image-swiper-button-prev {
+  left: calculate-vw(-25);
+}
+.image-swiper-button-next {
+  right: calculate-vw(-25);
+}
