@@ -1,34 +1,93 @@
 ﻿@import '../../../shared/mixins/functions.scss';
 
 #wedding-section {
-    height: 50vw;
-    background-image: url(../WeddingSection/assets/weddingImage.webp);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+  background-image: linear-gradient(rgba(18, 18, 18, 0.35), rgba(18, 18, 18, 0.35)), url(../WeddingSection/assets/weddingImage.webp);
+  background-position:
+    0 0,
+    50%;
+  background-size: auto, cover;
+  background-attachment: scroll, fixed;
+  border-bottom: 1px solid black;
+
+  .content-container {
+    color: white;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    .content {
-        color: white;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+
+    .headings-container {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        text-align: center;
+      }
+
+      .title-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        span {
-            font-weight: 500;
-            font-size: calculate-vw(14);
-            line-height: calculate-vw(16.8);
-        }
-        h2 {
-            margin-top: calculate-vw(24);
-            margin-bottom: calculate-vw(16);
-        }
-        .description {
-            font-weight: 500;
-            font-size: calculate-vw(18);
-            line-height: calculate-vw(25.2);
-            margin-bottom: calculate-vw(64);
-        }
+      }
     }
+  }
+}
+
+@media (min-width: 992px) {
+  #wedding-section {
+    .content-container {
+      gap: calculate-vw(64);
+      padding: calculate-vw(80);
+
+      .headings-container {
+        width: 50%;
+        gap: calculate-vw(16);
+
+        .title-container {
+          gap: calculate-vw(24);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #wedding-section {
+    .content-container {
+      gap: calculate-vw-tablet(64);
+      padding: calculate-vw-tablet(80);
+
+      .headings-container {
+        gap: calculate-vw-tablet(16);
+
+        .title-container {
+          gap: calculate-vw-tablet(24);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #wedding-section {
+    .content-container {
+      gap: calculate-vw-mobile(64);
+      padding: calculate-vw-mobile(40) calculate-vw-mobile(16);
+
+      .headings-container {
+        gap: calculate-vw-mobile(16);
+
+        .title-container {
+          gap: calculate-vw-mobile(24);
+        }
+      }
+    }
+
+    .tertiary-button {
+      width: 100%;
+    }
+  }
 }

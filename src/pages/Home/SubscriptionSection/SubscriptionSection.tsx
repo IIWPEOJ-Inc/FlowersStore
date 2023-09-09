@@ -11,7 +11,7 @@ export const SubscriptionSection = () => {
       <div className="right-section">
         <div className="content-container">
           <div className="title-container">
-            <div className="overline">SERVICE</div>
+            <div className="overline">service</div>
             <h2>Flower Subscriptions</h2>
           </div>
           <p>

@@ -33,7 +33,6 @@ p,
 .caption,
 .caption-small {
   font-family: 'Gilroy', sans-serif;
-  background-color: white;
   letter-spacing: calc(1em / 33);
   margin: 0;
 }
@@ -128,6 +127,10 @@ p,
   }
 
   .img-subscription {
+    height: calculate-vw(720);
+  }
+
+  .img-wedding {
     height: calculate-vw(720);
   }
 
@@ -235,6 +238,10 @@ p,
     height: calculate-vw-tablet(500);
   }
 
+  .img-wedding {
+    height: calculate-vw-tablet(500);
+  }
+
   .icon {
     width: calculate-vw-tablet(24);
     height: calculate-vw-tablet(24);
@@ -333,6 +340,10 @@ p,
 
   .img-subscription {
     height: calculate-vw-mobile(420);
+  }
+
+  .img-wedding {
+    height: calculate-vw-mobile(416);
   }
 
   .icon {
