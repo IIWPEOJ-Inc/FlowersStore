@@ -1,12 +1,28 @@
 ﻿@import '../../../shared/mixins/functions.scss';
 
-.our-service {
-    border-bottom: 1px solid black;
-  
-    h2{
-      text-align: center;
-      padding-bottom: calculate-vw(80);
-      padding-top: calculate-vw(80);
-    }
+#our-service-section {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+@media (min-width: 992px) {
+  #our-service-section {
+    align-items: center;
+    justify-content: center;
+    padding: calculate-vw(80);
   }
-  
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #our-service-section {
+    align-items: center;
+    justify-content: center;
+    padding: calculate-vw-tablet(80);
+  }
+}
+
+@media (max-width: 767px) {
+  #our-service-section {
+    padding: calculate-vw-mobile(40) calculate-vw-mobile(16);
+  }
+}
