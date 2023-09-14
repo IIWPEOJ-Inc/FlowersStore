@@ -59,19 +59,19 @@ const Footer = () => {
           <h5>Follow Us</h5>
           <div className="links-flex">
             <Link to="/">
-              <img src={Instagram} alt="Instagram" className="icon" />
+              <img src={Instagram} alt="instagram" className="icon" />
             </Link>
             <Link to="/">
-              <img src={Pinterest} alt="Pinterest" className="icon" />
+              <img src={Pinterest} alt="pinterest" className="icon" />
             </Link>
             <Link to="/">
-              <img src={Facebook} alt="Facebook" className="icon" />
+              <img src={Facebook} alt="facebook" className="icon" />
             </Link>
             <Link to="/">
-              <img src={Twitter} alt="Twitter" className="icon" />
+              <img src={Twitter} alt="twitter" className="icon" />
             </Link>
             <Link to="/">
-              <img src={Telegram} alt="Telegram" className="icon" />
+              <img src={Telegram} alt="telegram" className="icon" />
             </Link>
           </div>
         </div>

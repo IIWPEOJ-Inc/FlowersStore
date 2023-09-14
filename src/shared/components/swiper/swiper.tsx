@@ -22,7 +22,6 @@ export const ReactSwiper = (props: ReactSwiperProps) => {
             <img src={leftArrow} alt="leftArrow" className="img-arrow" />
           </div>
         )}
-
         <Swiper
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
           loop={true}
@@ -41,9 +40,11 @@ export const ReactSwiper = (props: ReactSwiperProps) => {
             <SwiperSlide key={index}>{child}</SwiperSlide>
           ))}
         </Swiper>
-        <div className="image-swiper-button-next">
-          <img src={rightArrow} alt="rightArrow" className="img-arrow" />
-        </div>
+        {isDesktop && (
+          <div className="image-swiper-button-next">
+            <img src={rightArrow} alt="rightArrow" className="img-arrow" />
+          </div>
+        )}
       </div>
       <div className="swiper-pagination"></div>
     </div>
