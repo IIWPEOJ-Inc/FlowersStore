@@ -114,22 +114,9 @@ em,
     object-fit: cover;
   }
 
-  .img-hero {
-    height: calculate-vw(256);
-  }
-
-  .img-card-item {
-    height: calculate-vw(360);
-  }
-
   .icon {
     width: calculate-vw(24);
     height: calculate-vw(24);
-  }
-
-  .arrow {
-    position: relative;
-    bottom: calculate-vw(3);
   }
 }
 
@@ -210,22 +197,9 @@ em,
     object-fit: cover;
   }
 
-  .img-hero {
-    height: calculate-vw-tablet(256);
-  }
-
-  .img-card-item {
-    height: calculate-vw-tablet(384);
-  }
-
   .icon {
     width: calculate-vw-tablet(24);
     height: calculate-vw-tablet(24);
-  }
-
-  .arrow {
-    position: relative;
-    bottom: calculate-vw-tablet(3);
   }
 }
 
@@ -306,21 +280,8 @@ em,
     object-fit: cover;
   }
 
-  .img-hero {
-    height: calculate-vw-mobile(180);
-  }
-
-  .img-card-item {
-    height: calculate-vw-mobile(200);
-  }
-
   .icon {
     width: calculate-vw-mobile(24);
     height: calculate-vw-mobile(24);
-  }
-
-  .arrow {
-    position: relative;
-    bottom: calculate-vw-mobile(3);
   }
 }
