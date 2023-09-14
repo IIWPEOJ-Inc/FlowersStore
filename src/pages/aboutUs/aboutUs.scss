@@ -1,0 +1,182 @@
+@import '../../shared/mixins/functions.scss';
+
+#about-us-page {
+  display: grid;
+  grid-row: auto;
+
+  .section-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .our-story-container {
+      display: flex;
+      flex-direction: column;
+      gap: calculate-vw(64);
+
+      .icons-container {
+        display: flex;
+        gap: calculate-vw(32);
+
+        > .link {
+          display: flex;
+          border-radius: 100%;
+          border: 1px solid #121212;
+          padding: calculate-vw(12);
+        }
+      }
+
+      .zapfino {
+        font-family: 'Zapfino', sans-serif;
+      }
+    }
+
+    .img-about-us {
+      height: calculate-vw(720);
+    }
+  }
+
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: calculate-vw(24);
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    padding: calculate-vw(80);
+  }
+
+  .story-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: calculate-vw(16);
+
+    .button-container {
+      margin-top: calculate-vw(40);
+      width: calculate-vw(270);
+    }
+  }
+
+  .description-container {
+    display: flex;
+    flex-direction: column;
+    gap: calculate-vw(16);
+  }
+
+  .text-centred {
+    text-align: center;
+  }
+
+  .centred {
+    justify-content: center;
+  }
+
+  .width-50 {
+    width: 50%;
+  }
+
+  .order-1 {
+    order: 1;
+  }
+
+  .order-2 {
+    order: 2;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #about-us-page {
+    .section-container {
+      display: flex;
+      flex-direction: column;
+
+      .our-story-container {
+        gap: calculate-vw-tablet(64);
+
+        .icons-container {
+          gap: calculate-vw-tablet(32);
+
+          .icon-container {
+            padding: calculate-vw-tablet(12);
+          }
+        }
+      }
+
+      .img-about-us {
+        height: calculate-vw-tablet(500);
+      }
+    }
+
+    .title-container {
+      gap: calculate-vw-tablet(24);
+    }
+
+    .content-container {
+      padding: calculate-vw-tablet(80);
+    }
+
+    .story-container {
+      gap: calculate-vw-tablet(16);
+
+      .button-container {
+        margin-top: calculate-vw-tablet(40);
+        width: calculate-vw-tablet(270);
+      }
+    }
+
+    .description-container {
+      gap: calculate-vw-tablet(16);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #about-us-page {
+    .section-container {
+      display: flex;
+      flex-direction: column;
+
+      .our-story-container {
+        gap: calculate-vw-mobile(64);
+
+        .icons-container {
+          gap: calculate-vw-mobile(16);
+
+          .icon-container {
+            padding: calculate-vw-mobile(12);
+          }
+        }
+      }
+
+      .img-about-us {
+        height: calculate-vw-mobile(420);
+      }
+    }
+
+    .title-container {
+      gap: calculate-vw-mobile(24);
+    }
+
+    .content-container {
+      padding: calculate-vw-mobile(40) calculate-vw-mobile(16);
+    }
+
+    .story-container {
+      gap: calculate-vw-mobile(16);
+
+      .button-container {
+        margin-top: calculate-vw-mobile(40);
+        width: calculate-vw-mobile(270);
+      }
+    }
+
+    .description-container {
+      gap: calculate-vw-mobile(16);
+    }
+  }
+}

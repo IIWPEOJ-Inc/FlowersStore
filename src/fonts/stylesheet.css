@@ -1,4 +1,13 @@
 @font-face {
+  font-family: 'Zapfino';
+  src:
+    local('Zapfino'),
+    url('Zapfino.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Gilroy';
   src: url('Gilroy-Regular.eot');
   src:
