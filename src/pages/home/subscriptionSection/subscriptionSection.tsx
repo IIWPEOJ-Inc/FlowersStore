@@ -1,4 +1,5 @@
 ﻿import './subscriptionSection.scss';
+import { Link } from 'react-router-dom';
 import { SecondaryButton } from '../../../shared/components/buttons/buttons';
 import SubscriptionImage from './assets/subscriptionImage.png';
 
@@ -19,7 +20,9 @@ export const SubscriptionSection = () => {
             than one-time purchases.
           </p>
         </div>
-        <SecondaryButton buttonType="button">SUBSCRIBE NOW</SecondaryButton>
+        <Link to="/subscription">
+          <SecondaryButton buttonType="button">subscribe now</SecondaryButton>
+        </Link>
       </div>
     </section>
   );

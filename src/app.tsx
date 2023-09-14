@@ -13,7 +13,7 @@ import Footer from './shared/components/footer/footer';
 
 export const App = () => {
   return (
-    <div className="App">
+    <div className="app">
       <Header />
       <Routes>
         <Route index element={<Home />} />

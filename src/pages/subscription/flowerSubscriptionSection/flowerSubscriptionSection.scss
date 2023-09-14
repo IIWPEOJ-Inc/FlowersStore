@@ -1,0 +1,88 @@
+﻿@import '../../../shared/mixins/functions.scss';
+
+#flower-subscription-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  .left-section {
+    display: flex;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  .right-section {
+    border-bottom: 1px solid black;
+    .content {
+      padding: calculate-vw(80);
+      .subscription-list {
+        padding-left: calculate-vw(22);
+        margin-bottom: calculate-vw(24);
+        margin-top: calculate-vw(2);
+        list-style-type: disc;
+        .option-description {
+          margin: 0;
+          color: #121212e5;
+        }
+      }
+    }
+    .content :nth-last-child(2) {
+      margin-bottom: calculate-vw(71);
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #flower-subscription-section {
+    display: flex;
+    flex-direction: column;
+    .left-section {
+      border-right: none;
+      img {
+        max-height: 500px;
+      }
+    }
+    .right-section {
+      .content {
+        display: flex;
+        flex-direction: column;
+        padding: calculate-vw-tablet(80);
+        .subscription-list {
+          padding-left: calculate-vw-tablet(25);
+          margin-bottom: calculate-vw-tablet(24);
+          margin-top: calculate-vw-tablet(2);
+          list-style-type: disc;
+        }
+      }
+      .content :nth-last-child(2) {
+        margin-bottom: calculate-vw-tablet(79);
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #flower-subscription-section {
+    display: flex;
+    flex-direction: column;
+    .left-section {
+      border-right: none;
+      img {
+        height: 420px;
+      }
+    }
+    .right-section {
+      .content {
+        display: flex;
+        flex-direction: column;
+        padding: calculate-vw-mobile(40) calculate-vw-mobile(16);
+        .subscription-list {
+          padding-left: calculate-vw-tablet(48);
+          margin-bottom: calculate-vw-tablet(24);
+          margin-top: calculate-vw-tablet(2);
+          list-style-type: disc;
+        }
+      }
+      .content :nth-last-child(2) {
+        margin-bottom: calculate-vw-tablet(48);
+      }
+    }
+  }
+}

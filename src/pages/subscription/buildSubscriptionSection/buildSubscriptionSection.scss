@@ -1,0 +1,114 @@
+﻿@import '../../../shared/mixins/functions.scss';
+
+#build-subscription-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid black;
+  .left-content {
+    border-right: 1px solid black;
+    .content {
+      padding: calculate-vw(80) calculate-vw(40);
+      .selection-description {
+        color: #121212e5;
+        margin-bottom: calculate-vw(24);
+      }
+      .gray-line {
+        background-color: #d2d2d7;
+        height: calculate-vw(1);
+        margin: calculate-vw(40) 0;
+      }
+      .under-h4-div {
+        margin-bottom: calculate-vw(24);
+      }
+      .frequency-buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: calculate-vw(16);
+      }
+      .frequency-buttons > * {
+        flex-grow: 1;
+      }
+    }
+  }
+  .right-content {
+    .content {
+      top: calculate-vw(85);
+      display: flex;
+      position: sticky;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #build-subscription-section {
+    display: flex;
+    flex-direction: column-reverse;
+    .left-content {
+      border-right: none;
+      .content {
+        padding: calculate-vw-tablet(80) calculate-vw-tablet(40);
+        .selection-description {
+          margin-bottom: calculate-vw-tablet(24);
+        }
+        .gray-line {
+          height: calculate-vw-tablet(1);
+          margin: calculate-vw-tablet(40) 0;
+        }
+        .under-h4-div {
+          margin-bottom: calculate-vw-tablet(24);
+        }
+        .frequency-buttons {
+          display: flex;
+          justify-content: space-between;
+          gap: calculate-vw-tablet(16);
+        }
+        .frequency-buttons > * {
+          flex-grow: 1;
+        }
+      }
+    }
+    .right-content {
+      .content {
+        top: 0;
+        position: static;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #build-subscription-section {
+    display: flex;
+    flex-direction: column-reverse;
+    .left-content {
+      border-right: none;
+      .content {
+        padding: calculate-vw-mobile(40) calculate-vw-mobile(16);
+        .selection-description {
+          margin-bottom: calculate-vw-mobile(24);
+        }
+        .gray-line {
+          height: calculate-vw-mobile(1);
+          margin: calculate-vw-mobile(40) 0;
+        }
+        .under-h4-div {
+          margin-bottom: calculate-vw-mobile(24);
+        }
+        .frequency-buttons {
+          display: flex;
+          flex-direction: column;
+          gap: calculate-vw-mobile(16);
+        }
+        .frequency-buttons > * {
+          flex-grow: 0;
+        }
+      }
+    }
+    .right-content {
+      .content {
+        top: 0;
+        position: static;
+      }
+    }
+  }
+}

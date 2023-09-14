@@ -1,0 +1,268 @@
+@import './shared/mixins/functions.scss';
+
+  .app {
+    font-weight: 400;
+    font-size: calculate-vw(16);
+    line-height: calculate-vw(22.4);
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: calculate-vw(67);
+    line-height: calculate-vw(80.4);
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: calculate-vw(50);
+    line-height: calculate-vw(60);
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: calculate-vw(38);
+    line-height: calculate-vw(45.6);
+  }
+
+  h4 {
+    font-weight: 400;
+    font-size: calculate-vw(28);
+    line-height: calculate-vw(33.6);
+  }
+
+  h5 {
+    font-weight: 500;
+    font-size: calculate-vw(21);
+    line-height: calculate-vw(25.2);
+  }
+
+  h6 {
+    font-weight: 500;
+    font-size: calculate-vw(16);
+    line-height: calculate-vw(19.2);
+  }
+
+  p {
+    font-weight: 400;
+    font-size: calculate-vw(16);
+    line-height: calculate-vw(22.4);
+    text-align: justify;
+  }
+
+  .subtitle {
+    font-weight: 400;
+    font-size: calculate-vw(18);
+    line-height: calculate-vw(25.2);
+  }
+
+  .overline {
+    font-weight: 500;
+    font-size: calculate-vw(14);
+    line-height: calculate-vw(16.8);
+    text-transform: uppercase;
+  }
+
+  .caption {
+    font-weight: 400;
+    font-size: calculate-vw(14);
+    line-height: calculate-vw(16.8);
+  }
+
+  .caption-small {
+    font-weight: 500;
+    font-size: calculate-vw(12);
+    line-height: calculate-vw(14.4);
+  }
+
+  //images
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .icon {
+    width: calculate-vw(24);
+    height: calculate-vw(24);
+    object-fit: none;
+  }
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+  //typography
+  .app {
+    font-weight: 400;
+    font-size: calculate-vw-tablet(16);
+    line-height: calculate-vw-tablet(22.4);
+  }
+
+  h1 {
+    font-weight: 600;
+    font-size: calculate-vw-tablet(67);
+    line-height: calculate-vw-tablet(80.4);
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: calculate-vw-tablet(50);
+    line-height: calculate-vw-tablet(60);
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: calculate-vw-tablet(38);
+    line-height: calculate-vw-tablet(45.6);
+  }
+
+  h4 {
+    font-weight: 400;
+    font-size: calculate-vw-tablet(22);
+    line-height: calculate-vw-tablet(33.6);
+  }
+
+  h5 {
+    font-weight: 500;
+    font-size: calculate-vw-tablet(21);
+    line-height: calculate-vw-tablet(25.2);
+  }
+
+  h6 {
+    font-weight: 500;
+    font-size: calculate-vw-tablet(16);
+    line-height: calculate-vw-tablet(19.2);
+  }
+
+  p {
+    font-weight: 400;
+    font-size: calculate-vw-tablet(16);
+    line-height: calculate-vw-tablet(22.4);
+    text-align: justify;
+  }
+
+  .subtitle {
+    font-weight: 400;
+    font-size: calculate-vw-tablet(18);
+    line-height: calculate-vw-tablet(25.2);
+  }
+
+  .overline {
+    font-weight: 500;
+    font-size: calculate-vw-tablet(14);
+    line-height: calculate-vw-tablet(16.8);
+    text-transform: uppercase;
+  }
+
+  .caption {
+    font-weight: 400;
+    font-size: calculate-vw-tablet(14);
+    line-height: calculate-vw-tablet(16.8);
+  }
+
+  .caption-small {
+    font-weight: 500;
+    font-size: calculate-vw-tablet(12);
+    line-height: calculate-vw-tablet(14.4);
+  }
+
+  //images
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .icon {
+    width: calculate-vw-tablet(24);
+    height: calculate-vw-tablet(24);
+    object-fit: none;
+  }
+}
+
+@media (max-width: 767px) {
+  //typography
+  .app {
+    font-weight: 400;
+    font-size: calculate-vw-mobile(16);
+    line-height: calculate-vw-mobile(22.4);
+  }
+  h1 {
+    font-weight: 600;
+    font-size: calculate-vw-mobile(40);
+    line-height: calculate-vw-mobile(48);
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: calculate-vw-mobile(34);
+    line-height: calculate-vw-mobile(48.8);
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: calculate-vw-mobile(26);
+    line-height: calculate-vw-mobile(31.2);
+  }
+
+  h4 {
+    font-weight: 400;
+    font-size: calculate-vw-mobile(22);
+    line-height: calculate-vw-mobile(26.4);
+  }
+
+  h5 {
+    font-weight: 500;
+    font-size: calculate-vw-mobile(18);
+    line-height: calculate-vw-mobile(21.6);
+  }
+
+  h6 {
+    font-weight: 500;
+    font-size: calculate-vw-mobile(16);
+    line-height: calculate-vw-mobile(16);
+  }
+
+  p {
+    font-weight: 400;
+    font-size: calculate-vw-mobile(16);
+    line-height: calculate-vw-mobile(22.4);
+    text-align: justify;
+  }
+
+  .subtitle {
+    font-weight: 400;
+    font-size: calculate-vw-mobile(18);
+    line-height: calculate-vw-mobile(25.2);
+  }
+
+  .overline {
+    font-weight: 500;
+    font-size: calculate-vw-mobile(12);
+    line-height: calculate-vw-mobile(14.4);
+    text-transform: uppercase;
+  }
+
+  .caption {
+    font-weight: 400;
+    font-size: calculate-vw-mobile(14);
+    line-height: calculate-vw-mobile(16.8);
+  }
+
+  .caption-small {
+    font-weight: 500;
+    font-size: calculate-vw-mobile(12);
+    line-height: calculate-vw-mobile(14.4);
+  }
+
+  //images
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .icon {
+    width: calculate-vw-mobile(24);
+    height: calculate-vw-mobile(24);
+    object-fit: none;
+  }
+}
