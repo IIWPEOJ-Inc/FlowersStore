@@ -1,0 +1,58 @@
+﻿@import '../../mixins/functions';
+
+.quantity-counter {
+    height: calculate-vw(44);
+    border: 1px solid black;
+    display: inline-flex;
+    button {
+        all: unset;
+    }
+    .minus{
+        width: calculate-vw(44);
+    }
+    .quantity{
+        border-left: 1px solid black;
+        width: calculate-vw(56);
+    }
+    .plus {
+        border-left: 1px solid black;
+        width: calculate-vw(44);
+    }
+    .boxes-settings {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .quantity-counter {
+        height: calculate-vw-tablet(44);
+        .minus{
+            width: calculate-vw-tablet(44);
+        }
+        .quantity{
+            width: calculate-vw-tablet(56);
+        }
+        .plus {
+            width: calculate-vw-tablet(44);
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .quantity-counter {
+        display: flex;
+        height: calculate-vw-mobile(44);
+        .minus{
+            width: calculate-vw-mobile(44);
+        }
+        .quantity{
+            flex-grow: 1;
+            width: calculate-vw-mobile(56);
+        }
+        .plus {
+            width: calculate-vw-mobile(44);
+        }
+    }
+}

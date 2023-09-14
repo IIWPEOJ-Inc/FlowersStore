@@ -1,0 +1,63 @@
+@import '../../shared/mixins/functions.scss';
+
+#subscription {
+  h2 {
+    margin-bottom: calculate-vw(24);
+  }
+  
+  h3 {
+    margin-top: calculate-vw(24);
+    margin-bottom: calculate-vw(16);
+  }
+  
+  h4 {
+    margin-bottom: calculate-vw(16);
+  }
+  
+  h6 {
+    margin-bottom: calculate-vw(8);
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #subscription {
+    h2 {
+      margin-bottom: calculate-vw-tablet(24);
+    }
+    
+    h3 {
+      margin-top: calculate-vw-tablet(24);
+      margin-bottom: calculate-vw-tablet(16);
+    }
+    
+    h4 {
+      margin-bottom: calculate-vw-tablet(16);
+    }
+    
+    h6 {
+      margin-bottom: calculate-vw-tablet(8);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #subscription {
+    h2 {
+      margin-bottom: calculate-vw-mobile(24);
+    }
+    
+    h3 {
+      margin-top: calculate-vw-mobile(24);
+      margin-bottom: calculate-vw-mobile(16);
+    }
+    
+    h4 {
+      margin-bottom: calculate-vw-mobile(16);
+    }
+    
+    h6 {
+      margin-bottom: calculate-vw-mobile(8);
+    }
+  }
+}

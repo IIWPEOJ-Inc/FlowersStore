@@ -1,0 +1,46 @@
+﻿@import '../../../shared/mixins/functions.scss';
+
+#faq-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f7;
+  padding: calculate-vw(80) calculate-vw(288);
+  .content {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: calculate-vw(80);
+    h2 {
+      margin-bottom: calculate-vw(40);
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #faq-section {
+    padding: calculate-vw-tablet(80) calculate-vw-tablet(40);
+    .content {
+      padding: calculate-vw-tablet(80);
+      h2 {
+        margin-bottom: calculate-vw-tablet(40);
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #faq-section {
+    padding: calculate-vw-mobile(40) 0;
+    .content {
+      border-left: none;
+      border-right: none;
+      padding: calculate-vw-mobile(40) calculate-vw-mobile(24);
+      h2 {
+        margin-bottom: calculate-vw-mobile(24);
+      }
+    }
+  }
+}
