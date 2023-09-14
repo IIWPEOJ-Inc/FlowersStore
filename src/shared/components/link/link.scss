@@ -7,7 +7,7 @@
   background-color: white;
   font-style: normal;
   font-weight: 500;
-  letter-spacing: calc(1em / 33);
+  letter-spacing: calculate-letter-spacing(0.4);
   text-decoration: none;
 
   &:hover {
@@ -19,6 +19,7 @@
   .link {
     font-size: calculate-vw(16);
     line-height: calculate-vw(19.2);
+    letter-spacing: calculate-letter-spacing(0.4);
   }
 }
 
@@ -26,6 +27,7 @@
   .link {
     font-size: calculate-vw-tablet(16);
     line-height: calculate-vw-tablet(19.2);
+    letter-spacing: calculate-letter-spacing(0.4);
   }
 }
 
@@ -33,5 +35,6 @@
   .link {
     font-size: calculate-vw-mobile(14);
     line-height: calculate-vw-mobile(16.8);
+    letter-spacing: calculate-letter-spacing(0.35);
   }
 }

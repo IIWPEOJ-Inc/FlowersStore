@@ -1,0 +1,24 @@
+@import '../../../../shared/mixins/functions.scss';
+
+.swiper-content {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 992px) {
+  .swiper-content {
+    gap: calculate-vw(16);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .swiper-content {
+    gap: calculate-vw-tablet(16);
+  }
+}
+
+@media (max-width: 767px) {
+  .swiper-content {
+    gap: calculate-vw-mobile(16);
+  }
+}

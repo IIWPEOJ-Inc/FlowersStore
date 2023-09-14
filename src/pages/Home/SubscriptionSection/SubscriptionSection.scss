@@ -53,6 +53,10 @@
         }
       }
     }
+
+    .img-subscription {
+      height: calculate-vw(720);
+    }
   }
 }
 
@@ -72,6 +76,10 @@
           gap: calculate-vw-tablet(24);
         }
       }
+    }
+
+    .img-subscription {
+      height: calculate-vw-tablet(500);
     }
   }
 }
@@ -96,6 +104,10 @@
       .secondary-button {
         width: 100%;
       }
+    }
+
+    .img-subscription {
+      height: calculate-vw-mobile(420);
     }
   }
 }

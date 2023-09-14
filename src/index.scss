@@ -10,6 +10,7 @@ body,
 #root,
 header,
 footer,
+section,
 .app {
   width: 100%;
   font-family: 'Gilroy', sans-serif;
@@ -17,7 +18,6 @@ footer,
   font-size: calculate-vw(16);
   line-height: calculate-vw(22.4);
   background-color: white;
-  letter-spacing: calc(1em / 33);
   margin: 0;
 }
 
@@ -28,12 +28,12 @@ h4,
 h5,
 h6,
 p,
+em,
 .subtitle,
 .overline,
 .caption,
 .caption-small {
   font-family: 'Gilroy', sans-serif;
-  letter-spacing: calc(1em / 33);
   margin: 0;
 }
 
@@ -58,9 +58,9 @@ p,
   }
 
   h4 {
-    font-weight: 600;
-    font-size: calculate-vw(50);
-    line-height: calculate-vw(60);
+    font-weight: 400;
+    font-size: calculate-vw(28);
+    line-height: calculate-vw(33.6);
   }
 
   h5 {
@@ -122,18 +122,6 @@ p,
     height: calculate-vw(360);
   }
 
-  .img-contact-us {
-    height: calculate-vw(720);
-  }
-
-  .img-subscription {
-    height: calculate-vw(720);
-  }
-
-  .img-wedding {
-    height: calculate-vw(720);
-  }
-
   .icon {
     width: calculate-vw(24);
     height: calculate-vw(24);
@@ -166,9 +154,9 @@ p,
   }
 
   h4 {
-    font-weight: 600;
-    font-size: calculate-vw-tablet(50);
-    line-height: calculate-vw-tablet(60);
+    font-weight: 400;
+    font-size: calculate-vw-tablet(28);
+    line-height: calculate-vw-tablet(33.6);
   }
 
   h5 {
@@ -230,18 +218,6 @@ p,
     height: calculate-vw-tablet(384);
   }
 
-  .img-contact-us {
-    height: calculate-vw-tablet(560);
-  }
-
-  .img-subscription {
-    height: calculate-vw-tablet(500);
-  }
-
-  .img-wedding {
-    height: calculate-vw-tablet(500);
-  }
-
   .icon {
     width: calculate-vw-tablet(24);
     height: calculate-vw-tablet(24);
@@ -274,9 +250,9 @@ p,
   }
 
   h4 {
-    font-weight: 600;
-    font-size: calculate-vw(22);
-    line-height: calculate-vw(26.4);
+    font-weight: 400;
+    font-size: calculate-vw-mobile(22);
+    line-height: calculate-vw-mobile(26.4);
   }
 
   h5 {
@@ -336,14 +312,6 @@ p,
 
   .img-card-item {
     height: calculate-vw-mobile(200);
-  }
-
-  .img-subscription {
-    height: calculate-vw-mobile(420);
-  }
-
-  .img-wedding {
-    height: calculate-vw-mobile(416);
   }
 
   .icon {

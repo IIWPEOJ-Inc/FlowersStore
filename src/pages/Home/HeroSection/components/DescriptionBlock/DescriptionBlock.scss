@@ -30,8 +30,12 @@
         font-weight: 600;
         font-size: calculate-vw(16);
         line-height: calculate-vw(19.2);
-        letter-spacing: 0.033vw;
       }
+    }
+
+    .arrow {
+      position: relative;
+      bottom: calculate-vw(3);
     }
   }
 }
@@ -58,8 +62,12 @@
         font-weight: 600;
         font-size: calculate-vw-tablet(16);
         line-height: calculate-vw-tablet(19.2);
-        letter-spacing: 0.033vw;
       }
+    }
+
+    .arrow {
+      position: relative;
+      bottom: calculate-vw-tablet(3);
     }
   }
 }
@@ -86,8 +94,12 @@
         font-weight: 600;
         font-size: calculate-vw-mobile(12);
         line-height: calculate-vw-mobile(14.4);
-        letter-spacing: 0.033vw;
       }
+    }
+
+    .arrow {
+      position: relative;
+      bottom: calculate-vw-mobile(3);
     }
   }
 }

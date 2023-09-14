@@ -72,6 +72,14 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
+
+    .img-hero {
+      height: calculate-vw(256);
+    }
+
+    .img-card-item {
+      height: calculate-vw(360);
+    }
   }
 }
 
@@ -145,6 +153,14 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
+  }
+
+  .img-hero {
+    height: calculate-vw-tablet(256);
+  }
+
+  .img-card-item {
+    height: calculate-vw-tablet(384);
   }
 }
 
@@ -220,5 +236,13 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
+  }
+
+  .img-hero {
+    height: calculate-vw-mobile(180);
+  }
+
+  .img-card-item {
+    height: calculate-vw-mobile(200);
   }
 }

@@ -17,8 +17,7 @@ export const Home = () => {
       <OurServiceSection />
       <SubscriptionSection />
       <WeddingSection />
-      {/*       
-      <ReviewSection />*/}
+      <ReviewSection />
     </>
   );
 };

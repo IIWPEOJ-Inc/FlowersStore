@@ -68,6 +68,7 @@
     .left-section {
       display: grid;
       grid-template-rows: 1fr 1fr;
+      height: 50vw;
 
       .contact-us-container {
         border-right: 1px solid black;
@@ -155,6 +156,7 @@
     .left-section {
       display: grid;
       grid-template-rows: 1fr 1fr;
+      height: calculate-vw-tablet(580);
 
       .contact-us-container {
         border-bottom: 1px solid black;
@@ -298,5 +300,9 @@
         }
       }
     }
+  }
+
+  .img-contact-us {
+    height: calculate-vw-mobile(500);
   }
 }

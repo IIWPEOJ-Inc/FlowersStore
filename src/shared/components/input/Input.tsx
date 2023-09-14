@@ -5,7 +5,7 @@ interface Props extends InputHTMLAttributes<HTMLInputElement> {
   placeholder: string;
 }
 
-const Input: React.FC<Props> = ({ placeholder, ...props }) => {
+const Input = ({ placeholder, ...props }: Props) => {
   return <input className="input" placeholder={placeholder} {...props} />;
 };
 

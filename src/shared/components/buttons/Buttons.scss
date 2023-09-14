@@ -5,7 +5,6 @@
   text-transform: uppercase;
   text-align: center;
   font-weight: 500;
-  letter-spacing: calc(1em / 33);
   color: white;
   background-color: black;
   border: none;
@@ -31,7 +30,6 @@
   background-color: white;
   border: 1px solid black;
   font-weight: 500;
-  letter-spacing: calc(1em / 33);
 
   &.pressed {
     background-color: initial;
@@ -54,7 +52,6 @@
   text-transform: uppercase;
   border: 1px solid white;
   font-weight: 500;
-  letter-spacing: calc(1em / 33);
   background-color: rgba(0, 0, 0, 0);
   color: white;
 
@@ -84,6 +81,7 @@
     font-size: calculate-vw(16);
     line-height: calculate-vw(19.2);
     height: calculate-vw(56);
+    letter-spacing: calculate-letter-spacing(0.48);
   }
 
   .secondary-button {
@@ -94,6 +92,7 @@
     font-size: calculate-vw(16);
     line-height: calculate-vw(19.2);
     height: calculate-vw(56);
+    letter-spacing: calculate-letter-spacing(0.48);
   }
 
   .tertiary-button {
@@ -104,6 +103,7 @@
     font-size: calculate-vw(16);
     line-height: calculate-vw(19.2);
     height: calculate-vw(56);
+    letter-spacing: calculate-letter-spacing(0.48);
   }
 }
 
@@ -116,6 +116,7 @@
     font-size: calculate-vw-tablet(16);
     line-height: calculate-vw-tablet(19.2);
     height: calculate-vw-tablet(56);
+    letter-spacing: calculate-letter-spacing(0.48);
   }
 
   .secondary-button {
@@ -126,6 +127,7 @@
     font-size: calculate-vw-tablet(16);
     line-height: calculate-vw-tablet(19.2);
     height: calculate-vw-tablet(56);
+    letter-spacing: calculate-letter-spacing(0.48);
   }
 
   .tertiary-button {
@@ -136,6 +138,7 @@
     font-size: calculate-vw-tablet(16);
     line-height: calculate-vw-tablet(19.2);
     height: calculate-vw-tablet(56);
+    letter-spacing: calculate-letter-spacing(0.48);
   }
 }
 
@@ -148,6 +151,7 @@
     font-size: calculate-vw-mobile(14);
     line-height: calculate-vw-mobile(14);
     height: calculate-vw-mobile(48);
+    letter-spacing: calculate-letter-spacing(0.35);
   }
 
   .secondary-button {
@@ -158,6 +162,7 @@
     font-size: calculate-vw-mobile(16);
     line-height: calculate-vw-mobile(19.2);
     height: calculate-vw-mobile(48);
+    letter-spacing: calculate-letter-spacing(0.35);
   }
 
   .tertiary-button {
@@ -168,5 +173,6 @@
     font-size: calculate-vw-mobile(16);
     line-height: calculate-vw-mobile(19.2);
     height: calculate-vw-mobile(48);
+    letter-spacing: calculate-letter-spacing(0.35);
   }
 }

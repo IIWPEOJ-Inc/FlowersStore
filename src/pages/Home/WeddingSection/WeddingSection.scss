@@ -5,8 +5,8 @@
   background-position:
     0 0,
     50%;
-  background-size: auto, cover;
-  background-attachment: scroll, fixed;
+  background-size: cover;
+  background-attachment: fixed;
   border-bottom: 1px solid black;
 
   .content-container {
@@ -51,6 +51,10 @@
         }
       }
     }
+
+    .img-wedding {
+      height: calculate-vw(720);
+    }
   }
 }
 
@@ -67,6 +71,10 @@
           gap: calculate-vw-tablet(24);
         }
       }
+    }
+
+    .img-wedding {
+      height: calculate-vw-tablet(500);
     }
   }
 }
@@ -88,6 +96,10 @@
 
     .tertiary-button {
       width: 100%;
+    }
+
+    .img-wedding {
+      height: calculate-vw-mobile(416);
     }
   }
 }

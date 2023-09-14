@@ -9,3 +9,7 @@
 @function calculate-vw-mobile($value) {
   @return calc($value * 100 / 375) * 1vw;
 }
+
+@function calculate-letter-spacing($value) {
+  @return calc(1em / (10 / $value));
+}
