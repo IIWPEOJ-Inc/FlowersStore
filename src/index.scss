@@ -1,27 +1,36 @@
 @import './fonts/stylesheet.css';
+@import './shared/mixins/functions.scss';
 
-*{
+* {
   box-sizing: border-box;
 }
 
 html,
 body,
 #root,
+header,
+footer,
+section,
 .app {
   width: 100%;
   font-family: 'Gilroy', sans-serif;
-  font-weight: 400;
+  background-color: white;
   margin: 0;
 }
 
-@media (min-width: 769px) {
-  .mobile-only {
-    display: none !important;
-  }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+em,
+.subtitle,
+.overline,
+.caption,
+.caption-small {
+  font-family: 'Gilroy', sans-serif;
+  margin: 0;
 }
 
-@media (max-width: 768px) {
-  .desktop-only {
-    display: none !important;
-  }
-}

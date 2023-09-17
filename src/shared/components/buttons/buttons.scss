@@ -1,0 +1,178 @@
+@import '../../mixins/functions.scss';
+
+.primary-button {
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  background-color: black;
+  border: none;
+
+  &.pressed {
+    color: white;
+    background-color: black;
+  }
+
+  &.disabled {
+    background-color: #d2d2d7;
+    color: #808080;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: #424245;
+  }
+}
+
+.secondary-button {
+  text-transform: uppercase;
+  background-color: white;
+  border: 1px solid black;
+  font-weight: 500;
+
+  &.pressed {
+    background-color: initial;
+    color: black;
+  }
+
+  &.disabled {
+    border: 1px solid #d2d2d7;
+    color: #808080;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+  }
+}
+
+.tertiary-button {
+  text-transform: uppercase;
+  border: 1px solid white;
+  font-weight: 500;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+
+  &.pressed {
+    background-color: white;
+    color: black;
+  }
+
+  &.disabled {
+    border: 1px solid #d2d2d7;
+    color: #808080;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+  }
+}
+
+@media (min-width: 992px) {
+  .primary-button {
+    padding-top: calculate-vw(16);
+    padding-bottom: calculate-vw(14);
+    padding-right: calculate-vw(24);
+    padding-left: calculate-vw(24);
+    font-size: calculate-vw(16);
+    line-height: calculate-vw(19.2);
+    height: calculate-vw(56);
+    letter-spacing: calculate-letter-spacing(0.48);
+  }
+
+  .secondary-button {
+    padding-top: calculate-vw(16);
+    padding-bottom: calculate-vw(14);
+    padding-right: calculate-vw(24);
+    padding-left: calculate-vw(24);
+    font-size: calculate-vw(16);
+    line-height: calculate-vw(19.2);
+    height: calculate-vw(56);
+    letter-spacing: calculate-letter-spacing(0.48);
+  }
+
+  .tertiary-button {
+    padding-top: calculate-vw(16);
+    padding-bottom: calculate-vw(14);
+    padding-right: calculate-vw(24);
+    padding-left: calculate-vw(24);
+    font-size: calculate-vw(16);
+    line-height: calculate-vw(19.2);
+    height: calculate-vw(56);
+    letter-spacing: calculate-letter-spacing(0.48);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .primary-button {
+    padding-top: calculate-vw-tablet(16);
+    padding-bottom: calculate-vw-tablet(14);
+    padding-right: calculate-vw-tablet(24);
+    padding-left: calculate-vw-tablet(24);
+    font-size: calculate-vw-tablet(16);
+    line-height: calculate-vw-tablet(19.2);
+    height: calculate-vw-tablet(56);
+    letter-spacing: calculate-letter-spacing(0.48);
+  }
+
+  .secondary-button {
+    padding-top: calculate-vw-tablet(16);
+    padding-bottom: calculate-vw-tablet(14);
+    padding-right: calculate-vw-tablet(24);
+    padding-left: calculate-vw-tablet(24);
+    font-size: calculate-vw-tablet(16);
+    line-height: calculate-vw-tablet(19.2);
+    height: calculate-vw-tablet(56);
+    letter-spacing: calculate-letter-spacing(0.48);
+  }
+
+  .tertiary-button {
+    padding-top: calculate-vw-tablet(16);
+    padding-bottom: calculate-vw-tablet(14);
+    padding-right: calculate-vw-tablet(24);
+    padding-left: calculate-vw-tablet(24);
+    font-size: calculate-vw-tablet(16);
+    line-height: calculate-vw-tablet(19.2);
+    height: calculate-vw-tablet(56);
+    letter-spacing: calculate-letter-spacing(0.48);
+  }
+}
+
+@media (max-width: 767px) {
+  .primary-button {
+    padding-top: calculate-vw-mobile(16);
+    padding-bottom: calculate-vw-mobile(14);
+    padding-right: calculate-vw-mobile(24);
+    padding-left: calculate-vw-mobile(24);
+    font-size: calculate-vw-mobile(14);
+    line-height: calculate-vw-mobile(14);
+    height: calculate-vw-mobile(48);
+    letter-spacing: calculate-letter-spacing(0.35);
+  }
+
+  .secondary-button {
+    padding-top: calculate-vw-mobile(16);
+    padding-bottom: calculate-vw-mobile(14);
+    padding-right: calculate-vw-mobile(24);
+    padding-left: calculate-vw-mobile(24);
+    font-size: calculate-vw-mobile(14);
+    line-height: calculate-vw-mobile(19.2);
+    height: calculate-vw-mobile(48);
+    letter-spacing: calculate-letter-spacing(0.35);
+  }
+
+  .tertiary-button {
+    padding-top: calculate-vw-mobile(16);
+    padding-bottom: calculate-vw-mobile(14);
+    padding-right: calculate-vw-mobile(24);
+    padding-left: calculate-vw-mobile(24);
+    font-size: calculate-vw-mobile(14);
+    line-height: calculate-vw-mobile(19.2);
+    height: calculate-vw-mobile(48);
+    letter-spacing: calculate-letter-spacing(0.35);
+  }
+}

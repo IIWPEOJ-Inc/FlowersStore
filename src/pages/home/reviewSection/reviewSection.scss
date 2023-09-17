@@ -1,0 +1,114 @@
+﻿@import '../../../shared/mixins/functions.scss';
+
+#review-section {
+  border-bottom: 1px solid black;
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+
+    .swiper-headings-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      .headings-container {
+        display: flex;
+        flex-direction: column;
+
+        .google-title-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #review-section {
+    .content-container {
+      gap: calculate-vw(64);
+      padding: calculate-vw(80);
+
+      .swiper-headings-container {
+        gap: calculate-vw(16);
+
+        .headings-container {
+          gap: calculate-vw(24);
+
+          .google-title-container {
+            gap: calculate-vw(8);
+          }
+        }
+      }
+    }
+
+    .img-google {
+      width: calculate-vw(77);
+      height: calculate-vw(28);
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #review-section {
+    .content-container {
+      gap: calculate-vw-tablet(64);
+      padding: calculate-vw-tablet(80);
+
+      .swiper-headings-container {
+        gap: calculate-vw-tablet(16);
+
+        .headings-container {
+          gap: calculate-vw-tablet(24);
+
+          .google-title-container {
+            gap: calculate-vw-tablet(8);
+          }
+        }
+      }
+    }
+
+    .img-google {
+      width: calculate-vw-tablet(77);
+      height: calculate-vw-tablet(28);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #review-section {
+    .content-container {
+      gap: calculate-vw-mobile(64);
+      padding: calculate-vw-mobile(40) calculate-vw-mobile(16);
+
+      .swiper-headings-container {
+        gap: calculate-vw-mobile(16);
+
+        .headings-container {
+          gap: calculate-vw-mobile(24);
+
+          .google-title-container {
+            gap: calculate-vw-mobile(8);
+          }
+        }
+      }
+    }
+
+    .secondary-button {
+      width: 100%;
+    }
+
+    .img-google {
+      width: calculate-vw-mobile(77);
+      height: calculate-vw-mobile(28);
+    }
+  }
+}
