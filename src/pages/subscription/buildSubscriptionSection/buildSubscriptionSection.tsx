@@ -23,12 +23,12 @@ export const BuildSubscriptionSection = () => {
           <SubscriptionPlan
             image={ClassicFlowers}
             planName={'Seasonal'}
-            options={['Price $65', 'Free Delivery', 'Best for a budget', 'Glass vase with first delivery', 'Save up to 25%']}
+            children={['Price $65', 'Free Delivery', 'Best for a budget', 'Glass vase with first delivery', 'Save up to 25%']}
           />
           <SubscriptionPlan
             image={SeasonalFlowers}
             planName={'Classic'}
-            options={[
+            children={[
               'Price $45',
               'Free Delivery',
               'Best for a budget',
@@ -40,7 +40,7 @@ export const BuildSubscriptionSection = () => {
           <SubscriptionPlan
             image={LuxeFlowers}
             planName={'Luxe'}
-            options={[
+            children={[
               'Price $95',
               'Free Delivery',
               'Premium arrangement',

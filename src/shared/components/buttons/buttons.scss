@@ -8,6 +8,9 @@
   color: white;
   background-color: black;
   border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &.pressed {
     color: white;
@@ -74,8 +77,8 @@
 
 @media (min-width: 992px) {
   .primary-button {
-    padding-top: calculate-vw(16);
-    padding-bottom: calculate-vw(14);
+    // padding-top: calculate-vw(16);
+    // padding-bottom: calculate-vw(14);
     padding-right: calculate-vw(24);
     padding-left: calculate-vw(24);
     font-size: calculate-vw(16);
@@ -85,8 +88,8 @@
   }
 
   .secondary-button {
-    padding-top: calculate-vw(16);
-    padding-bottom: calculate-vw(14);
+    // padding-top: calculate-vw(16);
+    // padding-bottom: calculate-vw(14);
     padding-right: calculate-vw(24);
     padding-left: calculate-vw(24);
     font-size: calculate-vw(16);
@@ -96,8 +99,8 @@
   }
 
   .tertiary-button {
-    padding-top: calculate-vw(16);
-    padding-bottom: calculate-vw(14);
+    // padding-top: calculate-vw(16);
+    // padding-bottom: calculate-vw(14);
     padding-right: calculate-vw(24);
     padding-left: calculate-vw(24);
     font-size: calculate-vw(16);

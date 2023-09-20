@@ -21,7 +21,6 @@
       max-height: 0;
       overflow: hidden;
       margin-bottom: calculate-vw(24);
-      transition: max-height 0.5s ease-in-out;
      
       &.show {
         max-height: 30vw;

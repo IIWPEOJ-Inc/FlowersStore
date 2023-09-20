@@ -1,0 +1,27 @@
+@import '../../mixins/functions';
+
+.modal {
+    display: grid;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-top: calculate-vw(85);
+    background-color: rgba(210, 210, 215, 0.35);
+    backdrop-filter: blur(3px);
+    min-height: 100vh;
+    
+    &.sign-up-modal {
+        grid-template-columns: 25% 50% 25%;
+    }
+
+    &.menu-modal {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &.closed {
+        min-height: 0;
+    }
+}
+
+

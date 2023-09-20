@@ -1,10 +1,13 @@
 import './header.scss';
+import { SignUp } from '../../../pages/sign-up/signUp';
 import { useMediaQuery } from 'react-responsive';
+import { useState } from 'react';
 import Link from '../link/link';
 import burgerMenu from '../../assets/burgerMenu.svg';
 import shopBag from '../../assets/shopBag.svg';
 
 export const Header = () => {
+  const [modalIsActive, setModalIsActive] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 992 });
 
   const leftContent = isDesktop ? (
@@ -29,7 +32,7 @@ export const Header = () => {
   const rightContent = isDesktop ? (
     <div className="header-grid">
       <div className="grid-right-items">
-        <div className="grid-right-item">
+        <div onChange={() => setModalIsActive(true)} className="grid-right-item">
           <Link to="/">Sign In</Link>
         </div>
         <div className="grid-right-item">
@@ -51,6 +54,7 @@ export const Header = () => {
         {leftContent}
         {rightContent}
       </div>
+      <SignUp />
     </header>
   );
 };
