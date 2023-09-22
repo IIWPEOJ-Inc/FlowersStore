@@ -1,0 +1,92 @@
+@import '../../../shared/mixins/functions.scss';
+
+#recommendation {
+  .also-like {
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  #recommendation {
+    .also-like {
+      margin: calculate-vw(80) calculate-vw(560);
+    }
+
+    .grid-container{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid black;
+      .grid-content-1 {
+        border-right: 1px solid black;
+      }
+  
+      .grid-content-2 {
+        border-right: 1px solid black;
+      }
+  
+      .grid-content-3 {
+        border-right: 1px solid black;
+      }
+  
+      .grid-content-4 {
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #recommendation {
+    .also-like {
+      height: calculate-vw-tablet(206);
+      padding: calculate-vw-tablet(80) calculate-vw-tablet(224);
+    }
+
+    .grid-container{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid black;
+      .grid-content-1 {
+          border-right: 1px solid black;
+          border-bottom: 1px solid black;
+        }
+      
+        .grid-content-2 {
+          border-bottom: 1px solid black;
+        }
+      
+        .grid-content-3 {
+          border-right: 1px solid black;
+        }
+      
+        .grid-content-4 {}
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #recommendation {
+    .also-like {
+      height: calculate-vw-mobile(111);
+      padding: calculate-vw-mobile(40) calculate-vw-mobile(24);
+    }
+
+    .grid-container{
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      border-top: 1px solid black;
+      .grid-content-1 {
+          border-bottom: 1px solid black;
+        }
+      
+        .grid-content-2 {
+          border-bottom: 1px solid black;
+        }
+      
+        .grid-content-3 {
+          border-bottom: 1px solid black;
+        }
+      
+        .grid-content-4 {}
+    }
+  }
+}

@@ -3,6 +3,7 @@ import { ReactSwiper } from '../../../shared/components/swiper/swiper';
 import { SecondaryButton } from '../../../shared/components/buttons/buttons';
 import Google from './assets/google.svg';
 import { SwiperContent } from './components/swiperContent';
+import { SwiperPerView } from '../../../shared/components/swiper/swiperPerView';
 
 export const ReviewSection = () => {
   return (

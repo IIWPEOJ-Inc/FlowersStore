@@ -1,0 +1,108 @@
+.radio-label {
+  display: flex;
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+}
+
+.radio-input {
+  margin: 0;
+  visibility: hidden;
+}
+
+.radio-input:checked + span {
+  border: 2px solid black;
+  background:  #dcdcdc;
+}
+
+.radio-input:checked + span:after {
+  opacity: 1;
+}
+
+.custom-radio {
+  cursor: pointer;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.custom-radio::after {
+  content: '';
+  background:  black;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+@media (min-width: 992px) {
+  .custom-radio {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #9a9a9a;
+    left: -14px;
+    top: 6px;
+    margin-right: 8px;
+    // left: -calculate-vw(14);
+    // top: calculate-vw(6);
+    // width: calculate-vw(24);
+    // height: calculate-vw(24);
+    // border: calculate-vw(2) solid #9a9a9a;
+    // margin-right: calculate-vw(8);
+  }
+
+  .custom-radio::after {
+    // width: calculate-vw(14);
+    // height: calculate-vw(14);
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .custom-radio {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #9a9a9a;
+    left: -14px;
+    top: 6px;
+    margin-right: 8px;
+    // left: -calculate-vw-tablet(8);
+    // top: calculate-vw-tablet(6);
+    // width: calculate-vw-tablet(24);
+    // height: calculate-vw-tablet(24);
+    // border: calculate-vw-tablet(2) solid #9a9a9a;
+  }
+
+  .custom-radio::after {
+    width: 14px;
+    height: 14px;
+    // width: calculate-vw-tablet(14);
+    // height: calculate-vw-tablet(14);
+  }
+}
+
+@media (max-width: 767px) {
+  .custom-radio {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #9a9a9a;
+    left: -14px;
+    top: 6px;
+    margin-right: 8px;
+    // left: -calculate-vw-mobile(8);
+    // top: calculate-vw-mobile(6);
+    // width: calculate-vw-mobile(24);
+    // height: calculate-vw-mobile(24);
+    // border: calculate-vw-mobile(2) solid #9a9a9a;
+  }
+
+  .custom-radio::after {
+    width: 14px;
+    height: 14px;
+    // width: calculate-vw-mobile(14);
+    // height: calculate-vw-mobile(14);
+  }
+}
