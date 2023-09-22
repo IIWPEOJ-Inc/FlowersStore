@@ -29,11 +29,17 @@ export const Header = () => {
     </div>
   );
 
+  // onClick={() => {
+  //   setModalIsActive(true);
+  //   console.log(modalIsActive);
+  // }}
+
   const rightContent = isDesktop ? (
     <div className="header-grid">
       <div className="grid-right-items">
-        <div onChange={() => setModalIsActive(true)} className="grid-right-item">
+        <div className="grid-right-item">
           <Link to="/">Sign In</Link>
+          {/* сделать компонент для баттона modalbutton */}
         </div>
         <div className="grid-right-item">
           <Link to="/">Cart</Link>
@@ -49,7 +55,7 @@ export const Header = () => {
   );
 
   return (
-    <header>
+    <header className={modalIsActive ? 'overflow' : ''}>
       <div className="header-grid">
         {leftContent}
         {rightContent}

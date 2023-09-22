@@ -13,7 +13,7 @@ interface SignUpProps {
 }
 
 export const SignUp = () => {
-  const [pageNumber, setPageNumber] = useState(3);
+  const [pageNumber, setPageNumber] = useState(1);
   const { register } = useForm<SignUpProps>();
 
   const step1 = (

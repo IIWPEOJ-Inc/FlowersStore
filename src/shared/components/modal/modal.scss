@@ -11,12 +11,12 @@
     backdrop-filter: blur(3px);
     min-height: 100vh;
     
-    &.sign-up-modal {
+    &.sign-up {
         grid-template-columns: 25% 50% 25%;
     }
 
-    &.menu-modal {
-        grid-template-columns: 1fr 1fr;
+    &.menu {
+        grid-template-columns: 0% 50% 50%;
     }
 
     &.closed {

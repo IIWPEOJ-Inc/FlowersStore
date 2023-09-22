@@ -5,6 +5,8 @@ export enum ModalType {
   Menu,
 }
 
+//переделать на передачу стринга и передавать сразу структуру нужную
+
 interface ModalProps {
   children: React.ReactNode;
   modalType: ModalType;
@@ -12,7 +14,7 @@ interface ModalProps {
 
 export const Modal = ({ children, modalType }: ModalProps) => {
   return (
-    <div className={`modal ${modalType === ModalType.SignUp ? 'sign-up-modal' : 'menu-modal'}`}>
+    <div className={`modal ${modalType === ModalType.SignUp ? 'sign-up' : 'menu'}`}>
       <div></div>
       <div>{children}</div>
       <div></div>

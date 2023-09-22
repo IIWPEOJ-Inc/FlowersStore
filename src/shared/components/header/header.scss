@@ -8,6 +8,9 @@ header {
   top: 0%;
   bottom: auto;
   z-index: 30;
+  &.overflow {
+    overflow: hidden;
+  }
 
   .header-grid {
     display: grid;
