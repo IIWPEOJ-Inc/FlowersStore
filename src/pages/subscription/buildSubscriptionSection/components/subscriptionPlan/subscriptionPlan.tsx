@@ -1,5 +1,5 @@
 ﻿import './subscriptionPlan.scss';
-import { PrimaryButton } from '../../../../../shared/components/buttons/buttons';
+import { Button, ButtonTypes } from '../../../../../shared/components/buttons/buttons';
 interface SubscriptionPlanProps {
   image: string;
   planName: string;
@@ -20,7 +20,7 @@ export const SubscriptionPlan = ({ image, planName, children }: SubscriptionPlan
           </ul>
         </div>
       </div>
-      <PrimaryButton buttonType={'button'}>select</PrimaryButton>
+      <Button buttonType={ButtonTypes.PrimaryButton}>select</Button>
     </div>
   );
 };

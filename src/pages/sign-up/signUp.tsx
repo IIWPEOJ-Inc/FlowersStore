@@ -1,6 +1,6 @@
 import './signUp.scss';
-import { Modal, ModalType } from '../../shared/components/modal/modal';
-import { PrimaryButton, SecondaryButton } from '../../shared/components/buttons/buttons';
+import { Button, ButtonTypes } from '../../shared/components/buttons/buttons';
+import { Modal } from '../../shared/components/modal/modal';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import Apple from '../../shared/assets/apple.svg';
@@ -28,7 +28,14 @@ export const SignUp = () => {
           })}
           placeholder={'+380 XX XXX XX XX'}
         />
-        <PrimaryButton buttonType={'button'}>continue</PrimaryButton>
+        <Button
+          onClick={() => {
+            setPageNumber(pageNumber + 1);
+          }}
+          buttonType={ButtonTypes.PrimaryButton}
+        >
+          continue
+        </Button>
       </form>
       <div className="divide-lines-flex">
         <div className="divide-line"></div>
@@ -37,18 +44,18 @@ export const SignUp = () => {
       </div>
       <h6 className="step1-h6">Instantly login or sign up via Google</h6>
       <div className="bottom-buttons">
-        <SecondaryButton buttonType={'button'}>
+        <Button buttonType={ButtonTypes.SecondaryButton}>
           <div className="button-content">
             <img className="icon" src={Google} alt="Google" />
             <div>continue with google</div>
           </div>
-        </SecondaryButton>
-        <SecondaryButton buttonType={'button'}>
+        </Button>
+        <Button buttonType={ButtonTypes.SecondaryButton}>
           <div className="button-content">
             <img className="icon" src={Apple} alt="Apple" />
             <div>continue with apple</div>
           </div>
-        </SecondaryButton>
+        </Button>
       </div>
     </>
   );
@@ -67,7 +74,14 @@ export const SignUp = () => {
           })}
           placeholder={'XX XX XX'}
         />
-        <PrimaryButton buttonType={'button'}>Join us</PrimaryButton>
+        <Button
+          onClick={() => {
+            setPageNumber(pageNumber + 1);
+          }}
+          buttonType={ButtonTypes.PrimaryButton}
+        >
+          Join us
+        </Button>
       </form>
       <div className="links-flex">
         <Link to={'/'}>Didn't receive a code?</Link>
@@ -90,7 +104,7 @@ export const SignUp = () => {
           })}
           placeholder={'+380 XX XXX XX XX'}
         />
-        <PrimaryButton buttonType={'button'}>continue</PrimaryButton>
+        <Button buttonType={ButtonTypes.PrimaryButton}>continue</Button>
       </form>
     </>
   );
@@ -98,8 +112,16 @@ export const SignUp = () => {
   const content = <>{pageNumber === 1 ? step1 : pageNumber === 2 ? step2 : step3}</>;
 
   return (
-    <Modal modalType={ModalType.SignUp}>
-      <div id="sign-up-content">
+    <Modal modalType={'sign-up'}>
+      <div></div>
+      <div
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+        }}
+        aria-hidden="true"
+        id="sign-up-content"
+      >
         {content}
         <div className="bottom-links">
           <Link to={'/'}>
@@ -111,6 +133,7 @@ export const SignUp = () => {
           </Link>
         </div>
       </div>
+      <div></div>
     </Modal>
   );
 };

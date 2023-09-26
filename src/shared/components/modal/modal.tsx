@@ -1,23 +1,28 @@
 import './modal.scss';
-
-export enum ModalType {
-  SignUp,
-  Menu,
-}
-
-//переделать на передачу стринга и передавать сразу структуру нужную
+import { RootState } from '../../../store/store';
+import { hideModal } from './modalSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 interface ModalProps {
   children: React.ReactNode;
-  modalType: ModalType;
+  modalType: string;
 }
 
 export const Modal = ({ children, modalType }: ModalProps) => {
+  const dispatch = useDispatch();
+  const isActive = useSelector((state: RootState) => state.modal.isActive);
   return (
-    <div className={`modal ${modalType === ModalType.SignUp ? 'sign-up' : 'menu'}`}>
-      <div></div>
-      <div>{children}</div>
-      <div></div>
+    <div onClick={() => dispatch(hideModal())} aria-hidden="true" className={`modal ${isActive ? '' : 'closed'}`}>
+      <div
+        // onClick={(e) => {
+        //   e.preventDefault();
+        //   e.stopPropagation();
+        // }}
+        // aria-hidden="true"
+        className={modalType}
+      >
+        {children}
+      </div>
     </div>
   );
 };

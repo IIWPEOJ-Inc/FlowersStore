@@ -1,5 +1,5 @@
 ﻿import './buildSubscriptionSection.scss';
-import { PrimaryButton, SecondaryButton } from '../../../shared/components/buttons/buttons';
+import { Button, ButtonTypes } from '../../../shared/components/buttons/buttons';
 import { QuantityCounter } from '../../../shared/components/quantityCounter/quantityCounter';
 import { SubscriptionPlan } from './components/subscriptionPlan/subscriptionPlan';
 import ClassicFlowers from './assets/classicFlowers.png';
@@ -53,9 +53,9 @@ export const BuildSubscriptionSection = () => {
           <h4>How often do you want flowers delivered ?</h4>
           <div className="under-h4-div">Select the delivery frequency</div>
           <div className="frequency-buttons">
-            <SecondaryButton buttonType={'button'}>Monthly</SecondaryButton>
-            <SecondaryButton buttonType={'button'}>Bi-Weekly</SecondaryButton>
-            <SecondaryButton buttonType={'button'}>Weekly</SecondaryButton>
+            <Button buttonType={ButtonTypes.SecondaryButton}>Monthly</Button>
+            <Button buttonType={ButtonTypes.SecondaryButton}>Bi-Weekly</Button>
+            <Button buttonType={ButtonTypes.SecondaryButton}>Weekly</Button>
           </div>
           <div className="gray-line"></div>
           <h4>How many deliveries would you like ?</h4>
@@ -64,7 +64,7 @@ export const BuildSubscriptionSection = () => {
           </div>
           <QuantityCounter />
           <div className="gray-line"></div>
-          <PrimaryButton buttonType={'button'}>Checkout</PrimaryButton>
+          <Button buttonType={ButtonTypes.PrimaryButton}>Checkout</Button>
         </div>
       </div>
       <div className="right-content">

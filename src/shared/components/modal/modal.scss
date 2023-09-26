@@ -1,27 +1,81 @@
 @import '../../mixins/functions';
 
 .modal {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(210, 210, 215, 0.35);
+  backdrop-filter: blur(3px);
+  z-index: 100;
+
+  .sign-up {
+    padding-top: calculate-vw(84);
     display: grid;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    padding-top: calculate-vw(85);
-    background-color: rgba(210, 210, 215, 0.35);
-    backdrop-filter: blur(3px);
-    min-height: 100vh;
-    
-    &.sign-up {
-        grid-template-columns: 25% 50% 25%;
+    grid-template-columns: 25% 50% 25%;
+    height: 100vh;
+  }
+
+  .menu {
+    padding-top: calculate-vw(84);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 100vh;
+  }
+
+  &.closed {
+    opacity: 0;
+    z-index: -100;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .modal {
+    margin-top: calculate-vw-tablet(58);
+    z-index: 100;
+    background-color: transparent;
+    backdrop-filter: unset;
+
+    .sign-up {
+      padding-top: 0;
+      display: block;
+      height: 93vh;
     }
 
-    &.menu {
-        grid-template-columns: 0% 50% 50%;
+    .menu {
+      padding-top: 0;
+      display: block;
     }
 
     &.closed {
-        min-height: 0;
+      opacity: 0;
+      z-index: -100;
     }
+  }
 }
 
+@media (max-width: 767px) {
+  .modal {
+    margin-top: calculate-vw-mobile(50);
+    z-index: 100;
+    background-color: transparent;
+    backdrop-filter: unset;
 
+    .sign-up {
+      padding-top: 0;
+      display: block;
+      height: 93vh;
+    }
+
+    .menu {
+      padding-top: 0;
+      display: block;
+      height: 100vh;
+    }
+
+    &.closed {
+      opacity: 0;
+      z-index: -100;
+    }
+  }
+}

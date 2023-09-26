@@ -1,5 +1,5 @@
 ﻿import './aboutUsSection.scss';
-import { SecondaryButton } from '../../../shared/components/buttons/buttons';
+import { Button, ButtonTypes } from '../../../shared/components/buttons/buttons';
 import Link from '../../../shared/components/link/link';
 
 export const AboutUsSection = () => {
@@ -25,7 +25,7 @@ export const AboutUsSection = () => {
           </p>
         </div>
         <Link to="/about-us">
-          <SecondaryButton buttonType="button">LEARN MORE</SecondaryButton>
+          <Button buttonType={ButtonTypes.SecondaryButton}>LEARN MORE</Button>
         </Link>
       </div>
     </section>

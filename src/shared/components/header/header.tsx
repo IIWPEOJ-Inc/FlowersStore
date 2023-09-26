@@ -1,14 +1,15 @@
 import './header.scss';
-import { SignUp } from '../../../pages/sign-up/signUp';
+import { Button, ButtonTypes } from '../buttons/buttons';
+import { showModal } from '../modal/modalSlice';
+import { useDispatch } from 'react-redux';
 import { useMediaQuery } from 'react-responsive';
-import { useState } from 'react';
 import Link from '../link/link';
 import burgerMenu from '../../assets/burgerMenu.svg';
 import shopBag from '../../assets/shopBag.svg';
 
 export const Header = () => {
-  const [modalIsActive, setModalIsActive] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 992 });
+  const dispatch = useDispatch();
 
   const leftContent = isDesktop ? (
     <div className="header-grid">
@@ -23,23 +24,19 @@ export const Header = () => {
     </div>
   ) : (
     <div className="grid-left-item">
-      <Link to="/">
+      <Button onClick={() => dispatch(showModal())} buttonType={ButtonTypes.HeaderButton}>
         <img src={burgerMenu} alt="burger-menu" className="icon" loading="lazy" />
-      </Link>
+      </Button>
     </div>
   );
-
-  // onClick={() => {
-  //   setModalIsActive(true);
-  //   console.log(modalIsActive);
-  // }}
 
   const rightContent = isDesktop ? (
     <div className="header-grid">
       <div className="grid-right-items">
         <div className="grid-right-item">
-          <Link to="/">Sign In</Link>
-          {/* сделать компонент для баттона modalbutton */}
+          <Button onClick={() => dispatch(showModal())} buttonType={ButtonTypes.HeaderButton}>
+            Sing Up
+          </Button>
         </div>
         <div className="grid-right-item">
           <Link to="/">Cart</Link>
@@ -55,12 +52,11 @@ export const Header = () => {
   );
 
   return (
-    <header className={modalIsActive ? 'overflow' : ''}>
+    <header>
       <div className="header-grid">
         {leftContent}
         {rightContent}
       </div>
-      <SignUp />
     </header>
   );
 };

@@ -1,72 +1,167 @@
 @import '../../shared/mixins/functions.scss';
 
 #sign-up-content {
-    padding: calculate-vw(80);
-    padding-bottom: calculate-vw(40);
-    border: 1px solid black;
-    background-color: white;
-    min-height: 100%;
+  padding: calculate-vw(80);
+  padding-bottom: calculate-vw(40);
+  border: 1px solid black;
+  background-color: white;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  .step1-h6 {
+    margin-top: calculate-vw(24);
+    margin-bottom: calculate-vw(12);
+  }
+  .phone-form {
     display: flex;
     flex-direction: column;
+    gap: calculate-vw(16);
+  }
+  .divide-lines-flex {
+    display: flex;
+    align-items: center;
+    gap: calculate-vw(12);
+    margin-top: calculate-vw(24);
+    color: #d2d2d7;
+    .divide-line {
+      height: calculate-vw(1);
+      flex-grow: 1;
+      background-color: #d2d2d7;
+    }
+  }
+  .bottom-buttons {
+    display: flex;
+    gap: calculate-vw(16);
+  }
+  .bottom-buttons > * {
+    flex-grow: 1;
+  }
+  .button-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: calculate-vw(8);
+    letter-spacing: calculate-vw(0.48);
+  }
+  .bottom-links {
+    display: flex;
+    gap: calculate-vw(12);
+    justify-content: center;
+    flex-grow: 1;
+    align-items: end;
+  }
+  .top-headers {
+    display: flex;
+    flex-direction: column;
+    gap: calculate-vw(24);
+    margin-bottom: calculate-vw(12);
+  }
+  .caption-small {
+    margin-top: calculate-vw(8);
+    margin-bottom: calculate-vw(16);
+  }
+
+  .links-flex {
+    display: flex;
+    gap: calculate-vw(8);
+    margin-top: calculate-vw(24);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #sign-up-content {
+    padding: calculate-vw-tablet(80);
+    padding-bottom: calculate-vw-tablet(40);
+    border: none;
     .step1-h6 {
-        margin-top: calculate-vw(24);
-        margin-bottom: calculate-vw(12);
+      margin-top: calculate-vw-tablet(24);
+      margin-bottom: calculate-vw-tablet(12);
     }
     .phone-form {
-        display: flex;
-        flex-direction: column;
-        gap: calculate-vw(16);
+      gap: calculate-vw-tablet(16);
     }
     .divide-lines-flex {
-        display: flex;
-        align-items: center;
-        gap: calculate-vw(12);
-        margin-top: calculate-vw(24);
-        color: #D2D2D7;
-        .divide-line {
-            height: calculate-vw(1);
-            flex-grow: 1;
-            background-color: #D2D2D7;
-        }
+      gap: calculate-vw-tablet(12);
+      margin-top: calculate-vw-tablet(24);
+      .divide-line {
+        height: calculate-vw-tablet(1);
+      }
     }
     .bottom-buttons {
-        display: flex;
-        gap: calculate-vw(16);
-    }
-    .bottom-buttons > * {
-        flex-grow: 1;
+      gap: calculate-vw-tablet(16);
     }
     .button-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: calculate-vw(8);
-        letter-spacing: calculate-vw(0.48);
+      gap: calculate-vw-tablet(8);
+      letter-spacing: calculate-vw-tablet(0.48);
     }
     .bottom-links {
-        display: flex;
-        gap: calculate-vw(12);
-        justify-content: center;
-        flex-grow: 1;
-        align-items: end;
+      gap: calculate-vw-tablet(12);
     }
 
     .top-headers {
-        display: flex;
-        flex-direction: column;
-        gap: calculate-vw(24);
-        margin-bottom: calculate-vw(12);
+      gap: calculate-vw-tablet(24);
+      margin-bottom: calculate-vw-tablet(12);
     }
     .caption-small {
-        margin-top: calculate-vw(8);
-        margin-bottom: calculate-vw(16);
+      margin-top: calculate-vw-tablet(8);
+      margin-bottom: calculate-vw-tablet(16);
     }
 
     .links-flex {
-        display: flex;
-        gap: calculate-vw(8);
-        margin-top: calculate-vw(24);
+      gap: calculate-vw-tablet(8);
+      margin-top: calculate-vw-tablet(24);
     }
-    
+  }
 }
 
+@media (max-width: 767px) {
+  #sign-up-content {
+    padding: calculate-vw-mobile(40) calculate-vw-mobile(16);
+    border: none;
+    .step1-h6 {
+      margin-top: calculate-vw-mobile(24);
+      margin-bottom: calculate-vw-mobile(12);
+    }
+    .phone-form {
+      gap: calculate-vw-mobile(16);
+    }
+    .divide-lines-flex {
+      gap: calculate-vw-mobile(12);
+      margin-top: calculate-vw-mobile(24);
+      .divide-line {
+        height: calculate-vw-mobile(1);
+      }
+    }
+    .bottom-buttons {
+      flex-direction: column;
+      gap: calculate-vw-mobile(16);
+    }
+    .button-content {
+      gap: calculate-vw-mobile(8);
+      letter-spacing: calculate-vw-mobile(0.48);
+    }
+    .bottom-links {
+      flex-direction: column;
+      align-items: center;
+      justify-content: end;
+      gap: calculate-vw-mobile(12);
+    }
+    .bottom-links > :nth-child(2) {
+        display: none;
+    }
+
+    .top-headers {
+      gap: calculate-vw-mobile(24);
+      margin-bottom: calculate-vw-mobile(12);
+    }
+    .caption-small {
+      margin-top: calculate-vw-mobile(8);
+      margin-bottom: calculate-vw-mobile(16);
+    }
+
+    .links-flex {
+      gap: calculate-vw-mobile(8);
+      margin-top: calculate-vw-mobile(24);
+    }
+  }
+}
