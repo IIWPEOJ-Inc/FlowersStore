@@ -1,15 +1,21 @@
 import './header.scss';
+import { BurgerMenu } from '../burgerMenu/burgerMenu';
 import { Button, ButtonTypes } from '../buttons/buttons';
 import { showModal } from '../modal/modalSlice';
 import { useDispatch } from 'react-redux';
 import { useMediaQuery } from 'react-responsive';
+import { useState } from 'react';
 import Link from '../link/link';
 import burgerMenu from '../../assets/burgerMenu.svg';
 import shopBag from '../../assets/shopBag.svg';
 
 export const Header = () => {
+  const [isActive, setIsActive] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 992 });
   const dispatch = useDispatch();
+  const closeBurgerMenu = () => {
+    setIsActive(!isActive);
+  };
 
   const leftContent = isDesktop ? (
     <div className="header-grid">
@@ -24,7 +30,7 @@ export const Header = () => {
     </div>
   ) : (
     <div className="grid-left-item">
-      <Button onClick={() => dispatch(showModal())} buttonType={ButtonTypes.HeaderButton}>
+      <Button onClick={() => setIsActive(!isActive)} buttonType={ButtonTypes.HeaderButton}>
         <img src={burgerMenu} alt="burger-menu" className="icon" loading="lazy" />
       </Button>
     </div>
@@ -53,6 +59,7 @@ export const Header = () => {
 
   return (
     <header>
+      {isDesktop ? <></> : <BurgerMenu isActive={isActive} callback={closeBurgerMenu} />}
       <div className="header-grid">
         {leftContent}
         {rightContent}

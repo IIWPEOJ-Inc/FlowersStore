@@ -1,5 +1,6 @@
 import './app.scss';
 import { AboutUs } from './pages/aboutUs/aboutUs';
+import { BurgerMenu } from './shared/components/burgerMenu/burgerMenu';
 import { Category } from './pages/category/category';
 import { CheckOut } from './pages/checkOut/checkOut';
 import { Header } from './shared/components/header/header';
@@ -21,7 +22,13 @@ export const App = () => {
 
   return (
     <div className="app">
+<<<<<<< HEAD
       {shouldRenderHeaderFooter && <Header />}
+=======
+      <SignUp />
+      {/* <BurgerMenu /> */}
+      <Header />
+>>>>>>> 45b3fd8 (burger-menu done without transition)
       <Routes>
         <Route index element={<Home />} />
         <Route path="/category/:categoryId" element={<Category />} />

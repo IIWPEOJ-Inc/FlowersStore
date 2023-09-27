@@ -1,5 +1,9 @@
 ﻿import { createSlice } from '@reduxjs/toolkit';
 
+interface ActiveModal {
+  isActive: boolean;
+}
+
 interface ModalVision {
   isActive: boolean;
 }
