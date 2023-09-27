@@ -8,13 +8,13 @@
     left: 0;
     background-color: rgba(210, 210, 215, 0.35);
     backdrop-filter: blur(3px);
-    z-index: 1;
+    z-index: 2;
     // transition: left 1s;
     &.closed {
-        background-color: transparent;
-        backdrop-filter: unset;
-        left: calculate-vw-tablet(-384);
-        z-index: -1;
+      background-color: transparent;
+      backdrop-filter: unset;
+      left: calculate-vw-tablet(-384);
+      z-index: -1;
     }
     .grid-sections {
       display: grid;
@@ -38,6 +38,9 @@
           flex-direction: column;
           gap: calculate-vw-tablet(16);
         }
+        .links-cell > * {
+          justify-content: start;
+        }
         .menu-cell:last-child {
           display: flex;
           justify-content: space-between;
@@ -60,12 +63,12 @@
     left: 0;
     background-color: rgba(210, 210, 215, 0.35);
     backdrop-filter: blur(3px);
-    z-index: 100;
+    z-index: 2;
     &.closed {
-        background-color: transparent;
-        backdrop-filter: unset;
-        left: calculate-vw-mobile(-384);
-        z-index: -1;
+      background-color: transparent;
+      backdrop-filter: unset;
+      left: calculate-vw-mobile(-384);
+      z-index: -1;
     }
     .grid-sections {
       .menu-section {
@@ -87,6 +90,9 @@
           flex-direction: column;
           gap: calculate-vw-mobile(16);
         }
+        .links-cell > * {
+            justify-content: start;
+          }
         .menu-cell:last-child {
           display: flex;
           justify-content: space-between;
