@@ -67,26 +67,6 @@
     flex-direction: column;
     gap: calculate-vw(16);
   }
-
-  .text-centred {
-    text-align: center;
-  }
-
-  .centred {
-    justify-content: center;
-  }
-
-  .width-50 {
-    width: 50%;
-  }
-
-  .order-1 {
-    order: 1;
-  }
-
-  .order-2 {
-    order: 2;
-  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

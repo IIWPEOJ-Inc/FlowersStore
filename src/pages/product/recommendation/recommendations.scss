@@ -1,0 +1,76 @@
+@import '../../../shared/mixins/functions.scss';
+
+#recommendation {
+  .also-like {
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
+  #recommendation {
+    .also-like {
+      padding: calculate-vw(80);
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid black;
+
+      .grid-item {
+        border-right: 1px solid black;
+      }
+
+      .grid-item:last-child {
+        border-right: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #recommendation {
+    .also-like {
+      padding: calculate-vw-tablet(80);
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid black;
+
+      .grid-item:nth-child(1) {
+        border-bottom: 1px solid black;
+      }
+      .grid-item:nth-child(2) {
+        border-left: 1px solid black;
+        border-bottom: 1px solid black;
+      }
+      .grid-item:last-child {
+        border-left: 1px solid black;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #recommendation {
+    .also-like {
+      padding: calculate-vw-mobile(40) calculate-vw-mobile(24);
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      border-top: 1px solid black;
+
+      .grid-item {
+        border-bottom: 1px solid black;
+      }
+
+      .grid-item:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}

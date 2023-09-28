@@ -14,7 +14,7 @@
   .recommendation-content {
     padding: calculate-vw(24);
     height: calculate-vw(375);
-    .recommendation-img{
+    .recommendation-img {
       height: calculate-vw(297);
       display: flex;
       align-items: stretch;
@@ -30,10 +30,10 @@
     padding: calculate-vw-tablet(24);
     height: calculate-vw-tablet(375);
     .recommendation-img {
-        height: calculate-vw-tablet(297);
-        display: flex;
-        align-items: stretch;
-      }
+      height: calculate-vw-tablet(297);
+      display: flex;
+      align-items: stretch;
+    }
     .name {
       margin: calculate-vw-tablet(8) 0 calculate-tablet(4);
     }
@@ -44,12 +44,12 @@
   .recommendation-content {
     padding: calculate-vw-mobile(12);
     height: calculate-vw-mobile(375);
-    
+
     .recommendation-img {
-        height: calculate-vw-mobile(297);
-        display: flex;
-        align-items: stretch;
-      }
+      height: calculate-vw-mobile(297);
+      display: flex;
+      align-items: stretch;
+    }
     .name {
       margin: calculate-vw-mobile(8) 0 calculate-mobile(4);
     }

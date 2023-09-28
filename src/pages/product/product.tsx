@@ -1,12 +1,11 @@
-
-import QuickOrder from "./quickOrder/quickOrder";
-import { Recommendation } from "./recommendation/recommendation";
+import { ProductOrder } from './productOrder/productOrder';
+import { Recommendations } from './recommendation/recommendations';
 
 export const Product = () => {
   return (
-    <section id="Product-section">
-      <QuickOrder></QuickOrder>
-      <Recommendation></Recommendation>
+    <section id="product-section">
+      <ProductOrder />
+      <Recommendations />
     </section>
   );
 };

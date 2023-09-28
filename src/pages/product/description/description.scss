@@ -1,0 +1,89 @@
+@import '../../../shared/mixins/functions.scss';
+
+#description-section {
+  display: flex;
+  flex-direction: column;
+
+  .path-to-product {
+    display: flex;
+  }
+
+  .quantity-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .combination-title {
+    display: flex;
+    .combination-title-right {
+      color: #808080;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  #description-section {
+    gap: calculate-vw(24);
+
+    .content {
+      gap: calculate-vw(16);
+
+      .combination-title {
+        justify-content: space-between;
+      }
+    }
+
+    .quantity-content {
+      gap: calculate-vw(16);
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #description-section {
+    gap: calculate-vw-tablet(24);
+
+    .content {
+      gap: calculate-vw-tablet(16);
+    }
+
+    .quantity-content {
+      gap: calculate-vw-tablet(16);
+    }
+
+    .combination-title {
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #description-section {
+    gap: calculate-vw-mobile(24);
+
+    .content {
+      gap: calculate-vw-mobile(16);
+
+      .combination-title {
+        flex-direction: column;
+        gap: calculate-vw-mobile(8);
+      }
+    }
+
+    .quantity-content {
+      display: grid;
+      gap: calculate-vw-mobile(16);
+    }
+
+    .combination-title {
+      .combination-title-include {
+        margin-bottom: calculate-vw-mobile(8);
+      }
+    }
+  }
+}
