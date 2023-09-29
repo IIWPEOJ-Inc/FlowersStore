@@ -1,5 +1,5 @@
 import './productOrder.scss';
-import { PrimaryButton } from '../../../shared/components/buttons/buttons';
+import { Button, ButtonTypes } from '../../../shared/components/buttons/buttons';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Description from '../description/description';
@@ -49,7 +49,7 @@ export const ProductOrder = () => {
         <div className="right-side">
           <Description Name={product?.title} Price={product?.price} Text={product?.description}></Description>
           <div className="button-container">
-            <PrimaryButton buttonType="button">add to bucket</PrimaryButton>
+            <Button buttonType={ButtonTypes.PrimaryButton}>add to bucket</Button>
           </div>
         </div>
       )}
