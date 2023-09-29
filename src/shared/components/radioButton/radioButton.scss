@@ -1,0 +1,45 @@
+@import '../../mixins/functions.scss';
+
+.radio-button {
+  accent-color: black;
+  cursor: pointer;
+  margin: 0;
+}
+
+.radio-button-label {
+  display: flex;
+  cursor: pointer;
+}
+
+@media (min-width: 992px) {
+  .radio-button {
+    width: calculate-vw(24);
+    height: calculate-vw(24);
+  }
+
+  .radio-button-label {
+    gap: calculate-vw(12);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .radio-button {
+    width: calculate-vw-tablet(24);
+    height: calculate-vw-tablet(24);
+  }
+
+  .radio-button-label {
+    gap: calculate-vw-tablet(12);
+  }
+}
+
+@media (max-width: 767px) {
+  .radio-button {
+    width: calculate-vw-mobile(24);
+    height: calculate-vw-mobile(24);
+  }
+
+  .radio-button-label {
+    gap: calculate-vw-mobile(12);
+  }
+}
