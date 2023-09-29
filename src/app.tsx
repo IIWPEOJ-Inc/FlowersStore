@@ -26,6 +26,7 @@ export const App = () => {
       {shouldRenderHeaderFooter && <Header />}
 =======
       <SignUp />
+      <ShoppingCart />
       <Header />
 >>>>>>> 45b3fd8 (burger-menu done without transition)
       <Routes>

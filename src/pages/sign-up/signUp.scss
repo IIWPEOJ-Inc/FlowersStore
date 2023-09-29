@@ -1,13 +1,33 @@
 @import '../../shared/mixins/functions.scss';
 
-#sign-up-content {
-  padding: calculate-vw(80);
-  padding-bottom: calculate-vw(40);
-  border: 1px solid black;
-  background-color: white;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
+.sign-up-modal {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(210, 210, 215, 0.35);
+  backdrop-filter: blur(3px);
+  z-index: 3;
+
+  &.closed {
+    opacity: 0;
+    z-index: -2;
+  }
+  .sign-up {
+    padding-top: calculate-vw(84);
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    height: 100vh;
+    .content {
+      padding: calculate-vw(80);
+      padding-bottom: calculate-vw(40);
+      border: 1px solid black;
+      background-color: white;
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
   .step1-h6 {
     margin-top: calculate-vw(24);
     margin-bottom: calculate-vw(12);
@@ -69,10 +89,24 @@
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  #sign-up-content {
-    padding: calculate-vw-tablet(80);
-    padding-bottom: calculate-vw-tablet(40);
-    border: none;
+  .sign-up-modal {
+    margin-top: calculate-vw-tablet(58);
+    background-color: transparent;
+    backdrop-filter: unset;
+    &.closed {
+      opacity: 0;
+      z-index: -1;
+    }
+    .sign-up {
+      padding-top: 0;
+      display: block;
+      height: 93vh;
+      .content {
+        padding: calculate-vw-tablet(80);
+        padding-bottom: calculate-vw-tablet(40);
+        border: none;
+      }
+    }
     .step1-h6 {
       margin-top: calculate-vw-tablet(24);
       margin-bottom: calculate-vw-tablet(12);
@@ -115,9 +149,24 @@
 }
 
 @media (max-width: 767px) {
-  #sign-up-content {
-    padding: calculate-vw-mobile(40) calculate-vw-mobile(16);
-    border: none;
+  .sign-up-modal {
+    margin-top: calculate-vw-mobile(50);
+    background-color: transparent;
+    backdrop-filter: unset;
+    &.closed {
+      opacity: 0;
+      z-index: -1;
+    }
+    .sign-up {
+      padding-top: 0;
+      display: block;
+      height: 93vh;
+      .content {
+        padding: calculate-vw-mobile(40) calculate-vw-mobile(16);
+        border: none;
+      }
+    }
+
     .step1-h6 {
       margin-top: calculate-vw-mobile(24);
       margin-bottom: calculate-vw-mobile(12);
@@ -147,7 +196,7 @@
       gap: calculate-vw-mobile(12);
     }
     .bottom-links > :nth-child(2) {
-        display: none;
+      display: none;
     }
 
     .top-headers {

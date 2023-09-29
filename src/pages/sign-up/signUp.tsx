@@ -1,6 +1,8 @@
 import './signUp.scss';
 import { Button, ButtonTypes } from '../../shared/components/buttons/buttons';
-import { Modal } from '../../shared/components/modal/modal';
+import { RootState } from '../../store/store';
+import { hideSignUpModal } from './singUpSlice';
+import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import Apple from '../../shared/assets/apple.svg';
@@ -15,6 +17,8 @@ interface SignUpProps {
 export const SignUp = () => {
   const [pageNumber, setPageNumber] = useState(1);
   const { register } = useForm<SignUpProps>();
+  const dispatch = useDispatch();
+  const isActive = useSelector((state: RootState) => state.signUp.isActive);
 
   const step1 = (
     <>
@@ -112,28 +116,30 @@ export const SignUp = () => {
   const content = <>{pageNumber === 1 ? step1 : pageNumber === 2 ? step2 : step3}</>;
 
   return (
-    <Modal modalType={'sign-up'}>
-      <div></div>
-      <div
-        onClick={(e) => {
-          e.preventDefault();
-          e.stopPropagation();
-        }}
-        aria-hidden="true"
-        id="sign-up-content"
-      >
-        {content}
-        <div className="bottom-links">
-          <Link to={'/'}>
-            <div className="underline caption">Privacy policy</div>
-          </Link>
-          <div className="caption">|</div>
-          <Link to={'/'}>
-            <div className="underline caption">Terms and Conditions</div>
-          </Link>
+    <div onClick={() => dispatch(hideSignUpModal())} aria-hidden="true" className={`sign-up-modal ${isActive ? '' : 'closed'}`}>
+      <div className="sign-up">
+        <div></div>
+        <div
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+          }}
+          aria-hidden="true"
+          className="content"
+        >
+          {content}
+          <div className="bottom-links">
+            <Link to={'/'}>
+              <div className="underline caption">Privacy policy</div>
+            </Link>
+            <div className="caption">|</div>
+            <Link to={'/'}>
+              <div className="underline caption">Terms and Conditions</div>
+            </Link>
+          </div>
         </div>
+        <div></div>
       </div>
-      <div></div>
-    </Modal>
+    </div>
   );
 };

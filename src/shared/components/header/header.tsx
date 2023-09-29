@@ -1,7 +1,8 @@
 import './header.scss';
 import { BurgerMenu } from '../burgerMenu/burgerMenu';
 import { Button, ButtonTypes } from '../buttons/buttons';
-import { showModal } from '../modal/modalSlice';
+import { showShoppingCartModal } from '../../../pages/shoppingCart/shoppingCartSlice';
+import { showSignUpModal } from '../../../pages/sign-up/singUpSlice';
 import { useDispatch } from 'react-redux';
 import { useMediaQuery } from 'react-responsive';
 import { useState } from 'react';
@@ -10,11 +11,11 @@ import burgerMenu from '../../assets/burgerMenu.svg';
 import shopBag from '../../assets/shopBag.svg';
 
 export const Header = () => {
-  const [isActive, setIsActive] = useState(false);
+  const [isActiveBurgerMenu, setIsActiveBurgerMenu] = useState(false);
   const isDesktop = useMediaQuery({ minWidth: 992 });
   const dispatch = useDispatch();
   const closeBurgerMenu = () => {
-    setIsActive(!isActive);
+    setIsActiveBurgerMenu(!isActiveBurgerMenu);
   };
 
   const leftContent = isDesktop ? (
@@ -30,7 +31,7 @@ export const Header = () => {
     </div>
   ) : (
     <div className="grid-left-item">
-      <Button onClick={() => setIsActive(!isActive)} buttonType={ButtonTypes.HeaderButton}>
+      <Button onClick={() => setIsActiveBurgerMenu(!isActiveBurgerMenu)} buttonType={ButtonTypes.HeaderButton}>
         <img src={burgerMenu} alt="burger-menu" className="icon" loading="lazy" />
       </Button>
     </div>
@@ -40,26 +41,28 @@ export const Header = () => {
     <div className="header-grid">
       <div className="grid-right-items">
         <div className="grid-right-item">
-          <Button onClick={() => dispatch(showModal())} buttonType={ButtonTypes.HeaderButton}>
+          <Button onClick={() => dispatch(showSignUpModal())} buttonType={ButtonTypes.HeaderButton}>
             Sing Up
           </Button>
         </div>
         <div className="grid-right-item">
-          <Link to="/">Cart</Link>
+          <Button onClick={() => dispatch(showShoppingCartModal())} buttonType={ButtonTypes.HeaderButton}>
+            Cart
+          </Button>
         </div>
       </div>
     </div>
   ) : (
     <div className="grid-right-item">
-      <Link to="/">
-        <img src={shopBag} alt="shopping-bag" className="icon" loading="lazy" />
-      </Link>
+      <Button onClick={() => dispatch(showShoppingCartModal())} buttonType={ButtonTypes.HeaderButton}>
+        <img src={shopBag} alt="burger-menu" className="icon" loading="lazy" />
+      </Button>
     </div>
   );
 
   return (
-    <header>
-      {isDesktop ? <></> : <BurgerMenu isActive={isActive} callback={closeBurgerMenu} />}
+    <header style={{ zIndex: isActiveBurgerMenu ? 200 : '2' }}>
+      {isDesktop ? <></> : <BurgerMenu isActive={isActiveBurgerMenu} callback={closeBurgerMenu} />}
       <div className="header-grid">
         {leftContent}
         {rightContent}

@@ -1,0 +1,146 @@
+@import '../../shared/mixins/functions.scss';
+
+.shopping-cart-modal {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(210, 210, 215, 0.35);
+  backdrop-filter: blur(3px);
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  &.closed {
+    opacity: 0;
+    z-index: -3;
+  }
+  .shopping-cart-content {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 100vh;
+    border-left: 1px solid black;
+    .header-section {
+      padding: calculate-vw(26) calculate-vw(40);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid black;
+    }
+    .flower-section {
+      padding: calculate-vw(40);
+      border-bottom: 1px solid black;
+      display: flex;
+      justify-content: space-between;
+      .left-elements {
+        display: flex;
+        gap: calculate-vw(16);
+        img {
+          height: calculate-vw(160);
+          width: calculate-vw(160);
+          border: 1px solid black;
+        }
+        .description {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: calculate-vw(8);
+        }
+      }
+    }
+    .flower-section > :last-child {
+      color: gray;
+    }
+    .subtotal-section {
+      padding: calculate-vw(40);
+      border-bottom: 1px solid black;
+      display: flex;
+      justify-content: space-between;
+    }
+    .gift-message-section {
+      padding: calculate-vw(40);
+      border-bottom: 1px solid black;
+      display: flex;
+      flex-grow: 1;
+      flex-direction: column;
+      gap: calculate-vw(16);
+    }
+    .note-section {
+      padding: calculate-vw(40);
+      border-bottom: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .shopping-cart-modal {
+    display: block;
+    .shopping-cart-content {
+      .header-section {
+        padding: calculate-vw-tablet(16) calculate-vw-tablet(40);
+      }
+      .flower-section {
+        padding: calculate-vw-tablet(40);
+        .left-elements {
+          gap: calculate-vw-tablet(16);
+          img {
+            height: calculate-vw-tablet(160);
+            width: calculate-vw-tablet(160);
+          }
+          .description {
+            gap: calculate-vw-tablet(8);
+          }
+        }
+      }
+      .subtotal-section {
+        padding: calculate-vw-tablet(40);
+      }
+      .gift-message-section {
+        padding: calculate-vw-tablet(40);
+        gap: calculate-vw-tablet(16);
+      }
+      .note-section {
+        padding: calculate-vw-tablet(40);
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .shopping-cart-modal {
+    display: block;
+    .shopping-cart-content {
+      .header-section {
+        padding: calculate-vw-mobile(12) calculate-vw-mobile(24);
+      }
+      .flower-section {
+        padding: calculate-vw-mobile(24) calculate-vw-mobile(16);
+        .left-elements {
+          display: block;
+          gap: calculate-vw-mobile(16);
+          img {
+            height: calculate-vw-mobile(160);
+            width: calculate-vw-mobile(160);
+          }
+          .description {
+            gap: calculate-vw-mobile(8);
+          }
+        }
+      }
+      .subtotal-section {
+        padding: calculate-vw-mobile(24) calculate-vw-mobile(16);
+      }
+      .gift-message-section {
+        padding: calculate-vw-mobile(24) calculate-vw-mobile(16);
+        gap: calculate-vw-mobile(16);
+      }
+      .note-section {
+        padding: calculate-vw-mobile(40) calculate-vw-mobile(16);
+      }
+    }
+  }
+}

@@ -1,13 +1,23 @@
-﻿// import { createSlice } from '@reduxjs/toolkit';
+﻿import { createSlice } from '@reduxjs/toolkit';
+interface ModalVision {
+  isActive: boolean;
+}
 
-// const initialState = {};
+const initialState: ModalVision = { isActive: false };
 
-// const singUpSlice = createSlice({
-//   name: second,
-//   initialState,
-//   reducers: {},
-// });
+const signUpSlice = createSlice({
+  name: 'modalSlice',
+  initialState,
+  reducers: {
+    showSignUpModal: (state) => {
+      state.isActive = true;
+    },
+    hideSignUpModal: (state) => {
+      state.isActive = false;
+    },
+  },
+});
 
-// export const {} = singUpSlice.actions;
+export const { showSignUpModal, hideSignUpModal } = signUpSlice.actions;
 
-// export default singUpSlice.reducer;
+export const signUpReducer = signUpSlice.reducer;

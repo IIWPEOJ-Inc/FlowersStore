@@ -1,10 +1,11 @@
 ﻿import { configureStore } from '@reduxjs/toolkit';
-import { modalSliceReducer } from '../shared/components/modal/modalSlice';
+import { shoppingCartReducer } from '../pages/shoppingCart/shoppingCartSlice';
+import { signUpReducer } from '../pages/sign-up/singUpSlice';
 
 export const store = configureStore({
   reducer: {
-    modal: modalSliceReducer,
-    // comments: commentsReducer,
+    signUp: signUpReducer,
+    shoppingCart: shoppingCartReducer,
     // users: usersReducer,
   },
 });

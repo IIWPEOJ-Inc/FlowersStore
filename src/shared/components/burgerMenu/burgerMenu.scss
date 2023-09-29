@@ -8,12 +8,12 @@
     left: 0;
     background-color: rgba(210, 210, 215, 0.35);
     backdrop-filter: blur(3px);
-    z-index: 2;
+    z-index: 3;
     // transition: left 1s;
     &.closed {
       background-color: transparent;
       backdrop-filter: unset;
-      left: calculate-vw-tablet(-384);
+      left: -100vw;
       z-index: -1;
     }
     .grid-sections {
@@ -63,7 +63,7 @@
     left: 0;
     background-color: rgba(210, 210, 215, 0.35);
     backdrop-filter: blur(3px);
-    z-index: 2;
+    z-index: 3;
     &.closed {
       background-color: transparent;
       backdrop-filter: unset;

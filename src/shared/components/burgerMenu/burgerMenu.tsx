@@ -1,6 +1,6 @@
 ﻿import './burgerMenu.scss';
 import { Button, ButtonTypes } from '../../../shared/components/buttons/buttons';
-import { hideModal, showModal } from '../modal/modalSlice';
+import { hideSignUpModal, showSignUpModal } from '../../../pages/sign-up/singUpSlice';
 import { useDispatch } from 'react-redux';
 import CloseButton from './assets/closeButton.svg';
 import Facebook from '../../../shared/assets/facebook.svg';
@@ -19,11 +19,11 @@ export const BurgerMenu = ({ isActive, callback }: BurgerMenuProps) => {
   const dispatch = useDispatch();
   const handleClick = () => {
     callback();
-    dispatch(hideModal());
+    dispatch(hideSignUpModal());
   };
   const menuClick = () => {
     callback();
-    dispatch(showModal());
+    dispatch(showSignUpModal());
   };
 
   return (
@@ -41,44 +41,39 @@ export const BurgerMenu = ({ isActive, callback }: BurgerMenuProps) => {
             </Button>
           </div>
           <div className="menu-cell">
-            <Button onClick={handleClick} buttonType={ButtonTypes.HeaderButton}>
-              <Link to={'/'}>
-                <h5>Shop</h5>
-              </Link>
-            </Button>
+            <Link onClick={handleClick} to={'/'}>
+              <h5>Shop</h5>
+            </Link>
           </div>
           <div className="menu-cell">
-            <Button onClick={handleClick} buttonType={ButtonTypes.HeaderButton}>
-              <Link to={'/'}>
-                <h5>Service</h5>
-              </Link>
-            </Button>
+            <Link onClick={handleClick} to={'/'}>
+              <h5>Service</h5>
+            </Link>
           </div>
           <div className="menu-cell">
-            <Button onClick={handleClick} buttonType={ButtonTypes.HeaderButton}>
-              <Link to={'/'}>
-                <h5>Contact</h5>
-              </Link>
-            </Button>
+            <Link onClick={handleClick} to={'/'}>
+              <h5>Contact</h5>
+            </Link>
           </div>
           <div className="menu-cell">
-            <Button onClick={handleClick} buttonType={ButtonTypes.HeaderButton}>
-              <Link to={'/'}>
-                <h5>About us</h5>
-              </Link>
-            </Button>
+            <Link onClick={handleClick} to={'/'}>
+              <h5>About us</h5>
+            </Link>
           </div>
           <div className="menu-cell">
             <div className="links-cell">
-              <Button onClick={handleClick} buttonType={ButtonTypes.HeaderButton}>
-                <Link to={'/'}>Shipping & returns</Link>
-              </Button>
-              <Button onClick={handleClick} buttonType={ButtonTypes.HeaderButton}>
-                <Link to={'/'}> Terms & conditions</Link>
-              </Button>
-              <Button onClick={handleClick} buttonType={ButtonTypes.HeaderButton}>
-                <Link to={'/'}>Privacy policy</Link>
-              </Button>
+              <Link onClick={handleClick} to={'/'}>
+                Shipping & returns
+              </Link>
+
+              <Link onClick={handleClick} to={'/'}>
+                {' '}
+                Terms & conditions
+              </Link>
+
+              <Link onClick={handleClick} to={'/'}>
+                Privacy policy
+              </Link>
             </div>
           </div>
           <div className="menu-cell">
