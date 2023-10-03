@@ -1,41 +1,51 @@
 import './signUp.scss';
 import { Button, ButtonTypes } from '../../shared/components/buttons/buttons';
 import { RootState } from '../../store/store';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { hideSignUpModal } from './singUpSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import Apple from '../../shared/assets/apple.svg';
 import Google from '../../shared/assets/google.svg';
 import Input from '../../shared/components/input/input';
 import Link from '../../shared/components/link/link';
 
-interface SignUpProps {
-  phone: string;
+interface Inputs {
+  email: string;
+  password: string;
 }
 
 export const SignUp = () => {
   const [pageNumber, setPageNumber] = useState(1);
-  const { register } = useForm<SignUpProps>();
+  const { register, handleSubmit } = useForm<Inputs>();
   const dispatch = useDispatch();
   const isActive = useSelector((state: RootState) => state.signUp.isActive);
+  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
   const step1 = (
     <>
       <h2>Greetings! Welcome to luxury gift shop.</h2>
-      <h6 className="step1-h6">Use your mobile number to sign up or log in</h6>
-      <form className="phone-form">
+      <h6 className="step1-h6">Use your email to sign up or log in</h6>
+      <form onSubmit={handleSubmit(onSubmit)} className="phone-form">
         <Input
-          {...register('phone', {
-            pattern: /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/,
+          {...register('email', {
+            pattern: {
+              value:
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+              message: 'Please enter a valid email',
+            },
             required: true,
           })}
-          placeholder={'+380 XX XXX XX XX'}
+        />
+        <Input
+          {...register('password', {
+            required: true,
+          })}
         />
         <Button
-          onClick={() => {
-            setPageNumber(pageNumber + 1);
-          }}
+          // onClick={() => {
+          //   setPageNumber(pageNumber + 1);
+          // }}
           buttonType={ButtonTypes.PrimaryButton}
         >
           continue
@@ -66,22 +76,27 @@ export const SignUp = () => {
   const step2 = (
     <>
       <div className="top-headers">
-        <h2>Sign up</h2>
+        <h2>Log in</h2>
         <h6>Become a member and enjoy personalized gift recommendations, fast checkout, and more.</h6>
-        <h6>Enter code from sms</h6>
+        <h6>Enter code from email</h6>
       </div>
       <form className="phone-form">
         <Input
-          {...register('phone', {
-            pattern: /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/,
+          {...register('email', {
+            pattern: {
+              value:
+                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+              message: 'Please enter a valid email',
+            },
             required: true,
           })}
           placeholder={'XX XX XX'}
+          value={''}
         />
         <Button
-          onClick={() => {
-            setPageNumber(pageNumber + 1);
-          }}
+          // onClick={() => {
+          //   setPageNumber(pageNumber + 1);
+          // }}
           buttonType={ButtonTypes.PrimaryButton}
         >
           Join us
@@ -93,27 +108,27 @@ export const SignUp = () => {
       </div>
     </>
   );
-  const step3 = (
-    <>
-      <div className="top-headers">
-        <h2>Reset your password</h2>
-        <h6>Please provide your phone number below to receive a code for restoring access to your account</h6>
-        <h6>Enter your mobile number</h6>
-      </div>
-      <form className="phone-form">
-        <Input
-          {...register('phone', {
-            pattern: /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/,
-            required: true,
-          })}
-          placeholder={'+380 XX XXX XX XX'}
-        />
-        <Button buttonType={ButtonTypes.PrimaryButton}>continue</Button>
-      </form>
-    </>
-  );
+  // const step3 = (
+  //   <>
+  //     <div className="top-headers">
+  //       <h2>Reset your password</h2>
+  //       <h6>Please provide your phone number below to receive a code for restoring access to your account</h6>
+  //       <h6>Enter your mobile number</h6>
+  //     </div>
+  //     <form className="phone-form">
+  //       <Input
+  //         {...register('email', {
+  //           pattern: /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/,
+  //           required: true,
+  //         })}
+  //         placeholder={'+380 XX XXX XX XX'}
+  //       />
+  //       <Button buttonType={ButtonTypes.PrimaryButton}>continue</Button>
+  //     </form>
+  //   </>
+  // );
 
-  const content = <>{pageNumber === 1 ? step1 : pageNumber === 2 ? step2 : step3}</>;
+  const content = <>{pageNumber === 1 ? step1 : step2}</>;
 
   return (
     <div onClick={() => dispatch(hideSignUpModal())} aria-hidden="true" className={`sign-up-modal ${isActive ? '' : 'closed'}`}>
@@ -121,7 +136,7 @@ export const SignUp = () => {
         <div></div>
         <div
           onClick={(e) => {
-            e.preventDefault();
+            // e.preventDefault();
             e.stopPropagation();
           }}
           aria-hidden="true"

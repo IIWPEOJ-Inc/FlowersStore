@@ -6,7 +6,7 @@ interface ModalVision {
 const initialState: ModalVision = { isActive: false };
 
 const signUpSlice = createSlice({
-  name: 'modalSlice',
+  name: 'signUpSlice',
   initialState,
   reducers: {
     showSignUpModal: (state) => {

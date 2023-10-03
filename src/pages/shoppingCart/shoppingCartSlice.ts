@@ -6,7 +6,7 @@ interface ModalVision {
 const initialState: ModalVision = { isActive: false };
 
 const shoppingCartSlice = createSlice({
-  name: 'modalSlice',
+  name: 'shoppingCartSlice',
   initialState,
   reducers: {
     showShoppingCartModal: (state) => {
