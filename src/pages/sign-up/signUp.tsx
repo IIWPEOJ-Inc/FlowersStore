@@ -17,16 +17,34 @@ interface Inputs {
 
 export const SignUp = () => {
   const [pageNumber, setPageNumber] = useState(1);
-  const { register, handleSubmit } = useForm<Inputs>();
+  const { register, handleSubmit, reset } = useForm<Inputs>({
+    defaultValues: {
+      email: '',
+      password: '',
+    },
+  });
   const dispatch = useDispatch();
   const isActive = useSelector((state: RootState) => state.signUp.isActive);
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    console.log(data);
+    reset();
+  };
 
   const step1 = (
     <>
       <h2>Greetings! Welcome to luxury gift shop.</h2>
-      <h6 className="step1-h6">Use your email to sign up or log in</h6>
-      <form onSubmit={handleSubmit(onSubmit)} className="phone-form">
+      <h6 className="step1-h6">
+        Use your email to log in or&nbsp;
+        <Button
+          onClick={() => {
+            setPageNumber(pageNumber + 1);
+          }}
+          buttonType={ButtonTypes.HeaderButton}
+        >
+          register
+        </Button>
+      </h6>
+      <form onSubmit={handleSubmit(onSubmit)} className="email-form">
         <Input
           {...register('email', {
             pattern: {
@@ -36,20 +54,15 @@ export const SignUp = () => {
             },
             required: true,
           })}
+          placeholder="Email"
         />
         <Input
           {...register('password', {
             required: true,
           })}
+          placeholder="Password"
         />
-        <Button
-          // onClick={() => {
-          //   setPageNumber(pageNumber + 1);
-          // }}
-          buttonType={ButtonTypes.PrimaryButton}
-        >
-          continue
-        </Button>
+        <Button buttonType={ButtonTypes.PrimaryButton}>continue</Button>
       </form>
       <div className="divide-lines-flex">
         <div className="divide-line"></div>
@@ -76,11 +89,11 @@ export const SignUp = () => {
   const step2 = (
     <>
       <div className="top-headers">
-        <h2>Log in</h2>
+        <h2>Register</h2>
         <h6>Become a member and enjoy personalized gift recommendations, fast checkout, and more.</h6>
-        <h6>Enter code from email</h6>
+        <h6>Enter email and password</h6>
       </div>
-      <form className="phone-form">
+      <form onSubmit={handleSubmit(onSubmit)} className="email-form">
         <Input
           {...register('email', {
             pattern: {
@@ -90,22 +103,20 @@ export const SignUp = () => {
             },
             required: true,
           })}
-          placeholder={'XX XX XX'}
-          value={''}
+          placeholder="Email"
         />
-        <Button
-          // onClick={() => {
-          //   setPageNumber(pageNumber + 1);
-          // }}
-          buttonType={ButtonTypes.PrimaryButton}
-        >
-          Join us
-        </Button>
+        <Input
+          {...register('password', {
+            required: true,
+          })}
+          placeholder="Password"
+        />
+        <Button buttonType={ButtonTypes.PrimaryButton}>continue</Button>
       </form>
-      <div className="links-flex">
+      {/* <div className="links-flex">
         <Link to={'/'}>Didn't receive a code?</Link>
         <Link to={'/'}>Resend code</Link>
-      </div>
+      </div> */}
     </>
   );
   // const step3 = (

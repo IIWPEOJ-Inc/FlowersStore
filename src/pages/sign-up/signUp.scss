@@ -28,11 +28,14 @@
       flex-direction: column;
     }
   }
-  .step1-h6 {
-    margin-top: calculate-vw(24);
-    margin-bottom: calculate-vw(12);
-  }
-  .phone-form {
+    .step1-h6 {
+      margin-top: calculate-vw(24);
+      margin-bottom: calculate-vw(12);
+      display: flex;
+    }
+
+
+  .email-form {
     display: flex;
     flex-direction: column;
     gap: calculate-vw(16);
