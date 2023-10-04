@@ -42,7 +42,7 @@ export const Header = () => {
       <div className="grid-right-items">
         <div className="grid-right-item">
           <Button onClick={() => dispatch(showSignUpModal())} buttonType={ButtonTypes.HeaderButton}>
-            Sing Up
+            Sign Up
           </Button>
         </div>
         <div className="grid-right-item">
