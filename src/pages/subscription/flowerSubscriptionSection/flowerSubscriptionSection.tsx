@@ -1,10 +1,5 @@
 ﻿import './flowerSubscriptionSection.scss';
-<<<<<<< HEAD
-import { SecondaryButton } from '../../../shared/components/buttons/buttons';
-=======
 import { Button, ButtonTypes } from '../../../shared/components/buttons/buttons';
-import { Link } from 'react-router-dom';
->>>>>>> 765b322 (adaptive alfa)
 import LeftImage from './assets/leftImage.png';
 
 export const FlowerSubscriptionSection = () => {
