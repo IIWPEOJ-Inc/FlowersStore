@@ -1,30 +1,21 @@
 import './buttons.scss';
+import { ButtonHTMLAttributes } from 'react';
 
-interface ButtonProps {
-  buttonType: 'button' | 'submit' | 'reset';
-  children: React.ReactNode;
+export enum ButtonTypes {
+  PrimaryButton = 'primary-button',
+  SecondaryButton = 'secondary-button',
+  TertiaryButton = 'tertiary-button',
+  HeaderButton = 'header-button',
 }
 
-export const PrimaryButton = ({ buttonType, children }: ButtonProps) => {
-  return (
-    <button className="primary-button" type={buttonType}>
-      {children}
-    </button>
-  );
-};
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  buttonType: ButtonTypes;
+}
 
-export const SecondaryButton = ({ buttonType, children }: ButtonProps) => {
+export const Button = ({ buttonType, ...rest }: ButtonProps) => {
   return (
-    <button className="secondary-button" type={buttonType}>
-      {children}
-    </button>
-  );
-};
-
-export const TertiaryButton = ({ buttonType, children }: ButtonProps) => {
-  return (
-    <button className="tertiary-button" type={buttonType}>
-      {children}
+    <button {...rest} className={buttonType}>
+      {rest.children}
     </button>
   );
 };

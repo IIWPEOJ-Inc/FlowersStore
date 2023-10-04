@@ -1,6 +1,6 @@
 ﻿import './reviewSection.scss';
+import { Button, ButtonTypes } from '../../../shared/components/buttons/buttons';
 import { ReactSwiper } from '../../../shared/components/swiper/swiper';
-import { SecondaryButton } from '../../../shared/components/buttons/buttons';
 import { SwiperContent } from './components/swiperContent';
 import Google from './assets/google.svg';
 
@@ -35,7 +35,7 @@ export const ReviewSection = () => {
             />
           </ReactSwiper>
         </div>
-        <SecondaryButton buttonType="submit">READ REVIEWS</SecondaryButton>
+        <Button buttonType={ButtonTypes.SecondaryButton}>READ REVIEWS</Button>
       </div>
     </section>
   );

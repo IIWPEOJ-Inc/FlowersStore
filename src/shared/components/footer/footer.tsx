@@ -1,5 +1,5 @@
 import './footer.scss';
-import { PrimaryButton } from '../buttons/buttons';
+import { Button, ButtonTypes } from '../buttons/buttons';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import Facebook from '../../assets/facebook.svg';
 import Input from '../input/input';
@@ -35,7 +35,7 @@ const Footer = () => {
               })}
               placeholder="Your Email"
             />
-            <PrimaryButton buttonType="submit">Remind</PrimaryButton>
+            <Button buttonType={ButtonTypes.PrimaryButton}>Remind</Button>
           </form>
         </div>
       </div>

@@ -1,5 +1,5 @@
 ﻿import './toContactUsSection.scss';
-import { PrimaryButton } from '../../../shared/components/buttons/buttons';
+import { Button, ButtonTypes } from '../../../shared/components/buttons/buttons';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useMediaQuery } from 'react-responsive';
 import ContactUsImage from './assets/contactUsImage.jpeg';
@@ -36,7 +36,7 @@ export const ToContactUsSection = () => {
               })}
               placeholder="+1 438 XXX XX XX"
             />
-            <PrimaryButton buttonType="submit">BOOK A CALL</PrimaryButton>
+            <Button buttonType={ButtonTypes.SecondaryButton}>BOOK A CALL</Button>
           </form>
         </div>
       </div>

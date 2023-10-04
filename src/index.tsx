@@ -1,6 +1,8 @@
 import './index.scss';
 import { App } from './app';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import ScrollToTop from './shared/components/scrollToTop/scrollToTop';
@@ -9,10 +11,12 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <ScrollToTop />
-      <App />
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <ScrollToTop />
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
 );
 

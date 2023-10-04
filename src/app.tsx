@@ -8,6 +8,7 @@ import { NotFound } from './pages/notFound/notFound';
 import { Product } from './pages/product/product';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { ShoppingCart } from './pages/shoppingCart/shoppingCart';
+import { SignUp } from './pages/sign-up/signUp';
 import { Subscription } from './pages/subscription/subscription';
 import Footer from './shared/components/footer/footer';
 import QRCodeGenerator from './shared/components/qrCodeGenerator/qrCodeGenerator';
@@ -20,6 +21,8 @@ export const App = () => {
 
   return (
     <div className="app">
+      <SignUp />
+      <ShoppingCart />
       {shouldRenderHeaderFooter && <Header />}
       <Routes>
         <Route index element={<Home />} />

@@ -1,5 +1,5 @@
 ﻿import './flowerSubscriptionSection.scss';
-import { SecondaryButton } from '../../../shared/components/buttons/buttons';
+import { Button, ButtonTypes } from '../../../shared/components/buttons/buttons';
 import LeftImage from './assets/leftImage.png';
 
 export const FlowerSubscriptionSection = () => {
@@ -33,7 +33,7 @@ export const FlowerSubscriptionSection = () => {
             </li>
           </ul>
           <a href="/subscription#build-subscription-section">
-            <SecondaryButton buttonType={'button'}>Explore Plans</SecondaryButton>
+            <Button buttonType={ButtonTypes.SecondaryButton}>Explore Plans</Button>
           </a>
         </div>
       </div>

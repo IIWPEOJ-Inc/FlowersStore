@@ -1,5 +1,5 @@
 ﻿import './weddingSection.scss';
-import { TertiaryButton } from '../../../shared/components/buttons/buttons';
+import { Button, ButtonTypes } from '../../../shared/components/buttons/buttons';
 
 export const WeddingSection = () => {
   return (
@@ -16,7 +16,7 @@ export const WeddingSection = () => {
               to life.
             </p>
           </div>
-          <TertiaryButton buttonType="button">INQUIRE NOW</TertiaryButton>
+          <Button buttonType={ButtonTypes.TertiaryButton}>INQUIRE NOW</Button>
         </div>
       </div>
     </section>

@@ -1,0 +1,108 @@
+﻿@import '../../mixins/functions.scss';
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .burger-menu {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(210, 210, 215, 0.35);
+    backdrop-filter: blur(3px);
+    z-index: 3;
+    // transition: left 1s;
+    &.closed {
+      background-color: transparent;
+      backdrop-filter: unset;
+      left: -100vw;
+      z-index: -1;
+    }
+    .grid-sections {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      .menu-section {
+        height: 100vh;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid black;
+        .close-cell {
+          padding: calculate-vw-tablet(12) calculate-vw-tablet(24);
+          border-bottom: 1px solid black;
+        }
+        .menu-cell {
+          padding: calculate-vw-tablet(24);
+          border-bottom: 1px solid black;
+        }
+        .links-cell {
+          display: flex;
+          flex-direction: column;
+          gap: calculate-vw-tablet(16);
+        }
+        .links-cell > * {
+          justify-content: start;
+        }
+        .menu-cell:last-child {
+          display: flex;
+          justify-content: space-between;
+        }
+        .menu-cell:nth-last-child(2) {
+          flex-grow: 1;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .burger-menu {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(210, 210, 215, 0.35);
+    backdrop-filter: blur(3px);
+    z-index: 3;
+    &.closed {
+      background-color: transparent;
+      backdrop-filter: unset;
+      left: calculate-vw-mobile(-384);
+      z-index: -1;
+    }
+    .grid-sections {
+      .menu-section {
+        height: 100vh;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid black;
+        .close-cell {
+          padding: calculate-vw-mobile(12) calculate-vw-mobile(24);
+          border-bottom: 1px solid black;
+        }
+        .menu-cell {
+          padding: calculate-vw-mobile(24);
+          border-bottom: 1px solid black;
+        }
+        .links-cell {
+          display: flex;
+          flex-direction: column;
+          gap: calculate-vw-mobile(16);
+        }
+        .links-cell > * {
+            justify-content: start;
+          }
+        .menu-cell:last-child {
+          display: flex;
+          justify-content: space-between;
+        }
+        .menu-cell:nth-last-child(2) {
+          flex-grow: 1;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

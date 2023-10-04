@@ -1,17 +1,8 @@
 import './link.scss';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, LinkProps as RouterLinkProps } from 'react-router-dom';
 
-interface Props {
-  to: string;
-  children: React.ReactNode;
-}
-
-const Link = ({ to, children }: Props) => {
-  return (
-    <RouterLink to={to} className="link">
-      {children}
-    </RouterLink>
-  );
+const Link = ({ ...props }: RouterLinkProps) => {
+  return <RouterLink {...props} className="link"></RouterLink>;
 };
 
 export default Link;

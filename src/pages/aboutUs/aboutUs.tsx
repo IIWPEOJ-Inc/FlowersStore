@@ -1,5 +1,5 @@
 import './aboutUs.scss';
-import { PrimaryButton } from '../../shared/components/buttons/buttons';
+import { Button, ButtonTypes } from '../../shared/components/buttons/buttons';
 import { useMediaQuery } from 'react-responsive';
 import Facebook from '../../shared/assets/facebook.svg';
 import Image1 from './assets/aboutUsImage1.jpg';
@@ -109,7 +109,7 @@ export const AboutUs = () => {
           </div>
           <div className="button-container">
             <Link to="/">
-              <PrimaryButton buttonType="button">shop now</PrimaryButton>
+              <Button buttonType={ButtonTypes.PrimaryButton}>shop now</Button>
             </Link>
           </div>
         </div>

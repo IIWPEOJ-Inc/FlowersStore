@@ -1,5 +1,5 @@
-import React from 'react';
 import './swiperProductContent.scss';
+import React from 'react';
 
 interface SwiperProductContentProps {
   imgProduct: any;

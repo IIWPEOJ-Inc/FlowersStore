@@ -1,12 +1,8 @@
 import './input.scss';
-import { InputHTMLAttributes } from 'react';
+import React from 'react';
 
-interface Props extends InputHTMLAttributes<HTMLInputElement> {
-  placeholder: string;
-}
-
-const Input = ({ placeholder, ...props }: Props) => {
-  return <input className="input" placeholder={placeholder} {...props} />;
-};
+const Input = React.forwardRef<HTMLInputElement, React.HTMLProps<HTMLInputElement>>(({ ...props }, ref) => {
+  return <input className="input" {...props} ref={ref} />;
+});
 
 export default Input;
