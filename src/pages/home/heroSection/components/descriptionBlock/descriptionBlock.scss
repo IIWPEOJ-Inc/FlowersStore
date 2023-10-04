@@ -1,13 +1,5 @@
 ﻿@import '../../../../../shared/mixins/functions.scss';
 
-.border-left {
-  border-left: 1px solid black;
-}
-
-.border-right {
-  border-right: 1px solid black;
-}
-
 @media (min-width: 992px) {
   .description-block {
     display: flex;

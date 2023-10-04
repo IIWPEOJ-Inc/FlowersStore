@@ -9,20 +9,34 @@ import leftArrow from '../../assets/leftArrow.svg';
 import rightArrow from '../../assets/rightArrow.svg';
 
 interface ReactSwiperProps {
+  slidesPerView?: number | undefined;
+  spaceBetween?: string | number | undefined;
+  isPaginationRequired?: boolean;
+  contentCentred?: boolean;
+  desktopNavigationOnly?: boolean;
   children: ReactNode | ReactNode[];
 }
-export const ReactSwiper = (props: ReactSwiperProps) => {
+export const ReactSwiper = ({
+  slidesPerView = undefined,
+  spaceBetween = undefined,
+  isPaginationRequired = false,
+  contentCentred = false,
+  desktopNavigationOnly = false,
+  children,
+}: ReactSwiperProps) => {
   const isDesktop = useMediaQuery({ minWidth: 992 });
-
+  const showNavigation = isDesktop ? isDesktop : !desktopNavigationOnly;
   return (
     <div className="swiper-container">
       <div className="nav-content-conteiner">
-        {isDesktop && (
+        {showNavigation && (
           <div className="image-swiper-button-prev">
             <img src={leftArrow} alt="leftArrow" className="img-arrow" loading="lazy" />
           </div>
         )}
         <Swiper
+          slidesPerView={slidesPerView}
+          spaceBetween={spaceBetween}
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
           loop={true}
           navigation={{
@@ -36,17 +50,19 @@ export const ReactSwiper = (props: ReactSwiperProps) => {
           mousewheel={true}
           keyboard={true}
         >
-          {React.Children.map(props.children, (child, index) => (
-            <SwiperSlide key={index}>{child}</SwiperSlide>
+          {React.Children.map(children, (child, index) => (
+            <SwiperSlide className={contentCentred ? 'centred' : ''} key={index}>
+              {child}
+            </SwiperSlide>
           ))}
         </Swiper>
-        {isDesktop && (
+        {showNavigation && (
           <div className="image-swiper-button-next">
             <img src={rightArrow} alt="rightArrow" className="img-arrow" loading="lazy" />
           </div>
         )}
       </div>
-      <div className="swiper-pagination"></div>
+      <>{isPaginationRequired ? <div className="swiper-pagination"></div> : ''}</>
     </div>
   );
 };

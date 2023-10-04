@@ -1,0 +1,57 @@
+@import '../../../../shared/mixins/functions.scss';
+
+.recommendation-content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-items: center;
+
+  .price {
+    color: #808080;
+  }
+}
+
+@media (min-width: 992px) {
+  .recommendation-content {
+    padding: calculate-vw(24);
+    height: calculate-vw(375);
+    .recommendation-img {
+      height: calculate-vw(297);
+      display: flex;
+      align-items: stretch;
+    }
+    .name {
+      margin: calculate-vw(8) 0 calculate-vw(4);
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .recommendation-content {
+    padding: calculate-vw-tablet(24);
+    height: calculate-vw-tablet(375);
+    .recommendation-img {
+      height: calculate-vw-tablet(297);
+      display: flex;
+      align-items: stretch;
+    }
+    .name {
+      margin: calculate-vw-tablet(8) 0 calculate-tablet(4);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .recommendation-content {
+    padding: calculate-vw-mobile(12);
+    height: calculate-vw-mobile(375);
+
+    .recommendation-img {
+      height: calculate-vw-mobile(297);
+      display: flex;
+      align-items: stretch;
+    }
+    .name {
+      margin: calculate-vw-mobile(8) 0 calculate-mobile(4);
+    }
+  }
+}

@@ -1,3 +1,11 @@
+import { ProductOrder } from './productOrder/productOrder';
+import { Recommendations } from './recommendation/recommendations';
+
 export const Product = () => {
-  return <div>Product</div>;
+  return (
+    <section id="product-section">
+      <ProductOrder />
+      <Recommendations />
+    </section>
+  );
 };

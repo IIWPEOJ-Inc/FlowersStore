@@ -1,0 +1,49 @@
+@import '../../../../shared/mixins/functions.scss';
+
+.swiper-product-content {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  .price {
+    color: #808080;
+  }
+
+  .img-product {
+    border: 1px solid #d2d2d7;
+  }
+}
+
+@media (min-width: 992px) {
+  .swiper-product-content {
+    .img-product {
+      margin-bottom: calculate-vw(8);
+    }
+    .name {
+      margin-bottom: calculate-vw(4);
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .swiper-product-content {
+    .img-product {
+      margin-bottom: calculate-vw-tablet(8);
+    }
+    .name {
+      margin-bottom: calculate-vw-tablet(4);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .swiper-product-content {
+    .img-product {
+      height: calculate-vw-mobile(162);
+      width: calculate-vw-mobile(208);
+      margin-bottom: calculate-vw-mobile(8);
+    }
+    .name {
+      margin-bottom: calculate-vw-mobile(4);
+    }
+  }
+}

@@ -1,0 +1,66 @@
+@import '../../../shared/mixins/functions.scss';
+
+#productOrder-section {
+  border-bottom: 1px solid black;
+
+  .left-side {
+    border-right: 1px solid black;
+  }
+}
+
+@media (min-width: 992px) {
+  #productOrder-section {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    .right-side {
+      padding: calculate-vw(40);
+
+      .button-container {
+        margin-top: calculate-vw(40);
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #productOrder-section {
+    display: flex;
+    flex-direction: column;
+
+    .right-side {
+      padding: calculate-vw-tablet(40);
+    }
+
+    .left-side {
+      .img-product {
+        height: calculate-vw-tablet(670);
+      }
+    }
+
+    .button-container {
+      margin-top: calculate-vw-tablet(40);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #productOrder-section {
+    display: flex;
+    flex-direction: column;
+
+    .right-side {
+      padding: calculate-vw-mobile(40) calculate-vw-mobile(16);
+    }
+
+    .left-side {
+      .img-product {
+        height: calculate-vw-mobile(420);
+      }
+    }
+
+    .button-container {
+      margin-top: calculate-vw-mobile(40);
+    }
+  }
+}
