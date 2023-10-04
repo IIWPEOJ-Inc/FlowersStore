@@ -11,7 +11,7 @@ export const SubscriptionPlan = ({ image, planName, options }: SubscriptionPlanP
   return (
     <div className="subscription-plan">
       <div className="top-content">
-        <img src={image} alt="" />
+        <img src={image} alt="" loading="lazy" />
         <div className="right-side-grid">
           <span className="subtitle">{planName}</span>
           <ul>

@@ -74,6 +74,11 @@ p {
   line-height: calculate-vw(14.4);
 }
 
+.link {
+  width: 100%;
+  height: 100%;
+}
+
 //images
 img {
   width: 100%;
@@ -84,7 +89,6 @@ img {
 .icon {
   width: calculate-vw(24);
   height: calculate-vw(24);
-  object-fit: none;
 }
 
 .border-top {
@@ -189,7 +193,6 @@ img {
   .icon {
     width: calculate-vw-tablet(24);
     height: calculate-vw-tablet(24);
-    object-fit: none;
   }
 }
 
@@ -278,6 +281,5 @@ img {
   .icon {
     width: calculate-vw-mobile(24);
     height: calculate-vw-mobile(24);
-    object-fit: none;
   }
 }

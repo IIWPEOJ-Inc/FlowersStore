@@ -47,11 +47,11 @@ export const ToContactUsSection = () => {
           </div>
           <div className="phone-container">
             <div className="icon-container ">
-              <img src={Phone} alt="Phone" className="icon" />
+              <img src={Phone} alt="Phone" className="icon" loading="lazy" />
               <Link to="/tel">+1 438 XXX XX XX</Link>
             </div>
             <div className="icon-container ">
-              <img src={Phone} alt="Phone" className="icon" />
+              <img src={Phone} alt="Phone" className="icon" loading="lazy" />
               <Link to="/tel">+1 438 XXX XX XX</Link>
             </div>
           </div>
@@ -63,7 +63,7 @@ export const ToContactUsSection = () => {
           <div className="address-container">
             <div className="overline">opening hours: 8 to 11 p.m.</div>
             <div className="icon-container ">
-              <img src={PinDrop} alt="pin-drop" className="icon" />
+              <img src={PinDrop} alt="pin-drop" className="icon" loading="lazy" />
               <Link to="/geo">360 Victoria Ave, Montreal</Link>
             </div>
           </div>
@@ -74,17 +74,17 @@ export const ToContactUsSection = () => {
 
   const rightSection = (
     <div className="right-section">
-      <img src={ContactUsImage} alt="img-contact-us" className="img-contact-us" />
+      <img src={ContactUsImage} alt="img-contact-us" className="img-contact-us" loading="lazy" />
       <div className="grid-container">
         <div className="grid-item">
           <h3>Follow us</h3>
         </div>
         <div className="grid-item icons">
-          <img src={Instagram} alt="instagram" className="icon" />
-          <img src={Pinterest} alt="pinterest" className="icon" />
-          <img src={Facebook} alt="facebook" className="icon" />
-          <img src={Twitter} alt="twitter" className="icon" />
-          <img src={Telegram} alt="telegram" className="icon" />
+          <img src={Instagram} alt="instagram" className="icon" loading="lazy" />
+          <img src={Pinterest} alt="pinterest" className="icon" loading="lazy" />
+          <img src={Facebook} alt="facebook" className="icon" loading="lazy" />
+          <img src={Twitter} alt="twitter" className="icon" loading="lazy" />
+          <img src={Telegram} alt="telegram" className="icon" loading="lazy" />
         </div>
       </div>
     </div>

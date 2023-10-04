@@ -1,6 +1,7 @@
 @import '../../mixins/functions.scss';
 
 .link {
+  all: unset;
   display: flex;
   align-items: center;
   font-family: 'Gilroy', sans-serif;
@@ -12,6 +13,7 @@
 
   &:hover {
     cursor: pointer;
+    color: gray;
   }
 }
 

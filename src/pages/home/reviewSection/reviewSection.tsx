@@ -11,7 +11,7 @@ export const ReviewSection = () => {
         <div className="swiper-headings-container">
           <div className="headings-container">
             <div className="google-title-container">
-              <img src={Google} alt="img-google" className="img-google" />
+              <img src={Google} alt="img-google" className="img-google" loading="lazy" />
               <div className="overline">Reviews</div>
             </div>
             <h2>Our Clients say</h2>

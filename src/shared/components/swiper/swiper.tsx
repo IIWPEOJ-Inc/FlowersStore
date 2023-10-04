@@ -19,7 +19,7 @@ export const ReactSwiper = (props: ReactSwiperProps) => {
       <div className="nav-content-conteiner">
         {isDesktop && (
           <div className="image-swiper-button-prev">
-            <img src={leftArrow} alt="leftArrow" className="img-arrow" />
+            <img src={leftArrow} alt="leftArrow" className="img-arrow" loading="lazy" />
           </div>
         )}
         <Swiper
@@ -42,7 +42,7 @@ export const ReactSwiper = (props: ReactSwiperProps) => {
         </Swiper>
         {isDesktop && (
           <div className="image-swiper-button-next">
-            <img src={rightArrow} alt="rightArrow" className="img-arrow" />
+            <img src={rightArrow} alt="rightArrow" className="img-arrow" loading="lazy" />
           </div>
         )}
       </div>

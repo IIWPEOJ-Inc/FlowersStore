@@ -1,14 +1,42 @@
 ﻿import './heroSection.scss';
-import { DescriptionBlock, Direction } from './components/descriptionBlock/descriptionBlock';
-import { FlowerBlock } from './components/flowerBlock/flowerBlock';
+import { useEffect, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import HeroImage from './assets/heroImage.png';
-import flower1 from './assets/flower1.jpg';
-import flower2 from './assets/flower2.png';
-import flower3 from './assets/flower3.png';
-import flower4 from './assets/flower4.png';
-import flower5 from './assets/flower5.png';
+import Link from '../../../shared/components/link/link';
+import Loader from '../../../shared/components/loader/loader';
+import leftArrow from './assets/arrow-left.svg';
+import rightArrow from './assets/arrow-right.svg';
+
+interface Category {
+  id: string;
+  title: string;
+  path: string;
+}
 
 export const HeroSection = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [categories, setCategories] = useState<Category[]>([]);
+  const isDesktop = useMediaQuery({ minWidth: 992 });
+
+  useEffect(() => {
+    const fetchCategories = async () => {
+      setIsLoading(true);
+
+      try {
+        const response = await fetch(`${process.env.REACT_APP_BASE_URL}/categories`);
+        const categories = (await response.json()) as Category[];
+        setCategories(categories);
+      } catch (ex: any) {
+        console.log(ex, 'Aborted');
+        return;
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchCategories();
+  }, []);
+
   return (
     <section id="hero-section">
       <div className="left-section">
@@ -28,7 +56,7 @@ export const HeroSection = () => {
             </div>
             <div className="grid-column-container">
               <div className="left-container">
-                <img src={HeroImage} alt="img-hero" className="img-hero" />
+                <img src={HeroImage} alt="img-hero" className="img-hero" loading="lazy" />
               </div>
               <div className="right-container">
                 <p>Experience the joy of giving with our modern floral studio. Order online and send fresh flowers, plants and gifts today.</p>
@@ -37,18 +65,47 @@ export const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div className="right-section">
-        <DescriptionBlock arrowDirection={Direction.Right}>Fresh Flowers</DescriptionBlock>
-        <FlowerBlock arrowDirection={Direction.Right} image={flower1} />
-        <FlowerBlock arrowDirection={Direction.Left} image={flower2} />
-        <DescriptionBlock arrowDirection={Direction.Left}>Dried Flowers</DescriptionBlock>
-        <DescriptionBlock arrowDirection={Direction.Right}>Live Plants</DescriptionBlock>
-        <FlowerBlock arrowDirection={Direction.Right} image={flower3} />
-        <FlowerBlock arrowDirection={Direction.Left} image={flower4} />
-        <DescriptionBlock arrowDirection={Direction.Left}>Aroma Candles</DescriptionBlock>
-        <DescriptionBlock arrowDirection={Direction.Right}>Fresheners</DescriptionBlock>
-        <FlowerBlock arrowDirection={Direction.Right} image={flower5} />
-      </div>
+      {isLoading ? (
+        <Loader></Loader>
+      ) : (
+        <div className="right-section">
+          {categories.map((category, index) => {
+            const isEven = index % 2 === 0;
+            return (
+              <div className="category-container">
+                <div
+                  className={`category-title-item ${
+                    isEven ? (isDesktop ? 'order-1' : 'border-right order-1') : isDesktop ? 'border-left order-2' : 'order-2'
+                  }`}
+                >
+                  <h3>{category.title}</h3>
+                  <div className="link-items">
+                    <span className={isEven ? 'order-2' : 'order-1'}>
+                      {isEven ? (
+                        <img src={rightArrow} alt="arrow-right" className="icon arrow" />
+                      ) : (
+                        <img src={leftArrow} alt="arrow-left" className="icon arrow" />
+                      )}
+                    </span>
+                    <span className={isEven ? 'order-1' : 'order-2'}>
+                      <Link to={`/category/${category.id}`}>Shop now</Link>
+                    </span>
+                  </div>
+                </div>
+                <div
+                  className={`border-bottom ${
+                    isEven ? (isDesktop ? 'border-left order-2' : 'order-2') : isDesktop ? 'order-1' : 'border-right order-1'
+                  }`}
+                >
+                  <Link to={`/category/${category.id}`}>
+                    <img src={` ${process.env.REACT_APP_BASE_URL_PROD}${category.path}`} alt="card-item" loading="lazy" className="img-card-item " />
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </section>
   );
 };

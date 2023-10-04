@@ -29,24 +29,24 @@ export const AboutUs = () => {
             </div>
             <div className="icons-container centred">
               <Link to="/">
-                <img src={Instagram} alt="instagram" className="icon" />
+                <img src={Instagram} alt="instagram" className="icon" loading="lazy" />
               </Link>
               <Link to="/">
-                <img src={Pinterest} alt="pinterest" className="icon" />
+                <img src={Pinterest} alt="pinterest" className="icon" loading="lazy" />
               </Link>
               <Link to="/">
-                <img src={Facebook} alt="facebook" className="icon" />
+                <img src={Facebook} alt="facebook" className="icon" loading="lazy" />
               </Link>
               <Link to="/">
-                <img src={Twitter} alt="twitter" className="icon" />
+                <img src={Twitter} alt="twitter" className="icon" loading="lazy" />
               </Link>
               <Link to="/">
-                <img src={Telegram} alt="telegram" className="icon" />
+                <img src={Telegram} alt="telegram" className="icon" loading="lazy" />
               </Link>
             </div>
           </div>
         </div>
-        <img src={Image1} alt="img-about-us-1" className="img-about-us border-bottom" />
+        <img src={Image1} alt="img-about-us-1" className="img-about-us border-bottom" loading="lazy" />
       </div>
       <div className="content-container border-bottom">
         <div className="story-container">
@@ -62,7 +62,7 @@ export const AboutUs = () => {
         </div>
       </div>
       <div className="section-container">
-        <img src={Image2} alt="img-about-us-2" className={`img-about-us border-bottom ${isDesktop ? 'border-right' : ''}`} />
+        <img src={Image2} alt="img-about-us-2" className={`img-about-us border-bottom ${isDesktop ? 'border-right' : ''}`} loading="lazy" />
         <div className="content-container border-bottom">
           <div className="description-container">
             <h3>Expertly Crafted Bouquets</h3>
@@ -75,7 +75,7 @@ export const AboutUs = () => {
         </div>
       </div>
       <div className="section-container">
-        <img src={Image3} alt="img-about-us-3" className={`img-about-us border-bottom ${isDesktop ? 'order-2' : ''}`} />
+        <img src={Image3} alt="img-about-us-3" className={`img-about-us border-bottom ${isDesktop ? 'order-2' : ''}`} loading="lazy" />
         <div className={`content-container border-bottom ${isDesktop ? 'order-1 border-right' : ''}`}>
           <div className="description-container">
             <h3>Bouquets, Gifts & Ambiance</h3>
@@ -88,7 +88,7 @@ export const AboutUs = () => {
         </div>
       </div>
       <div className="section-container">
-        <img src={Image4} alt="img-about-us-4" className={`img-about-us border-bottom ${isDesktop ? 'border-right' : ''}`} />
+        <img src={Image4} alt="img-about-us-4" className={`img-about-us border-bottom ${isDesktop ? 'border-right' : ''}`} loading="lazy" />
         <div className="content-container border-bottom">
           <div className="description-container">
             <h3>Making Every Day Special</h3>

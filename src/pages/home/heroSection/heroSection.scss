@@ -69,8 +69,37 @@
     }
 
     .right-section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-direction: column;
+
+      .category-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        .category-title-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          position: relative;
+          padding: calculate-vw(24);
+          border-bottom: 1px solid black;
+
+          .link-items {
+            display: flex;
+            gap: calculate-vw(4);
+            position: absolute;
+            bottom: calculate-vw(24);
+            span {
+              display: flex;
+              font-weight: 600;
+              font-size: calculate-vw(16);
+              line-height: calculate-vw(19.2);
+              align-items: center;
+            }
+          }
+        }
+      }
     }
 
     .img-hero {
@@ -78,7 +107,8 @@
     }
 
     .img-card-item {
-      height: calculate-vw(360);
+      display: flex;
+      justify-content: center;
     }
   }
 }
@@ -150,8 +180,37 @@
     }
 
     .right-section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-direction: column;
+
+      .category-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        .category-title-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          position: relative;
+          padding: calculate-vw-tablet(24);
+          border-bottom: 1px solid black;
+
+          .link-items {
+            display: flex;
+            gap: calculate-vw-tablet(4);
+            position: absolute;
+            bottom: calculate-vw-tablet(24);
+            span {
+              display: flex;
+              font-weight: 600;
+              font-size: calculate-vw-tablet(16);
+              line-height: calculate-vw-tablet(19.2);
+              align-items: center;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -160,6 +219,9 @@
   }
 
   .img-card-item {
+    display: flex;
+    justify-content: center;
+    width: calculate-vw-tablet(384);
     height: calculate-vw-tablet(384);
   }
 }
@@ -233,8 +295,37 @@
     }
 
     .right-section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-direction: column;
+
+      .category-container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        .category-title-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          position: relative;
+          padding: calculate-vw-mobile(24);
+          border-bottom: 1px solid black;
+
+          .link-items {
+            display: flex;
+            gap: calculate-vw-mobile(4);
+            position: absolute;
+            bottom: calculate-vw-mobile(24);
+            span {
+              display: flex;
+              font-weight: 600;
+              font-size: calculate-vw-mobile(12);
+              line-height: calculate-vw-mobile(14.4);
+              align-items: center;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -243,6 +334,8 @@
   }
 
   .img-card-item {
+    display: flex;
+    justify-content: center;
     height: calculate-vw-mobile(200);
   }
 }

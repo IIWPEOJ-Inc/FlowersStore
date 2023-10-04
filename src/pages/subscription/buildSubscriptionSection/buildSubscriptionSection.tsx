@@ -54,8 +54,8 @@ export const BuildSubscriptionSection = () => {
           <div className="under-h4-div">Select the delivery frequency</div>
           <div className="frequency-buttons">
             <SecondaryButton buttonType={'button'}>Monthly</SecondaryButton>
-            <SecondaryButton buttonType={'button'}>Monthly</SecondaryButton>
-            <SecondaryButton buttonType={'button'}>Monthly</SecondaryButton>
+            <SecondaryButton buttonType={'button'}>Bi-Weekly</SecondaryButton>
+            <SecondaryButton buttonType={'button'}>Weekly</SecondaryButton>
           </div>
           <div className="gray-line"></div>
           <h4>How many deliveries would you like ?</h4>
@@ -69,7 +69,7 @@ export const BuildSubscriptionSection = () => {
       </div>
       <div className="right-content">
         <div className="content">
-          <img src={RightImage} alt="RightImage" />
+          <img src={RightImage} alt="RightImage" loading="lazy" />
         </div>
       </div>
     </section>

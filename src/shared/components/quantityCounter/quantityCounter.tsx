@@ -17,11 +17,11 @@ export const QuantityCounter = () => {
   return (
     <div className="quantity-counter">
       <button onClick={decrement} className="minus boxes-settings">
-        <img className="icon" src={Minus} alt="minus" />
+        <img className="icon" src={Minus} alt="minus" loading="lazy" />
       </button>
       <div className="quantity boxes-settings">{count}</div>
       <button onClick={increment} className="plus boxes-settings">
-        <img className="icon" src={Plus} alt="plus" />
+        <img className="icon" src={Plus} alt="plus" loading="lazy" />
       </button>
     </div>
   );

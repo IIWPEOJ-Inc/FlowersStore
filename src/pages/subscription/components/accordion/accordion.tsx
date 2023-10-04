@@ -25,7 +25,7 @@ export const Accordion = ({ items }: AccordionProps) => {
         <div className="item" key={index + 1}>
           <button className="title" onClick={() => toggle(index)}>
             {isDesktop ? <h4>{item.header}</h4> : isMobile ? <h6>{item.header}</h6> : <h5>{item.header}</h5>}
-            <img src={selected === index ? ArrowUp : ArrowDown} alt="arrow" />
+            <img src={selected === index ? ArrowUp : ArrowDown} alt="arrow" loading="lazy" />
           </button>
           <div className={selected === index ? 'item-content show' : 'item-content'}>{item.content}</div>
         </div>

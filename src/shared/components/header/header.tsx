@@ -21,7 +21,7 @@ export const Header = () => {
   ) : (
     <div className="grid-left-item">
       <Link to="/">
-        <img src={burgerMenu} alt="burger-menu" className="icon" />
+        <img src={burgerMenu} alt="burger-menu" className="icon" loading="lazy" />
       </Link>
     </div>
   );
@@ -40,7 +40,7 @@ export const Header = () => {
   ) : (
     <div className="grid-right-item">
       <Link to="/">
-        <img src={shopBag} alt="shopping-bag" className="icon" />
+        <img src={shopBag} alt="shopping-bag" className="icon" loading="lazy" />
       </Link>
     </div>
   );

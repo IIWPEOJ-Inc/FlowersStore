@@ -1,5 +1,4 @@
 ﻿import './flowerSubscriptionSection.scss';
-import { Link } from 'react-router-dom';
 import { SecondaryButton } from '../../../shared/components/buttons/buttons';
 import LeftImage from './assets/leftImage.png';
 
@@ -7,7 +6,7 @@ export const FlowerSubscriptionSection = () => {
   return (
     <section id="flower-subscription-section">
       <div className="left-section">
-        <img src={LeftImage} alt="LeftImage" />
+        <img src={LeftImage} alt="LeftImage" loading="lazy" />
       </div>
       <div className="right-section">
         <div className="content">

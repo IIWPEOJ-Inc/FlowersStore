@@ -7,7 +7,7 @@ export const SubscriptionSection = () => {
   return (
     <section id="subscription-section">
       <div className="left-section">
-        <img src={SubscriptionImage} alt="img-subscription" className="img-subscription" />
+        <img src={SubscriptionImage} alt="img-subscription" className="img-subscription" loading="lazy" />
       </div>
       <div className="right-section">
         <div className="content-container">
